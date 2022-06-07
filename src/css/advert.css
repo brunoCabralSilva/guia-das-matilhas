@@ -1,0 +1,36 @@
+.advert-content {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advert-title-descrip {
+    font-size: 1.5em;
+    width: 60%;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.advert-button-link {
+    border-radius: 7px;
+    margin-top: 20px;
+    border: 1px solid white;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 15px;
+    font-weight: bolder;
+    color: white;
+}
+
+.advert-button-link:hover {
+    border-radius: 7px;
+    margin-top: 20px;
+    border: 1px solid white;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 15px;
+    font-weight: bolder;
+}
