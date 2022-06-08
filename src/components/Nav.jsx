@@ -9,7 +9,7 @@ export default class Nav extends React.Component {
         <ul className="nav-ulNav">
           <li className="nav-liNav">
             <Link
-              to="/"
+              to="/guia-das-matilhas"
               className="nav-aNav"
             >
               Início
@@ -47,7 +47,7 @@ export default class Nav extends React.Component {
               Quem Somos
             </Link>
           </li>
-          <li className="nav-liSearch">
+          {/* <li className="nav-liSearch">
             <input
               type="text"
               placeholder="Digite algo aqui"
@@ -58,10 +58,10 @@ export default class Nav extends React.Component {
               className="nav-btnSearch"
             >
               <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </li>
+            </button> */}
+          {/* </li> */}
         </ul>
-      </nav>
+      </nav >
     );
   }
 }

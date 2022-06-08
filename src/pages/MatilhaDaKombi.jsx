@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import Construction from '../components/Construction';
 import Footer from '../components/Footer';
 
-export default class Breeds extends React.Component {
+export default class MatilhaDaKombi extends React.Component {
   render() {
     return (
       <div className="main">

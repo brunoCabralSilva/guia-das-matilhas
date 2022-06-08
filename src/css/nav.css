@@ -1,8 +1,13 @@
 .nav-nav {
-  width: 100%;
   z-index: 1;
   margin: auto;
-  background-image: url('../images/wallpapers/003.jpg')
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+nav {
+  z-index: 1;
 }
 
 .nav-ulNav {
@@ -11,7 +16,7 @@
   padding: 0;
   flex-direction: row;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   margin-bottom: 0px;
 }
 

@@ -1,6 +1,5 @@
 .home-title {
-  width: 80vw;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,11 +7,37 @@
   position: relative;
 }
 
+.home-arrow-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 20vh;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.link-arrow-image {
+  display: flex;
+  justify-content: center;
+}
+
+.home-arrow-image img {
+  animation: animacaoSeta 2s linear infinite;
+  width: 25%;
+}
+
+.home-arrow-image img:hover {
+  animation: animacaoSeta 0.3s linear infinite;
+}
+
 .darkness {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 .content-content {
@@ -25,40 +50,36 @@
 }
 
 .content-title-page {
-  font-size: 4em;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
   text-align: center;
   font-family: Amatic SC, cursive;
-  width: 80%;
-  margin: auto;
-  font-size: 5em;
-  animation: animacaoSeta 2s linear infinite;
+  width: 100%;
+  font-size: 5.2em;
+  animation: animacaoSeta 4s linear infinite;
 }
 
 @keyframes animacaoSeta {
   50% {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
+.content-title-page {
+  width: 85%;
+}
+
 .wallpaper01 {
-  width: 100vw;
-  height: 100vh;
   background: url('../images/wallpapers/001.jpg');
   background-size: cover;
 }
 
 .wallpaper02 {
-  width: 100vw;
-  height: 100vh;
   background: url('../images/wallpapers/002.jpg');
   background-size: cover;
 }
 
 .wallpaper03 {
-  width: 100vw;
-  height: 100vh;
   background: url('../images/wallpapers/003.jpg');
   background-size: cover;
 }

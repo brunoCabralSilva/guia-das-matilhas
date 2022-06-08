@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/home.css';
 import Nav from '../components/Nav';
+import { Link } from 'react-router-dom';
 import AdvertList from '../components/AdvertList';
 import Transition from '../components/Transition';
 import Navegation from '../components/Navegation';
@@ -52,15 +53,17 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const { screen, wallpaper } = this.state;
+    const { screen } = this.state;
     return (
-      <div className="main">
-        <Nav />
-        <div className={` ${screen} home-title `}>
+      <main>
+        <div className={`${screen} main`}>
           <div className="darkness"></div>
-          <div className="content-content">
+          <div className="main-nav">
+            <Nav />
+          </div>
+          <div className="home-title">
             <h1 className="content-title-page">Guia das Matilhas</h1>
-            <AdvertList
+            {/* <AdvertList
               wallpaper={wallpaper}
               screen={screen} />
           </div>
@@ -91,13 +94,19 @@ export default class Home extends React.Component {
               }
               onClick={() => this.setaWallpaper(2)}
             >
-            </div>
+            </div> */}
+          </div>
+          <div className="home-arrow-image">
+            <Link to="/menu" className="link-arrow-image">
+              <img
+                src={require('../images/logos/arrow-down.png')}
+                alt="Seta para baixo"
+              />
+            </Link>
           </div>
         </div>
-        <Transition />
-        <Navegation />
         <Footer />
-      </div>
+      </main>
     );
   }
 }

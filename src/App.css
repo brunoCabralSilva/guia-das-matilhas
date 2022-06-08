@@ -9,9 +9,9 @@ body {
   background-color: black;
 }
 
-.content {
-  width: 96vw;
-  height: 96vh;
+.main {
+  height: 100vh;
+  position: relative;
 }
 
 .title-page {

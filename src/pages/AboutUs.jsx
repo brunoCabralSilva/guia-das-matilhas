@@ -6,15 +6,15 @@ import Footer from '../components/Footer';
 export default class AboutUs extends React.Component {
   render() {
     return (
-      <div className="main">
+      <div className="about">
         <Nav />
         <section className="about-us">
           <div>
             <h2 className="title-page">Quem Somos?</h2>
             <div className="about-content" >
               <div className='about-description'>
-                <img src={require('../images/logos/Garou Nordeste.png')} alt="Garou Nordeste" className="about_logo" />
-                <div>
+                <img src={require('../images/logos/Garou Nordeste2.png')} alt="Garou Nordeste" className="about_logo" />
+                <div className="interation-contact">
                   <h1>Garou Nordeste</h1>
                   <div className="about-contact">
                     <a href="https://www.instagram.com/garounordeste/" target="_blank" rel="noreferrer">
@@ -30,6 +30,8 @@ export default class AboutUs extends React.Component {
                       <i className="fa-brands fa-facebook-f div-icon"></i>
                     </a>
                   </div>
+                </div>
+                <div className="interation-contact about-descrip">
                   <p>
                     O Garou Nordeste é um projeto que busca trazer toda a riqueza do Nordeste do Brasil ambientada para
                     "Lobisomem: O Apocalipse", cenário de RPG encontrado dentro do sistema WoD (Mundo das Trevas).
@@ -47,8 +49,8 @@ export default class AboutUs extends React.Component {
                 </div>
               </div>
               <div className='about-description'>
-                <img src={require('../images/logos/Crônicas da Kombi.png')} alt="Matilha da Kombi" className="about_logo" />
-                <div>
+                <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="about_logo" />
+                <div className="interation-contact">
                   <h1>Matilha da Kombi</h1>
                   <div className="about-contact">
                     <a href="https://www.instagram.com/cronicas_da_kombi/" target="_blank" rel="noreferrer">
@@ -58,6 +60,8 @@ export default class AboutUs extends React.Component {
                       <i className="fa-brands fa-facebook-f div-icon"></i>
                     </a>
                   </div>
+                </div>
+                <div className="interation-contact about-descrip">
                   <p>
                     A Matilha da Kombi, antes de qualquer coisa, sempre foi um grupo de amigos que se conheceu através do RPG. Surgiu em uma conversa despretensiosa no Facebook da Nação Garou, que em duas semanas virou uma mesa mensal e uma campanha marcante no Cenário de Lobisomem o Apocalipse, na Cidade de Niterói, no Rio de Janeiro. Diversos Garou já correram juntos dessa Matilha, mas ela começou com: Thiago Lucas, Rafael Trindade, Hanã Moreira, Diogo Linhares, Luiz "Caderninho" Vieira, Daniel Braga, Bruno De Biase, Marcus Laport e Rafael TrilhadoVento. Alguns ficaram pelo caminho, mas ainda ocupam seu espaço no memorial do nosso Caern - e quem sabe ainda voltem a correr conosco.
                   </p>
@@ -69,7 +73,9 @@ export default class AboutUs extends React.Component {
             </div>
           </div>
         </section>
-        <Footer />
+        <div className="about-footer">
+          <Footer />
+        </div>
       </div>
     );
   }
