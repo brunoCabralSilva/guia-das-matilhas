@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.9094e0c8.css",
+    "main.css": "/guia-das-matilhas/static/css/main.7a7837bb.css",
     "main.js": "/guia-das-matilhas/static/js/main.004cf938.js",
     "static/media/002.jpg": "/guia-das-matilhas/static/media/002.4611d1aa22e7becbef1c.jpg",
     "static/media/Garou Nordeste.png": "/guia-das-matilhas/static/media/Garou Nordeste.7a28fe38dc1c2dc1e48c.png",
@@ -18,11 +18,11 @@
     "static/media/arrow-left.png": "/guia-das-matilhas/static/media/arrow-left.4d7b6b4a43d0b81bdbf7.png",
     "static/media/arrow-down.png": "/guia-das-matilhas/static/media/arrow-down.f1328be3e4f27857d594.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.9094e0c8.css.map": "/guia-das-matilhas/static/css/main.9094e0c8.css.map",
+    "main.7a7837bb.css.map": "/guia-das-matilhas/static/css/main.7a7837bb.css.map",
     "main.004cf938.js.map": "/guia-das-matilhas/static/js/main.004cf938.js.map"
   },
   "entrypoints": [
-    "static/css/main.9094e0c8.css",
+    "static/css/main.7a7837bb.css",
     "static/js/main.004cf938.js"
   ]
 }
