@@ -1,0 +1,100 @@
+.gift-list {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.gift-found {
+    width: 47vw;
+    margin: 1vw 1vw 0 0;
+}
+
+.title-gift-found {
+    padding: 1vw;
+}
+
+.gift-found-content {
+    background-color: rgb(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
+    margin-top: 0.2vw;
+    padding: 0.5vw 2vw 2vw;
+}
+
+.gift-found-full {
+    width: 100vw;
+    margin: 1vw 1vw 0 0;
+}
+
+.gift-found-full .gift-name-and-img {
+    padding-left: 20px;
+    font-size: 1.5em;
+}
+
+.gift-found-content strong {
+    text-decoration: underline;
+}
+
+.gift-found-content-p {
+    padding: 0.5vw 0;
+}
+
+.gift-name-and-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
+}
+
+.img-arrow-exibition {
+    padding-right: 20px;
+    width: 4vw;
+}
+
+@media screen and (max-width: 910px) {
+
+    .gift-found-full .gift-name-and-img {
+        padding-left: 0;
+        font-size: 1em;
+    }
+
+    .gift-list {
+        flex-direction: column;
+    }
+
+    .gift-found,
+    .gift-found-full {
+        width: 100%;
+        margin: 0.5;
+    }
+
+    .img-arrow-exibition {
+        width: 12%;
+        padding-right: 20px;
+    }
+
+    .title-page-gift {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 45px;
+        text-align: left;
+    }
+
+    .title-gift-found,
+    .title-gift-found-full {
+        font-size: 25px;
+        padding: 20px 30px;
+    }
+
+    .gift-found-content {
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .gift-found-content-p {
+        padding: 7px;
+    }
+}

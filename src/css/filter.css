@@ -1,0 +1,28 @@
+.filter {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+.filter:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 0;
+}
+
+.filter-name-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin: 0.7vw 0;
+    padding: 0 3vw;
+}
+
+.filter-arrow-animate {
+    display: flex;
+    justify-content: right;
+}
+
+.img-arrow {
+    width: 12%;
+}

@@ -1,0 +1,50 @@
+.container-all-lists {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.container-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-image: url('../images/wallpapers/ceu_noturno.jpeg');
+    background-size: cover;
+    background-position: 60%;
+    margin: 0.5vw;
+    width: 29vw;
+    height: 25vh;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
+
+.container-list:hover {
+    border: 1px solid white;
+}
+
+.container-list-text {
+    justify-content: center;
+    align-items: center;
+}
+
+.container-list-text p,
+.container-list {
+    text-align: center;
+}
+
+@media screen and (max-width: 910px) {
+    .container-list {
+        width: 25vw;
+        font-size: 17px;
+        -webkit-text-stroke-width: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container-list {
+        height: 150px;
+    }
+}

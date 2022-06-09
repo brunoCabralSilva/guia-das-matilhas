@@ -21,4 +21,5 @@ body {
   padding: 20px 30px 20px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
+  z-index: 1;
 }

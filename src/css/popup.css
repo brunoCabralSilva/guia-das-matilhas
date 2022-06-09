@@ -1,0 +1,306 @@
+.div-pop-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+scroll-container {
+    margin-top: 1.5vh;
+    display: block;
+    max-height: 35vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.title-pop-up {
+    background-image: linear-gradient(to bottom right, white, rgb(14, 0, 31));
+    color: black;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.title-pop-up:nth-child(1) {
+    margin-top: 0;
+}
+
+.selected-popUp {
+    flex-direction: row;
+    background-color: rgba(4, 0, 20, 0.9);
+    border: 1px solid white;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 77%;
+    color: white;
+    padding: 0.7%;
+    width: 20%;
+    z-index: 20;
+    font-size: 1.2vw;
+}
+
+.selected-popUp2 {
+    flex-direction: row;
+    background-color: rgba(4, 0, 20, 0.9);
+    border: 1px solid white;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 77%;
+    color: white;
+    padding: 0.7%;
+    width: 20%;
+    z-index: 20;
+    font-size: 1.2vw;
+}
+
+
+.img-arrow-pop-up,
+.img-arrow-pop-up-max {
+    width: 15%;
+}
+
+.animation {
+    animation: vibration linear 2s infinite;
+}
+
+.animation2 {
+    animation: ilumination linear 2s infinite;
+}
+
+@keyframes vibration {
+    0% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    5% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    10% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    15% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    20% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    25% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(64, 9, 131), rgb(14, 0, 31));
+    }
+
+    30% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    35% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    40% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    45% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    50% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    55% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    60% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    65% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    70% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    75% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    80% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    85% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    90% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    95% {
+        transform: rotate(-1deg);
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    100% {
+        transform: rotate(1deg);
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+}
+
+@keyframes ilumination {
+    0% {
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    5% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    10% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    15% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    20% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(64, 9, 131), rgb(14, 0, 31));
+    }
+
+    25% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(64, 9, 131), rgb(14, 0, 31));
+    }
+
+    30% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    35% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    40% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    45% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    50% {
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    55% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    60% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    65% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    70% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    75% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    80% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    85% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    90% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    95% {
+        background-image: linear-gradient(to right, rgb(14, 0, 31), rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+
+    100% {
+        background-image: linear-gradient(to right, rgb(40, 7, 82), rgb(14, 0, 31));
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .selected-popUp {
+        top: 0;
+        left: 45%;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        width: 45%;
+    }
+
+    .selected-popUp2 {
+        top: 0;
+        left: 84%;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        width: 8%;
+        border: 2px solid white;
+        box-shadow: 4px 7px 8px white;
+    }
+
+    .img-arrow-pop-up {
+        width: 100%;
+    }
+
+    .img-arrow-pop-up-max {
+        width: 20%;
+    }
+
+    scroll-container {
+        margin-top: 10px;
+        display: block;
+        max-height: 250px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+}
