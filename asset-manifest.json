@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.92f1c993.css",
-    "main.js": "/guia-das-matilhas/static/js/main.9c164d94.js",
+    "main.css": "/guia-das-matilhas/static/css/main.4699e1c5.css",
+    "main.js": "/guia-das-matilhas/static/js/main.85aa732c.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -124,7 +124,6 @@
     "static/media/arrow-left.png": "/guia-das-matilhas/static/media/arrow-left.4d7b6b4a43d0b81bdbf7.png",
     "static/media/arrow-down.png": "/guia-das-matilhas/static/media/arrow-down.f1328be3e4f27857d594.png",
     "static/media/arrow-up.png": "/guia-das-matilhas/static/media/arrow-up.d0d4259bcaf268fdc339.png",
-    "static/media/ragabash2.png": "/guia-das-matilhas/static/media/ragabash2.bc990b5f9160639fc67b.png",
     "static/media/boneGnawers_semFundo.png": "/guia-das-matilhas/static/media/boneGnawers_semFundo.1fa626a53c4f4b36387c.png",
     "static/media/croatan_semFundo.png": "/guia-das-matilhas/static/media/croatan_semFundo.d2c531f5533f762f4c10.png",
     "static/media/ragabash.png": "/guia-das-matilhas/static/media/ragabash.305fd7bd231af37ced54.png",
@@ -137,18 +136,20 @@
     "static/media/ahroun2.png": "/guia-das-matilhas/static/media/ahroun2.b4cb8e86b0692fedcb21.png",
     "static/media/galliard.png": "/guia-das-matilhas/static/media/galliard.e73b1521b94f528d5398.png",
     "static/media/lupus.png": "/guia-das-matilhas/static/media/lupus.817cfedeb5a318f65892.png",
+    "static/media/ceu_noturno.jpeg": "/guia-das-matilhas/static/media/ceu_noturno.847b89a7548a8882c15b.jpeg",
     "static/media/Wendigo_semFundo.png": "/guia-das-matilhas/static/media/Wendigo_semFundo.de83d1921fb1864fe082.png",
     "static/media/philodox.png": "/guia-das-matilhas/static/media/philodox.056763f7befbe719321e.png",
+    "static/media/ragabash2.png": "/guia-das-matilhas/static/media/ragabash2.482488332eb2604abda8.png",
     "static/media/RedTalons_semFundo.png": "/guia-das-matilhas/static/media/RedTalons_semFundo.d4131829bb586f7ccead.png",
     "static/media/uktena_semFundo.png": "/guia-das-matilhas/static/media/uktena_semFundo.d11b30756c4488779550.png",
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.92f1c993.css.map": "/guia-das-matilhas/static/css/main.92f1c993.css.map",
-    "main.9c164d94.js.map": "/guia-das-matilhas/static/js/main.9c164d94.js.map"
+    "main.4699e1c5.css.map": "/guia-das-matilhas/static/css/main.4699e1c5.css.map",
+    "main.85aa732c.js.map": "/guia-das-matilhas/static/js/main.85aa732c.js.map"
   },
   "entrypoints": [
-    "static/css/main.92f1c993.css",
-    "static/js/main.9c164d94.js"
+    "static/css/main.4699e1c5.css",
+    "static/js/main.85aa732c.js"
   ]
 }
