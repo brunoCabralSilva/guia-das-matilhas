@@ -1,10 +1,9 @@
 .navegation {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    height: 68vh;
+    padding: 10px 10px 0px;
+    min-height: 95vh;
     background-color: black;
     color: white;
+    display: grid;
 }
 
 .navegation a {
@@ -20,96 +19,80 @@
     z-index: 1;
 }
 
-.navegation-link-inside,
-.navegation-link,
-.navegation-link-vert-inside,
-.navegation-link-hor-inside {
+.navegation-default {
+    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
 
-.first-block {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
+.nav-default {
+    margin: 5px;
 }
 
-.navegation-link-container {
-    width: 50%;
-    min-height: 100%;
-}
-
-.navegation-link-inside {
-    margin-top: 0;
-    height: 48.2%;
+.navegation0 {
+    grid-area: navegation0;
+    background-image: url('../images/menu/werewolfw20.png');
+    background-size: cover;
+    background-position: 0 5%;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.navegation-link-inside:nth-child(1) {
+.navegation1 {
+    grid-area: navegation1;
     background-image: url('../images/menu/garou_nordeste.jpg');
     background-size: cover;
     background-position: 50%;
+    position: relative;
 }
 
-.navegation-link-inside:nth-child(2) {
+.navegation2 {
+    grid-area: navegation2;
     background-image: url('../images/menu/kombi.jpg');
-    margin-top: 6%;
     background-size: cover;
     background-position: 50%;
+    position: relative;
 }
 
-.navegation-link {
+.navegation2 {
+    grid-area: navegation2;
+    background-image: url('../images/menu/kombi.jpg');
+    background-position: 50%;
+    position: relative;
+}
+
+.navegation3 {
+    grid-area: navegation3;
     background-image: url('https://media0.giphy.com/media/eGNpmOUeIIYUB4P4Al/giphy.gif?cid=ecf05e47n75145gye8fzw4eelk64zsl6jgulmjh3g1pm88a3&rid=giphy.gif&ct=g');
     background-size: cover;
     background-position: 40%;
-    margin: 0 1.5% 0;
-    width: 50%;
     position: relative;
 }
 
-.navegation-link-vertical {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
-.navegation-link-vert-inside {
+.navegation4 {
+    grid-area: navegation4;
     background-image: url('../images/menu/werewolf-blood.png');
     background-size: cover;
     background-position: 20% 20%;
-    margin-top: 0;
-    height: 100%;
     position: relative;
 }
 
-.navegation-link-horizontal {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    margin-top: 4%;
-}
-
-.navegation-link-hor-inside {
-    height: 100%;
-    position: relative;
-}
-
-.navegation-link-hor-inside:nth-child(01) {
-    width: 40%;
+.navegation5 {
+    grid-area: navegation5;
     background-image: url('../images/menu/ritual.jpg');
     background-size: cover;
     background-position: 50%;
-    margin-right: 2%;
+    position: relative;
 }
 
-.navegation-link-hor-inside:nth-child(02) {
-    width: 60%;
+.navegation6 {
+    grid-area: navegation6;
     background-image: url('https://media.giphy.com/media/ugcss7H8FXXpe/giphy.gif');
     background-size: cover;
     background-position: 35%;
-    margin-left: 2%;
+    position: relative;
 }
 
 .darkness2 {
@@ -121,11 +104,18 @@
 }
 
 .darkness2:hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-color: rgb(0, 0, 0, 0.3);
     border: 1px solid rgb(70, 68, 68);
+}
+
+.navegation-grid {
+    grid-template-areas:
+        "navegation0 navegation0 navegation0 navegation0 navegation0"
+        "navegation1 navegation3 navegation3 navegation4 navegation4"
+        "navegation1 navegation3 navegation3 navegation4 navegation4"
+        "navegation2 navegation3 navegation3 navegation5 navegation6"
+        "navegation2 navegation3 navegation3 navegation5 navegation6"
+    ;
 }
 
 @media screen and (max-width: 910px) {
@@ -137,6 +127,7 @@
     .navegation {
         min-height: 100%;
         flex-direction: column;
+        height: 1100px;
     }
 
     .navegation-p {
@@ -144,29 +135,18 @@
         line-height: 1.2;
     }
 
-    .navegation-link {
-        margin: 0;
-        margin-left: 3%;
+    .navegation-grid {
+        grid-template-areas:
+            "navegation0 navegation0 navegation0 navegation0"
+            "navegation1 navegation1 navegation3 navegation3"
+            "navegation1 navegation1 navegation3 navegation3"
+            "navegation2 navegation2 navegation3 navegation3"
+            "navegation2 navegation2 navegation3 navegation3"
+            "navegation4 navegation4 navegation4 navegation4"
+            "navegation4 navegation4 navegation4 navegation4"
+            "navegation5 navegation5 navegation6 navegation6"
+            "navegation5 navegation5 navegation6 navegation6"
+        ;
     }
 
-    .first-block {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 3.5%;
-    }
-
-    .navegation-link-vertical {
-        width: 100%;
-        height: 100%;
-    }
-
-    .navegation-link-inside {
-        width: 100%;
-        margin-top: 0;
-        height: 47%;
-    }
-
-    .navegation-link-inside:nth-child(2) {
-        margin-top: 6%;
-    }
 }

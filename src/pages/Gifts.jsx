@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/gifts.css';
+import '../css/popup.css';
 import Nav from '../components/Nav';
 import Filter from '../components/Filter';
 import GiftSearch from '../components/GiftSearch';
@@ -208,8 +209,9 @@ export default class Gifts extends React.Component {
     const breeds = breedFilter.map((item) => {
       return (
         <div>
-          <label htmlFor={item}>
+          <label htmlFor={item} className="label-item">
             <input
+              className="label-item"
               checked={true}
               id={item}
               name={item}
@@ -229,8 +231,9 @@ export default class Gifts extends React.Component {
     const augurios = filtroAugurios.map((item) => {
       return (
         <div>
-          <label htmlFor={item}>
+          <label htmlFor={item} className="label-item">
             <input
+              className="label-item"
               checked={true}
               onChange={this.removeFeature}
               id={item}
@@ -246,7 +249,7 @@ export default class Gifts extends React.Component {
     const filtroTribos = features.filter((item) => {
       if (item !== "Impuros" && item !== "Hominídeos" && item !== "Lupinos") {
         if (item !== "Ahroun" && item !== "Philodox" && item !== "Galliard" && item !== "Theurge" && item !== "Ragabash") {
-          return item;
+          return <span className="label-item">item</span>;
         }
       }
     });
@@ -254,8 +257,9 @@ export default class Gifts extends React.Component {
     const tribos = filtroTribos.map((item) => {
       return (
         <div>
-          <label htmlFor={item}>
+          <label htmlFor={item} className="label-item">
             <input
+              className="label-item"
               checked={true}
               id={item}
               name={item}

@@ -17,15 +17,14 @@ export default class PopUp extends React.Component {
     const rankList = rankSelected.map((item) => {
       return (
         <div>
-          <label htmlFor={item}>
+          <label htmlFor={item} className="label-item">
             <input
               checked={true}
               id={item}
               name={item}
               type="checkbox"
               onChange={removeRank}
-              className="title-pop-up"
-
+              className="label-item"
             />
             {` ${item} `}
           </label>
@@ -35,8 +34,9 @@ export default class PopUp extends React.Component {
     const bookList = bookSelected.map((item) => {
       return (
         <div>
-          <label htmlFor={item}>
+          <label htmlFor={item} className="label-item">
             <input
+              className="label-item"
               checked={true}
               id={item}
               name={item}
@@ -99,7 +99,7 @@ export default class PopUp extends React.Component {
           className="div-pop-up"
           onClick={() => minimizes('minimizePopUp')}
         >
-          <p className={nameFilterDisable()}>Filtros selecionados:</p>
+          <p className={`${nameFilterDisable()} classFilterEnable `}>Filtros selecionados:</p>
           {minimizePopUp
             ? <img
               src={require('../images/logos/arrow-up.png')}

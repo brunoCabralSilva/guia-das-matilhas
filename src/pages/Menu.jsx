@@ -1,17 +1,18 @@
 import React from 'react';
 import '../css/menu.css';
-import Nav from '../components/Nav';
-import Transition from '../components/Transition';
 import Navegation from '../components/Navegation';
 import Footer from '../components/Footer';
 
 export default class Home extends React.Component {
+  homeReturn = () => {
+    const { history } = this.props;
+    history.push('/guia-das-matilhas');
+  }
   render() {
     return (
       <section className="menu">
-        <Transition />
-        <Navegation />
-        <Footer />
+        <Navegation homeReturn={this.homeReturn} />
+        <div className="menu-footer"><Footer /></div>
       </section>
     );
   }
