@@ -22,4 +22,5 @@ body {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
   z-index: 1;
+  position: relative;
 }

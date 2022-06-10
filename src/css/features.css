@@ -1,0 +1,51 @@
+.features-div-auspices {
+    height: 104vh;
+    background: url('../images/wallpapers/horizon.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: 0% 90%;
+}
+
+.features-div-breeds {
+    height: 104vh;
+    background: url('../images/wallpapers/white-wolf.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: 40%;
+}
+
+.features-div-trybes {
+    height: 104vh;
+    background: url('../images/wallpapers/wol-see.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: 40%;
+}
+
+.nav-features {
+    position: relative;
+}
+
+.nav-features-auspices a,
+.nav-features-auspices span {
+    color: black;
+}
+
+.nav-features-auspices a:hover {
+    color: rgb(85, 3, 3);
+}
+
+.title-features {
+    padding: 10px 30px 10px;
+    margin-left: 8vw;
+    margin-top: 10px;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8), transparent, transparent, transparent);
+    color: white;
+    font-size: 50px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    z-index: 1;
+    position: relative;
+}
+
+.footer-features {
+    background-color: black;
+}

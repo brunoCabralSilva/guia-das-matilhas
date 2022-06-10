@@ -1,19 +1,26 @@
 import React from 'react';
+import '../css/features.css';
 import Nav from '../components/Nav';
-import Construction from '../components/Construction';
+import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
+import augurios from '../data/augurios.json';
 
 export default class Auspices extends React.Component {
   render() {
     return (
-      <div className="main">
-        <div className="darkness"></div>
-        <div className="main-nav">
-          <Nav />
+      <section className="features">
+        <div className=""></div>
+        <div className="features-div-auspices">
+          <div className="nav-features-auspices">
+            <Nav />
+          </div>
+          <h1 className="title-features">Augúrios</h1>
+          <Carousel list={augurios} repository={'auspices'} />
+          </div>
+          <div className="footer-features">
+          <Footer />
         </div>
-        <Construction />
-        <Footer />
-      </div>
+      </section>
     );
   }
 }

@@ -1,9 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import Trybes from './pages/Trybes';
-import Breeds from './pages/Breeds';
-import Auspices from './pages/Auspices';
 import NotFound from './pages/NotFound';
 import AboutUs from './pages/AboutUs';
 import Menu from './pages/Menu';
@@ -13,6 +10,9 @@ import Page from './pages/Page';
 import Rituals from './pages/Rituals';
 import Friends from './pages/Friends';
 import Gifts from './pages/Gifts';
+import Trybes from './pages/Trybes';
+import Breeds from './pages/Breeds';
+import Auspices from './pages/Auspices';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       <Route path="/rituais" component={Rituals} />
       <Route path="/parceiros" component={Friends} />
       <Route path="/dons" component={Gifts} />
-      <Route exact path="*" component={NotFound} /> 
+      <Route exact path="*" component={NotFound} />
     </Switch>
   );
 }
