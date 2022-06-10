@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.dfbdc0b2.css",
-    "main.js": "/guia-das-matilhas/static/js/main.73f58a8b.js",
+    "main.css": "/guia-das-matilhas/static/css/main.e0447f54.css",
+    "main.js": "/guia-das-matilhas/static/js/main.4ffb08f4.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/wol-see.jpg": "/guia-das-matilhas/static/media/wol-see.dc9b5fb4c43e2775b480.jpg",
@@ -109,6 +109,7 @@
     "static/media/garou_nordeste.jpg": "/guia-das-matilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
     "static/media/glassWalkers_book.jpg": "/guia-das-matilhas/static/media/glassWalkers_book.b4b603ac31a4b4c961af.jpg",
     "static/media/blackSpiralDancers_semFundo.png": "/guia-das-matilhas/static/media/blackSpiralDancers_semFundo.19a39553462af6d5b819.png",
+    "static/media/moon.jpg": "/guia-das-matilhas/static/media/moon.688b0ea20a5dc4947ad8.jpg",
     "static/media/apocalypse.jpg": "/guia-das-matilhas/static/media/apocalypse.7da44b0ee68b338a55a5.jpg",
     "static/media/lobo-uivando.jpg": "/guia-das-matilhas/static/media/lobo-uivando.f9f69b7830a5661c7447.jpg",
     "static/media/ritual.jpg": "/guia-das-matilhas/static/media/ritual.123f67abf4b9e1952422.jpg",
@@ -153,11 +154,11 @@
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.dfbdc0b2.css.map": "/guia-das-matilhas/static/css/main.dfbdc0b2.css.map",
-    "main.73f58a8b.js.map": "/guia-das-matilhas/static/js/main.73f58a8b.js.map"
+    "main.e0447f54.css.map": "/guia-das-matilhas/static/css/main.e0447f54.css.map",
+    "main.4ffb08f4.js.map": "/guia-das-matilhas/static/js/main.4ffb08f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfbdc0b2.css",
-    "static/js/main.73f58a8b.js"
+    "static/css/main.e0447f54.css",
+    "static/js/main.4ffb08f4.js"
   ]
 }
