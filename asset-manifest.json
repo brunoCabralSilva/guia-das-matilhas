@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.0daaa924.css",
-    "main.js": "/guia-das-matilhas/static/js/main.b81de0a6.js",
+    "main.css": "/guia-das-matilhas/static/css/main.dfbdc0b2.css",
+    "main.js": "/guia-das-matilhas/static/js/main.73f58a8b.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
+    "static/media/wol-see.jpg": "/guia-das-matilhas/static/media/wol-see.dc9b5fb4c43e2775b480.jpg",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
     "static/media/croatan_transp.png": "/guia-das-matilhas/static/media/croatan_transp.121dce84965e604d3566.png",
     "static/media/fianna_transp.png": "/guia-das-matilhas/static/media/fianna_transp.175b33bb89a9b544c30c.png",
@@ -21,6 +22,7 @@
     "static/media/002.jpg": "/guia-das-matilhas/static/media/002.4611d1aa22e7becbef1c.jpg",
     "static/media/childrenOfGaia_transp.png": "/guia-das-matilhas/static/media/childrenOfGaia_transp.fb75f644e8541e889cca.png",
     "static/media/glassWalkers_transp.png": "/guia-das-matilhas/static/media/glassWalkers_transp.8c5af6e35bb8297c4639.png",
+    "static/media/white-wolf.jpg": "/guia-das-matilhas/static/media/white-wolf.9a1bf03b59f5a77ac1fa.jpg",
     "static/media/childrenOfGaia_slide.png": "/guia-das-matilhas/static/media/childrenOfGaia_slide.c4604b13024acefbe4f0.png",
     "static/media/Garou Nordeste.png": "/guia-das-matilhas/static/media/Garou Nordeste.7a28fe38dc1c2dc1e48c.png",
     "static/media/Howlers_slide.png": "/guia-das-matilhas/static/media/Howlers_slide.02ef8aad96771218a937.png",
@@ -101,11 +103,13 @@
     "static/media/thunder-wyrm.png": "/guia-das-matilhas/static/media/thunder-wyrm.7f214c4be6944d8771e8.png",
     "static/media/wolf_soul.png": "/guia-das-matilhas/static/media/wolf_soul.de835020c57b6bd76c71.png",
     "static/media/Crônicas da Kombi.png": "/guia-das-matilhas/static/media/Crônicas da Kombi.d4d8e354dfd0561d71b3.png",
+    "static/media/004.jpg": "/guia-das-matilhas/static/media/004.91f20dc189510e8827f9.jpg",
     "static/media/003.jpg": "/guia-das-matilhas/static/media/003.2ea3fb6798bae6993666.jpg",
     "static/media/Garou Nordeste2.png": "/guia-das-matilhas/static/media/Garou Nordeste2.f34c8bdaaff6fdfb7a0d.png",
     "static/media/garou_nordeste.jpg": "/guia-das-matilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
     "static/media/glassWalkers_book.jpg": "/guia-das-matilhas/static/media/glassWalkers_book.b4b603ac31a4b4c961af.jpg",
     "static/media/blackSpiralDancers_semFundo.png": "/guia-das-matilhas/static/media/blackSpiralDancers_semFundo.19a39553462af6d5b819.png",
+    "static/media/apocalypse.jpg": "/guia-das-matilhas/static/media/apocalypse.7da44b0ee68b338a55a5.jpg",
     "static/media/lobo-uivando.jpg": "/guia-das-matilhas/static/media/lobo-uivando.f9f69b7830a5661c7447.jpg",
     "static/media/ritual.jpg": "/guia-das-matilhas/static/media/ritual.123f67abf4b9e1952422.jpg",
     "static/media/getOfFenris_semFundo.png": "/guia-das-matilhas/static/media/getOfFenris_semFundo.f82f9dc9a88921316954.png",
@@ -118,17 +122,21 @@
     "static/media/stargazers_semFundo.png": "/guia-das-matilhas/static/media/stargazers_semFundo.d3dde51d916bc627a5d9.png",
     "static/media/blackFuries_semFundo.png": "/guia-das-matilhas/static/media/blackFuries_semFundo.2f7663b63ad1c7f93c09.png",
     "static/media/childrenOfGaia_semFundo.png": "/guia-das-matilhas/static/media/childrenOfGaia_semFundo.3985a74cebe54846f0ee.png",
+    "static/media/wolf.jpg": "/guia-das-matilhas/static/media/wolf.15047820a629408df8e3.jpg",
     "static/media/jpg": "/guia-das-matilhas/static/media/d6c9df443bcedc11c6578d4da00c08dd.54e3307bc3f7d98da89b.jpg",
     "static/media/bunyip_semFundo.png": "/guia-das-matilhas/static/media/bunyip_semFundo.f6cfb3bdb912e033e307.png",
     "static/media/ahroun.png": "/guia-das-matilhas/static/media/ahroun.896c446d1c1eb637e032.png",
     "static/media/arrow-left.png": "/guia-das-matilhas/static/media/arrow-left.4d7b6b4a43d0b81bdbf7.png",
+    "static/media/arrow-right.png": "/guia-das-matilhas/static/media/arrow-right.14da8b5f862a0f437b04.png",
     "static/media/arrow-down.png": "/guia-das-matilhas/static/media/arrow-down.f1328be3e4f27857d594.png",
     "static/media/arrow-up.png": "/guia-das-matilhas/static/media/arrow-up.d0d4259bcaf268fdc339.png",
     "static/media/boneGnawers_semFundo.png": "/guia-das-matilhas/static/media/boneGnawers_semFundo.1fa626a53c4f4b36387c.png",
+    "static/media/horizon.jpg": "/guia-das-matilhas/static/media/horizon.8de2aff1bd9e9d327a2d.jpg",
     "static/media/croatan_semFundo.png": "/guia-das-matilhas/static/media/croatan_semFundo.d2c531f5533f762f4c10.png",
     "static/media/ragabash.png": "/guia-das-matilhas/static/media/ragabash.305fd7bd231af37ced54.png",
     "static/media/galliard2.png": "/guia-das-matilhas/static/media/galliard2.d92cb51e6404085d8820.png",
     "static/media/philodox2.png": "/guia-das-matilhas/static/media/philodox2.74ded469894cff921189.png",
+    "static/media/touch.jpg": "/guia-das-matilhas/static/media/touch.e59d32e8cc6061bed8b6.jpg",
     "static/media/theurge2.png": "/guia-das-matilhas/static/media/theurge2.9b23b5d765ed3877d444.png",
     "static/media/shadowLords_semFundo.png": "/guia-das-matilhas/static/media/shadowLords_semFundo.643c32e325a435686777.png",
     "static/media/theurge.png": "/guia-das-matilhas/static/media/theurge.c9feaac0b8be86e3a813.png",
@@ -145,11 +153,11 @@
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.0daaa924.css.map": "/guia-das-matilhas/static/css/main.0daaa924.css.map",
-    "main.b81de0a6.js.map": "/guia-das-matilhas/static/js/main.b81de0a6.js.map"
+    "main.dfbdc0b2.css.map": "/guia-das-matilhas/static/css/main.dfbdc0b2.css.map",
+    "main.73f58a8b.js.map": "/guia-das-matilhas/static/js/main.73f58a8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0daaa924.css",
-    "static/js/main.b81de0a6.js"
+    "static/css/main.dfbdc0b2.css",
+    "static/js/main.73f58a8b.js"
   ]
 }
