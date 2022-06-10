@@ -6,14 +6,24 @@
 }
 
 .container-list {
+    background-image: url('../images/wallpapers/ceu_noturno.jpeg');
+    background-size: cover;
+    background-position: 60%;
+}
+
+.container-list-selected {
+    background-image: url('../images/wallpapers/moon.jpg');
+    background-size: cover;
+    background-position: 0 99%;
+}
+
+.container-list,
+.container-list-selected {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-    background-image: url('../images/wallpapers/ceu_noturno.jpeg');
-    background-size: cover;
-    background-position: 60%;
     margin: 0.5vw;
     width: 29vw;
     height: 25vh;
@@ -21,7 +31,8 @@
     font-weight: bolder;
 }
 
-.container-list:hover {
+.container-list:hover,
+.container-list-selected:hover {
     border: 1px solid white;
 }
 
@@ -36,7 +47,9 @@
 }
 
 @media screen and (max-width: 910px) {
-    .container-list {
+
+    .container-list,
+    .container-list-selected {
         width: 25vw;
         font-size: 17px;
         -webkit-text-stroke-width: 0;
@@ -44,7 +57,9 @@
 }
 
 @media screen and (max-width: 500px) {
-    .container-list {
+
+    .container-list,
+    .container-list-selected {
         height: 150px;
     }
 }

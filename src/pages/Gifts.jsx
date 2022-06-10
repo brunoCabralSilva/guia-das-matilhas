@@ -50,43 +50,24 @@ export default class Gifts extends React.Component {
     const { minimizePopUp, animationPopUp } = this.state;
     if (!minimizePopUp) {
       if (animationPopUp !== 'selected-popUp' || animationPopUp !== 'selected-popUp animation' || animationPopUp !== 'selected-popUp animation2') {
-        return 'disable';
+        return 'disable-title-filter';
       }
       return '';
     }
   }
 
-
-  // animaPopUp = () => {
-  //   const { minimizePopUp, animationPopUp } = this.state;
-  //   if (!minimizePopUp) {
-  //     this.setState((prevState) => ({
-  //       animationPopUp: `${prevState.animationPopUp} animation`,
-  //     }));
-  //     setTimeout(() => {
-  //       const newClass = animationPopUp.replace(' animation', '');
-  //       this.setState({ animationPopUp: newClass });
-  //     }, 1000);
-  //   } else {
-  //     this.setState((prevState) => ({
-  //       animationPopUp: `${prevState.animationPopUp} animation2`,
-  //     }));
-  //     setTimeout(() => {
-  //       const newClass = animationPopUp.replace(' animation2', '');
-  //       this.setState({ animationPopUp: newClass });
-  //     }, 1000);
-  //   }
-  // }
-
-  rankSelected = (event, type) => {
-    console.log(type);
+  rankSelected = (event) => {
     const { rankSelected } = this.state;
     const { name, innerText } = event.target;
     const info = name === undefined ? innerText : name;
     if (!rankSelected.includes(info)) {
       this.setState((prevState) => ({ rankSelected: [...prevState.rankSelected, info] }));
+    } else {
+      const removeItem = rankSelected.filter((item)=> {
+        return (!item.includes(info));
+      });
+      this.setState({ rankSelected: removeItem });
     }
-    this.animaPopUp();
   }
 
   bookSelected = (event) => {
@@ -95,8 +76,12 @@ export default class Gifts extends React.Component {
     const info = name === undefined ? innerText : name;
     if (!bookSelected.includes(info)) {
       this.setState((prevState) => ({ bookSelected: [...prevState.bookSelected, info] }));
+    } else {
+      const removeItem = bookSelected.filter((item)=> {
+        return (!item.includes(info));
+      });
+      this.setState({ bookSelected: removeItem });
     }
-    this.animaPopUp();
   }
 
   featureSelected = (event) => {
@@ -105,8 +90,12 @@ export default class Gifts extends React.Component {
     const info = name === undefined ? innerText : name;
     if (!feature.includes(info)) {
       this.setState((prevState) => ({ feature: [...prevState.feature, info] }));
+    } else {
+      const removeItem = feature.filter((item)=> {
+        return (!item.includes(info));
+      });
+      this.setState({ feature: removeItem });
     }
-    this.animaPopUp();
   }
 
   bookList = () => {
@@ -374,6 +363,7 @@ export default class Gifts extends React.Component {
                 list={raca}
                 nameMinimize="minimizeBreed"
                 funcMin={this.minimizes}
+                itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <Filter
                 name="Tribos"
@@ -382,6 +372,7 @@ export default class Gifts extends React.Component {
                 list={tribos}
                 nameMinimize="minimizeTrybe"
                 funcMin={this.minimizes}
+                itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <Filter
                 name="Augúrios"
@@ -390,6 +381,7 @@ export default class Gifts extends React.Component {
                 list={augurios}
                 nameMinimize="minimizeAuspices"
                 funcMin={this.minimizes}
+                itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <Filter
                 name="Postos"
@@ -398,6 +390,7 @@ export default class Gifts extends React.Component {
                 nameMinimize="minimizeRank"
                 funcMin={this.minimizes}
                 list={posto}
+                itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <Filter
                 name="Livros"
@@ -406,6 +399,7 @@ export default class Gifts extends React.Component {
                 nameMinimize="minimizeBook"
                 funcMin={this.minimizes}
                 list={this.bookList().sort()}
+                itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <button
                 className="btn-gift-search"

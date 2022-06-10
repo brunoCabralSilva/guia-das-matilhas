@@ -11,6 +11,7 @@ export default class Filter extends React.Component {
       list,
       nameMinimize,
       funcMin,
+      itemsSelected,
     } = this.props;
     return (
       <section className="filter">
@@ -45,6 +46,7 @@ export default class Filter extends React.Component {
               list={list}
               type={name}
               select={select}
+              itemsSelected={itemsSelected}
             />
           </div>
         </div>

@@ -8,6 +8,7 @@ export default class List extends React.Component {
       list,
       select,
       type,
+      itemsSelected,
     } = this.props;
     const divList = list.map((element) => {
       const {
@@ -17,11 +18,18 @@ export default class List extends React.Component {
         nome,
         id,
         furia,
+        posto,
       } = element;
       if (type === "Augúrios") {
         return (
-          <div className="container-list"
-            name={nome} onClick={select}>
+          <div
+            className={
+              itemsSelected.includes(nome)
+              ? "container-list-selected"
+              : "container-list"
+            }
+            name={nome} onClick={select}
+          >
             <img
               src={require(`../images/auspices/${imagemGlifoBranco}`)}
               alt={nome}
@@ -35,8 +43,14 @@ export default class List extends React.Component {
 
       if (type === "Tribos") {
         return (
-          <div className="container-list"
-            name={nome} onClick={select}>
+          <div
+            className={
+              itemsSelected.includes(nome)
+              ? "container-list-selected"
+              : "container-list"
+            }
+            name={nome} onClick={select}
+          >
             <img
               src={require(`../images/trybes/${imgGlifoSemFundo}`)}
               className={`image-list image-trybe-${id}`}
@@ -50,16 +64,29 @@ export default class List extends React.Component {
 
       if (type === 'Postos') {
         return (
-          <div className="container-list container-list-text" name={nome} onClick={select}>
-            <p name={nome}>{element.posto}</p>
+          <div
+            className={
+              itemsSelected.includes(posto)
+              ? "container-list-selected container-list-text"
+              : "container-list container-list-text"
+            }
+            name={nome} onClick={select}
+          >
+            <p name={nome}>{posto}</p>
           </div>
         );
       }
 
       if (type === 'Raças') {
         return (
-          <div className="container-list"
-            name={nome} onClick={select}>
+          <div
+            className={
+              itemsSelected.includes(nome)
+              ? "container-list-selected"
+              : "container-list"
+            }
+            name={nome} onClick={select}
+          >
             <img
               src={require(`../images/breeds/${imgGlifo}`)}
               className={`image-list image-breed-${id}`}
@@ -72,7 +99,14 @@ export default class List extends React.Component {
       }
 
       return (
-        <div className="container-list container-list-text" name={element} onClick={select}>
+        <div
+            className={
+              itemsSelected.includes(element)
+              ? "container-list-selected container-list-text"
+              : "container-list container-list-text"
+            }
+            name={nome} onClick={select}
+          >
           <p name={element}>{element}</p>
         </div>
       );

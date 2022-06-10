@@ -99,7 +99,7 @@ export default class PopUp extends React.Component {
           className="div-pop-up"
           onClick={() => minimizes('minimizePopUp')}
         >
-          <p className={`${nameFilterDisable()} classFilterEnable `}>Filtros selecionados:</p>
+          <p className={`${nameFilterDisable()}`}>Filtros selecionados:</p>
           {minimizePopUp
             ? <img
               src={require('../images/logos/arrow-up.png')}
