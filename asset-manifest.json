@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.f04f8179.css",
-    "main.js": "/guia-das-matilhas/static/js/main.9491ccea.js",
+    "main.css": "/guia-das-matilhas/static/css/main.812b5962.css",
+    "main.js": "/guia-das-matilhas/static/js/main.935c2679.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -158,11 +158,11 @@
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.f04f8179.css.map": "/guia-das-matilhas/static/css/main.f04f8179.css.map",
-    "main.9491ccea.js.map": "/guia-das-matilhas/static/js/main.9491ccea.js.map"
+    "main.812b5962.css.map": "/guia-das-matilhas/static/css/main.812b5962.css.map",
+    "main.935c2679.js.map": "/guia-das-matilhas/static/js/main.935c2679.js.map"
   },
   "entrypoints": [
-    "static/css/main.f04f8179.css",
-    "static/js/main.9491ccea.js"
+    "static/css/main.812b5962.css",
+    "static/js/main.935c2679.js"
   ]
 }
