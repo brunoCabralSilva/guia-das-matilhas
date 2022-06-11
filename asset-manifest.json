@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/guia-das-matilhas/static/css/main.812b5962.css",
-    "main.js": "/guia-das-matilhas/static/js/main.935c2679.js",
+    "main.js": "/guia-das-matilhas/static/js/main.1541b359.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -107,15 +107,18 @@
     "static/media/003.jpg": "/guia-das-matilhas/static/media/003.2ea3fb6798bae6993666.jpg",
     "static/media/Garou Nordeste2.png": "/guia-das-matilhas/static/media/Garou Nordeste2.f34c8bdaaff6fdfb7a0d.png",
     "static/media/garou_nordeste.jpg": "/guia-das-matilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
+    "static/media/rageacrossbrasil.png": "/guia-das-matilhas/static/media/rageacrossbrasil.19d0526d3fc599e1e4b9.png",
     "static/media/glassWalkers_book.jpg": "/guia-das-matilhas/static/media/glassWalkers_book.b4b603ac31a4b4c961af.jpg",
     "static/media/blackSpiralDancers_semFundo.png": "/guia-das-matilhas/static/media/blackSpiralDancers_semFundo.19a39553462af6d5b819.png",
     "static/media/moon.jpg": "/guia-das-matilhas/static/media/moon.688b0ea20a5dc4947ad8.jpg",
     "static/media/rpgclandestino.png": "/guia-das-matilhas/static/media/rpgclandestino.d680c63003c4e4c07e96.png",
     "static/media/apocalypse.jpg": "/guia-das-matilhas/static/media/apocalypse.7da44b0ee68b338a55a5.jpg",
+    "static/media/oconclave.png": "/guia-das-matilhas/static/media/oconclave.9161e3475f66b36c3869.png",
     "static/media/005.jpg": "/guia-das-matilhas/static/media/005.f9f69b7830a5661c7447.jpg",
     "static/media/ritual.jpg": "/guia-das-matilhas/static/media/ritual.123f67abf4b9e1952422.jpg",
     "static/media/getOfFenris_semFundo.png": "/guia-das-matilhas/static/media/getOfFenris_semFundo.f82f9dc9a88921316954.png",
     "static/media/glassWalkers_semFundo.png": "/guia-das-matilhas/static/media/glassWalkers_semFundo.f3aa35fb7836d985b33a.png",
+    "static/media/nacaogarou.png": "/guia-das-matilhas/static/media/nacaogarou.487d7babbf22813c30fc.png",
     "static/media/kombi.jpg": "/guia-das-matilhas/static/media/kombi.339f7315df6de2db3d0c.jpg",
     "static/media/narradoresnarrados.jpeg": "/guia-das-matilhas/static/media/narradoresnarrados.e73e2f33ae4e72f3ed64.jpeg",
     "static/media/kombi-navegation.jpg": "/guia-das-matilhas/static/media/kombi-navegation.99b8a16407826d40e65d.jpg",
@@ -159,10 +162,10 @@
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
     "main.812b5962.css.map": "/guia-das-matilhas/static/css/main.812b5962.css.map",
-    "main.935c2679.js.map": "/guia-das-matilhas/static/js/main.935c2679.js.map"
+    "main.1541b359.js.map": "/guia-das-matilhas/static/js/main.1541b359.js.map"
   },
   "entrypoints": [
     "static/css/main.812b5962.css",
-    "static/js/main.935c2679.js"
+    "static/js/main.1541b359.js"
   ]
 }
