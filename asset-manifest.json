@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.7223eec7.css",
-    "main.js": "/guia-das-matilhas/static/js/main.e5f5e334.js",
+    "main.css": "/guia-das-matilhas/static/css/main.f04f8179.css",
+    "main.js": "/guia-das-matilhas/static/js/main.9491ccea.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -24,6 +24,7 @@
     "static/media/white-wolf.jpg": "/guia-das-matilhas/static/media/white-wolf.9a1bf03b59f5a77ac1fa.jpg",
     "static/media/childrenOfGaia_slide.png": "/guia-das-matilhas/static/media/childrenOfGaia_slide.c4604b13024acefbe4f0.png",
     "static/media/Garou Nordeste.png": "/guia-das-matilhas/static/media/Garou Nordeste.7a28fe38dc1c2dc1e48c.png",
+    "static/media/capirremoto.png": "/guia-das-matilhas/static/media/capirremoto.1d55cb85cd76a3641b34.png",
     "static/media/Howlers_slide.png": "/guia-das-matilhas/static/media/Howlers_slide.02ef8aad96771218a937.png",
     "static/media/RedTalons_slide.png": "/guia-das-matilhas/static/media/RedTalons_slide.5dd6de82622aa7bbfbea.png",
     "static/media/stargazers_slide.png": "/guia-das-matilhas/static/media/stargazers_slide.1dc5481c0ccdf906dde0.png",
@@ -64,6 +65,7 @@
     "static/media/croatan.png": "/guia-das-matilhas/static/media/croatan.d1b7a92c6264a0e6905d.png",
     "static/media/glassWalkers_glifo.jpg": "/guia-das-matilhas/static/media/glassWalkers_glifo.149f91af1709fcb33a96.jpg",
     "static/media/getOfFenris_glifo.jpg": "/guia-das-matilhas/static/media/getOfFenris_glifo.452a0a5a6976d3b169aa.jpg",
+    "static/media/tavernaliteraria.png": "/guia-das-matilhas/static/media/tavernaliteraria.5a4b48f12800fd27956e.png",
     "static/media/SilverFangs.png": "/guia-das-matilhas/static/media/SilverFangs.e0440bac754b83ef23bf.png",
     "static/media/Howlers_glifo.jpg": "/guia-das-matilhas/static/media/Howlers_glifo.9f7d2fc50136a4e958dc.jpg",
     "static/media/Howlers.png": "/guia-das-matilhas/static/media/Howlers.410ab38523561de4b95b.png",
@@ -108,16 +110,19 @@
     "static/media/glassWalkers_book.jpg": "/guia-das-matilhas/static/media/glassWalkers_book.b4b603ac31a4b4c961af.jpg",
     "static/media/blackSpiralDancers_semFundo.png": "/guia-das-matilhas/static/media/blackSpiralDancers_semFundo.19a39553462af6d5b819.png",
     "static/media/moon.jpg": "/guia-das-matilhas/static/media/moon.688b0ea20a5dc4947ad8.jpg",
+    "static/media/rpgclandestino.png": "/guia-das-matilhas/static/media/rpgclandestino.d680c63003c4e4c07e96.png",
     "static/media/apocalypse.jpg": "/guia-das-matilhas/static/media/apocalypse.7da44b0ee68b338a55a5.jpg",
     "static/media/005.jpg": "/guia-das-matilhas/static/media/005.f9f69b7830a5661c7447.jpg",
     "static/media/ritual.jpg": "/guia-das-matilhas/static/media/ritual.123f67abf4b9e1952422.jpg",
     "static/media/getOfFenris_semFundo.png": "/guia-das-matilhas/static/media/getOfFenris_semFundo.f82f9dc9a88921316954.png",
     "static/media/glassWalkers_semFundo.png": "/guia-das-matilhas/static/media/glassWalkers_semFundo.f3aa35fb7836d985b33a.png",
     "static/media/kombi.jpg": "/guia-das-matilhas/static/media/kombi.339f7315df6de2db3d0c.jpg",
+    "static/media/narradoresnarrados.jpeg": "/guia-das-matilhas/static/media/narradoresnarrados.e73e2f33ae4e72f3ed64.jpeg",
     "static/media/kombi-navegation.jpg": "/guia-das-matilhas/static/media/kombi-navegation.99b8a16407826d40e65d.jpg",
     "static/media/fianna_semFundo.png": "/guia-das-matilhas/static/media/fianna_semFundo.611219ee852296d91bb2.png",
     "static/media/wolf_run.gif": "/guia-das-matilhas/static/media/wolf_run.67c8ac035834e2f424f6.gif",
     "static/media/Howlers_semFundo.png": "/guia-das-matilhas/static/media/Howlers_semFundo.c23ffff3d4efb242b399.png",
+    "static/media/brazilinthedarkness.png": "/guia-das-matilhas/static/media/brazilinthedarkness.a02eefca28326aeb3ea6.png",
     "static/media/stargazers_glifo.jpg": "/guia-das-matilhas/static/media/stargazers_glifo.c3f3ff401aa1585ce222.jpg",
     "static/media/stargazers_semFundo.png": "/guia-das-matilhas/static/media/stargazers_semFundo.d3dde51d916bc627a5d9.png",
     "static/media/blackFuries_semFundo.png": "/guia-das-matilhas/static/media/blackFuries_semFundo.2f7663b63ad1c7f93c09.png",
@@ -153,11 +158,11 @@
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.7223eec7.css.map": "/guia-das-matilhas/static/css/main.7223eec7.css.map",
-    "main.e5f5e334.js.map": "/guia-das-matilhas/static/js/main.e5f5e334.js.map"
+    "main.f04f8179.css.map": "/guia-das-matilhas/static/css/main.f04f8179.css.map",
+    "main.9491ccea.js.map": "/guia-das-matilhas/static/js/main.9491ccea.js.map"
   },
   "entrypoints": [
-    "static/css/main.7223eec7.css",
-    "static/js/main.e5f5e334.js"
+    "static/css/main.f04f8179.css",
+    "static/js/main.9491ccea.js"
   ]
 }
