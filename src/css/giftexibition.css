@@ -9,8 +9,10 @@
     margin: 1vw 1vw 0 0;
 }
 
-.title-gift-found {
+.title-gift-found,
+.title-gift-found-full {
     padding: 1vw;
+    font-size: 1.6vw;
 }
 
 .gift-found-content {
@@ -27,7 +29,7 @@
 
 .gift-found-full .gift-name-and-img {
     padding-left: 20px;
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 .gift-found-content strong {
@@ -36,6 +38,7 @@
 
 .gift-found-content-p {
     padding: 0.5vw 0;
+    font-size: 1.5vw;
 }
 
 .gift-name-and-img {
@@ -84,7 +87,7 @@
 
     .title-gift-found,
     .title-gift-found-full {
-        font-size: 25px;
+        font-size: 23px;
         padding: 20px 30px;
     }
 
@@ -97,5 +100,6 @@
 
     .gift-found-content-p {
         padding: 7px;
+        font-size: 20px;
     }
 }

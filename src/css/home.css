@@ -25,7 +25,7 @@
 
 .home-arrow-image img {
   animation: animacaoSeta 2s linear infinite;
-  width: 25%;
+  width: 8vw;
 }
 
 .home-arrow-image img:hover {
@@ -55,7 +55,7 @@
   text-align: center;
   font-family: Amatic SC, cursive;
   width: 100%;
-  font-size: 5.2em;
+  font-size: 6.5vw;
   animation: animacaoSeta 4s linear infinite;
 }
 
@@ -71,16 +71,6 @@
 
 .wallpaper01 {
   background: url('../images/wallpapers/001.jpg');
-  background-size: cover;
-}
-
-.wallpaper02 {
-  background: url('../images/wallpapers/002.jpg');
-  background-size: cover;
-}
-
-.wallpaper03 {
-  background: url('../images/wallpapers/003.jpg');
   background-size: cover;
 }
 
@@ -109,4 +99,20 @@
   background-color: rgb(204, 179, 219);
   margin: 10px;
   border: 1px solid rgb(19, 11, 24);
+}
+
+@media screen and (max-width: 910px) {
+  .content-title-page {
+    font-size: 65px;
+  }
+
+  .home-arrow-image img {
+    width: 20%;
+  }
+
+  .wallpaper01,
+  .wallpaper02,
+  .wallpaper03 {
+    background-position: 50%;
+  }
 }

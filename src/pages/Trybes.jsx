@@ -10,11 +10,11 @@ export default class Trybes extends React.Component {
     return (
       <section className="features">
         <div className=""></div>
-        <div className="features-div-trybes">
+        <div className="features-div">
           <div className="nav-features">
             <Nav />
           </div>
-          <h1 className="title-features">Tribos</h1>
+          <h1 className="title-page title-features">Tribos</h1>
           <Carousel list={tribos} repository={'trybes'} />
           </div>
           <div className="footer-features">

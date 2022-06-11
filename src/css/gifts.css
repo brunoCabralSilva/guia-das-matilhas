@@ -28,15 +28,15 @@
     align-items: center;
     margin-top: 10px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 1.6vw;
 }
 
 .gift-text {
-    width: 60%;
+    width: 60vw;
 }
 
 .gift-img {
-    width: 40%;
+    width: 35vw;
 }
 
 .gift-img:hover {

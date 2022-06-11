@@ -10,11 +10,11 @@ export default class Breeds extends React.Component {
     return (
       <section className="features">
         <div className=""></div>
-        <div className="features-div-breeds">
+        <div className="features-div">
           <div className="nav-features">
             <Nav />
           </div>
-          <h1 className="title-features">Raças</h1>
+          <h1 className="title-page title-features">Raças</h1>
           <Carousel list={racas} repository={'breeds'} />
           </div>
           <div className="footer-features">

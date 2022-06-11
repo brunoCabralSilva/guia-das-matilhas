@@ -10,11 +10,11 @@ export default class Auspices extends React.Component {
     return (
       <section className="features">
         <div className=""></div>
-        <div className="features-div-auspices">
-          <div className="nav-features-auspices">
+        <div className="features-div">
+          <div className="nav-features">
             <Nav />
           </div>
-          <h1 className="title-features">Augúrios</h1>
+          <h1 className="title-page title-features">Augúrios</h1>
           <Carousel list={augurios} repository={'auspices'} />
           </div>
           <div className="footer-features">

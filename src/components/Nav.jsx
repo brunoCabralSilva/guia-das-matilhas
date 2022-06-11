@@ -47,19 +47,6 @@ export default class Nav extends React.Component {
               Quem Somos
             </Link>
           </li>
-          {/* <li className="nav-liSearch">
-            <input
-              type="text"
-              placeholder="Digite algo aqui"
-              className="nav-inputSearch"
-            />
-            <button
-              type="button"
-              className="nav-btnSearch"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button> */}
-          {/* </li> */}
         </ul>
       </nav >
     );

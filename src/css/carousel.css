@@ -1,13 +1,21 @@
 .carousel-div {
     display: flex;
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent, transparent);
+    margin: 10px;
 }
 
 .btn-carousel {
-    background-color: transparent;
-    border: none;
+    font-size: 100px;
     width: 8%;
     padding: 0 10px;
     position: relative;
+    background-color: transparent;
+    border: none;
+    color: rgb(110, 98, 117);
+}
+
+.btn-carousel:hover {
+    color: rgb(100, 83, 110);
 }
 
 .img-btn-carousel {
@@ -17,19 +25,20 @@
 .all-cards-carousel {
     display: flex;
     width: 100%;
-    margin: auto;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    height: 65vh;
 }
 
 .all-cards-carousel::-webkit-scrollbar {
     display: none;
 }
 
-.card-carousel {
+.card-carousel,
+.card-carousel-others {
     box-shadow: 5px 15px 40px black;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,22 +51,23 @@
     position: relative;
 }
 
-.card-carousel:hover {
+.card-carousel:hover,
+.card-carousel-others:hover {
     border: 1px solid rgb(185, 161, 161);
 }
 
 .img-card-carousel-trybes {
-    width: 20vw;
+    width: 17.5vw;
 }
 
 .img-card-carousel-auspices {
-    padding: 30px;
-    width: 20vw;
+    padding: 20px;
+    width: 18vw;
 }
 
 .img-card-carousel-breeds {
     padding: 20px;
-    width: 18vw;
+    width: 15.5vw;
 }
 
 .img-card-carousel-breeds:nth-child(1) {
@@ -71,7 +81,108 @@
 }
 
 .h1-card-carousel {
-    padding: 10px 20px;
-    width: 95%;
+    width: 100%;
     text-align: center;
+}
+
+.h1-card-carousel-2 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    .btn-carousel {
+        color: rgb(110, 98, 117);
+        height: 100%;
+    }
+
+    .features-div {
+        min-height: 700px;
+    }
+
+    .carousel-div {
+        height: 100%;
+    }
+
+    .all-cards-carousel {
+        min-height: 600px;
+    }
+
+    .img-card-carousel-trybes {
+        width: 320px;
+    }
+
+    .img-card-carousel-auspices {
+        width: 300px;
+    }
+
+    .img-card-carousel-breeds {
+        width: 280px;
+    }
+
+    .card-carousel,
+    .card-carousel-others {
+        width: 400px;
+        height: 400px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    .carousel-div {
+        display: flex;
+        background-image: none;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .features {
+        min-height: 500px;
+    }
+
+    .features-div {
+        min-height: 500px;
+    }
+
+    .carousel-div {
+        min-height: 600px;
+    }
+
+    .all-cards-carousel {
+        min-height: 200px;
+    }
+
+    .img-card-carousel-trybes {
+        width: 320px;
+    }
+
+    .img-card-carousel-auspices {
+        width: 220px;
+    }
+
+    .img-card-carousel-breeds {
+        width: 220px;
+    }
+
+    .card-carousel {
+        width: 400px;
+        min-height: 200px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    .card-carousel-others {
+        width: 400px;
+        height: 50px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    .carousel-div {
+        display: flex;
+        background-image: none;
+        margin: 10px;
+    }
+
+    .btn-carousel {
+        display: none;
+    }
 }

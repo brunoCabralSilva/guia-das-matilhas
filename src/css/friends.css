@@ -1,0 +1,10 @@
+.friends {
+    min-height: 100vh;
+    background: url('../images/wallpapers/001.jpg') no-repeat fixed;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.title-friend {
+    margin: 10px;
+}

@@ -18,7 +18,7 @@ export default class Filter extends React.Component {
         <div
           className="filter-name-arrow"
           onClick={() => funcMin(nameMinimize)}>
-          <h2 onClick={() => funcMin(nameMinimize)}>{name}</h2>
+          <h2 className="h2-filter" onClick={() => funcMin(nameMinimize)}>{name}</h2>
           <div className="filter-arrow-animate" onClick={() => funcMin(nameMinimize)}>
             {
               statusMinimize

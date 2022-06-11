@@ -127,7 +127,111 @@
     }
 
     .image-trybe-3 {
-        width: 48%;
+        width: 70%;
+    }
+
+    .image-trybe-4 {
+        padding-top: 20px;
+        width: 75%;
+    }
+
+    .image-trybe-5 {
+        width: 60%;
+    }
+
+    .image-trybe-6 {
+        width: 55%;
+    }
+
+    .image-trybe-7 {
+        padding-top: 25px;
+        width: 95%;
+    }
+
+    .image-trybe-8 {
+        width: 40%;
+    }
+
+    .image-trybe-9 {
+        padding-top: 25px;
+        width: 90%;
+    }
+
+    .image-trybe-10 {
+        padding-top: 25px;
+        width: 85%;
+    }
+
+    .image-trybe-11 {
+        padding-top: 15px;
+        width: 85%;
+    }
+
+    .image-trybe-12 {
+        padding-top: 10px;
+        width: 65%;
+    }
+
+    .image-trybe-13 {
+        padding-top: 20px;
+        width: 90%;
+    }
+
+    .image-trybe-14 {
+        padding-top: 20px;
+        width: 65%;
+    }
+
+    .image-trybe-15 {
+        padding-top: 20px;
+        width: 90%;
+    }
+
+    .image-trybe-16 {
+        width: 28%;
+    }
+
+    .image-trybe-17 {
+        width: 45%;
+    }
+
+    .image-auspices-1,
+    .image-auspices-2,
+    .image-auspices-3,
+    .image-auspices-4,
+    .image-auspices-5 {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 911px) and (max-width: 1300px) {
+    .image-list {
+        padding-top: 10px;
+        width: 20%;
+    }
+
+    .image-breed-1 {
+        width: 55%;
+    }
+
+    .image-breed-2 {
+        width: 50%;
+    }
+
+    .image-breed-3 {
+        width: 80%;
+    }
+
+    .image-trybe-1 {
+        width: 45%;
+    }
+
+    .image-trybe-2 {
+        width: 70%;
+    }
+
+    .image-trybe-3 {
+        width: 50%;
     }
 
     .image-trybe-4 {
@@ -192,7 +296,7 @@
     }
 
     .image-trybe-17 {
-        width: 45%;
+        width: 40%;
     }
 
     .image-auspices-1,
@@ -200,6 +304,6 @@
     .image-auspices-3,
     .image-auspices-4,
     .image-auspices-5 {
-        width: 60%;
+        width: 50%;
     }
 }

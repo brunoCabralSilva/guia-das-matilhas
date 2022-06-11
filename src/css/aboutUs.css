@@ -1,6 +1,6 @@
 .about {
     position: relative;
-    background: url('../images/wallpapers/lobo-uivando.jpg') no-repeat fixed;
+    background: url('../images/wallpapers/005.jpg') no-repeat fixed;
     background-size: cover;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .about-description p {
-    font-size: 20px;
+    font-size: 1.5vw;
     padding: 10px 20px;
 }
 
@@ -46,6 +46,7 @@
     padding: 10px;
     background-color: rgb(0, 0, 0, 0.8);
     margin-bottom: 5px;
+    font-size: 1.5vw;
 }
 
 .about-contact {
@@ -57,7 +58,7 @@
 .about-contact a {
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2vw;
     margin-bottom: 20px;
 }
 
@@ -74,13 +75,14 @@
 
 .div-icon {
     padding: 10px;
+    color: white;
 }
 
 .about_logo {
     width: 100%;
     padding: 10px;
     background-color: rgb(0, 0, 0, 0.8);
-    height: 26%;
+    height: 50vh;
     margin-bottom: 5px;
 }
 
@@ -101,6 +103,7 @@
     .interation-contact,
     .about_logo {
         width: 95%;
+        height: 100%;
     }
 
     .about-content {
@@ -126,5 +129,11 @@
 
     .about-description:nth-child(02) {
         margin-left: 0;
+    }
+
+    .about-contact a,
+    .interation-contact,
+    .about-description p {
+        font-size: 20px;
     }
 }

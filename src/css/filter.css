@@ -26,3 +26,15 @@
 .img-arrow {
     width: 12%;
 }
+
+.h2-filter {
+    font-size: 2.2vw;
+    padding: 2vh;
+}
+
+@media screen and (max-width: 910px) {
+    .h2-filter {
+        font-size: 25px;
+        padding: 10px;
+    }
+}
