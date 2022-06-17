@@ -38,16 +38,24 @@
 <h2 id="mapeamento">Mapeamento do site </h2>
 
 - `Funcionalidade 1`: Menu Principal
-- `Funcionalidade 1a`: Dons
-- `Funcionalidade 1b`: Rituais
-- `Funcionalidade 1d`: Fetiches
-- `Funcionalidade 1e`: Parceiros
-- `Funcionalidade 1f`: Garou Nordeste
-- `Funcionalidade 1g`: Matilha da Kombi
+- `Funcionalidade 1a`: Dons - Nele, é possível encontrar uma breve descrição do que são os dons, além de uma descrição sobre como utilizar os filtros para as buscas. Os aludidos filtros são cinco: raça, tribo, augúrio, posto e/ou livro. Ao clicar uma vez, o item é adicionado e pode ser visualizado em um pop-up no canto superior direito da tela. Ele pode ser removido clicando novamente no ícone ou removendo a seleção no pop-up. Ao clicar em buscar, a aplicação retorna uma lista com todos os dons que se adequam aos filtros selecionados.
+
+- `Funcionalidade 1b`: Rituais - Em construção
+
+- `Funcionalidade 1c`: Fetiches - Em construção
+
+- `Funcionalidade 1d`: Parceiros - Lista de todos os parceiros dos grupos ao qual os desenvolvedores pertencem. Nesta página, é possível encontrar todos os links de contato com estes parceiros, além de uma breve descrição dos mesmos e uma imagem da logo que os representa.
+
+- `Funcionalidade 1e`: Garou Nordeste - Em construção
+
+- `Funcionalidade 1g`: Matilha da Kombi - Em construção
 
 - `Funcionalidade 2`: Tribos
+
 - `Funcionalidade 3`: Augúrios
+
 - `Funcionalidade 4`: Raças
+
 - `Funcionalidade 2`: Quem Somos
 
 <h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
@@ -71,4 +79,4 @@
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>Programar é um eterno aprendizado. Quanto mais se pratica, mais se melhora. Praticar conceitos de programação com coisas que se é apaixonado apimenta ainda mais a relação! Muits aprendizados novos são adicionados a cada dia, fazendo com que este projeto já tenha valido a pena antes mesmo de ser concluído!</p>
+<p>Programar é um eterno aprendizado. Quanto mais se pratica, mais se melhora. Praticar conceitos de programação com coisas que se é apaixonado apimenta ainda mais a relação! Muitos aprendizados novos são adicionados a cada dia, fazendo com que este projeto já tenha valido a pena antes mesmo de ser concluído!</p>
