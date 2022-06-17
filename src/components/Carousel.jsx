@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import '../css/carousel.css';
 
 export default function Carousel(props) {
@@ -16,6 +17,7 @@ export default function Carousel(props) {
     divCardItems.current.scrollLeft += 800;
   }
 
+
   return (
     <div>
       <div className="carousel-div">
@@ -27,14 +29,14 @@ export default function Carousel(props) {
         </button>
         <div className="all-cards-carousel"
           ref={divCardItems}>
-          {list.map((item) => {
+          {list.map((item, index) => {
             const { imagem, nome, lua } = item;
             return (
               <Link to=""
                 className={
-                  repository==="trybes"
-                  ? "card-carousel"
-                  : "card-carousel-others"
+                  repository === "trybes"
+                    ? "card-carousel"
+                    : "card-carousel-others"
                 }
               >
                 <img

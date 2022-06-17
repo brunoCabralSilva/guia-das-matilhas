@@ -4,6 +4,11 @@ import Construction from '../components/Construction';
 import Footer from '../components/Footer';
 
 export default class Page extends React.Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="main">

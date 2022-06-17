@@ -5,12 +5,16 @@
     "imagem": "capirremoto.png",
     "links": [
       {
-        "rede": "twitter",
-        "href": "https://twitter.com/capirremoto"
-      },
-      {
         "rede": "instagram",
         "href": "https://www.instagram.com/capirremoto/"
+      },
+      {
+        "rede": "youtube",
+        "href": "https://www.youtube.com/watch?v=WzDjcI_TYZc"
+      },
+      {
+        "rede": "spotify",
+        "href": "https://open.spotify.com/show/2dIeIMmNR2y0T1dVnFVru4"
       },
       {
         "rede": "tiktok",
@@ -21,12 +25,8 @@
         "href": "https://www.twitch.tv/capirremoto"
       },
       {
-        "rede": "youtube",
-        "href": "https://www.youtube.com/watch?v=WzDjcI_TYZc"
-      },
-      {
-        "rede": "spotify",
-        "href": "https://open.spotify.com/show/2dIeIMmNR2y0T1dVnFVru4"
+        "rede": "twitter",
+        "href": "https://twitter.com/capirremoto"
       },
       {
         "rede": "discord",
@@ -67,10 +67,6 @@
         "href": "https://www.instagram.com/narradoresnarrados/?utm_medium=copy_link"
       },
       {
-        "rede": "twitch",
-        "href": "https://twitter.com/nnarrados"
-      },
-      {
         "rede": "youtube",
         "href": "https://www.youtube.com/channel/UCLNbQXNR5PBkc1VQqCGu7ig"
       },
@@ -94,12 +90,62 @@
         "href": "https://www.instagram.com/literariataverna/"
       },
       {
+        "rede": "youtube",
+        "href": "https://www.youtube.com/channel/UC48QqorUVafPS0fxV4mVG4w"
+      },
+      {
         "rede": "facebook",
         "href": "https://www.facebook.com/groups/577902799788648"
+      }
+    ]
+  },
+  {
+    "nome": "Nação Garou",
+    "descrição": "Desde 2006, a maior referência de Lobisomem: o Apocalipse do Brasil!",
+    "imagem": "nacaogarou.png",
+    "links": [
+      {
+        "rede": "instagram",
+        "href": "https://www.instagram.com/nacaogarou/"
       },
       {
         "rede": "youtube",
-        "href": "https://www.youtube.com/channel/UC48QqorUVafPS0fxV4mVG4w"
+        "href": "https://www.youtube.com/nacaogarou"
+      },
+      {
+        "rede": "spotify",
+        "href": "https://open.spotify.com/show/1KGVvCp6FbNKZJsU5MplJK?si=n6pNzVPzTnaCYu2jRcGa3A"
+      },
+      {
+        "rede": "twitch",
+        "href": "https://www.twitch.tv/nacaogarou?lang=pt-br"
+      },
+      {
+        "rede": "discord",
+        "href": "https://discord.com/invite/A4X9EaJW"
+      },
+      {
+        "rede": "facebook",
+        "href": "https://www.facebook.com/NacaoGarouTraducoes/"
+      }
+    ]
+  },
+  {
+    "nome": "Rage Across Brasil",
+    "descrição": "O Rage Across Brasil é uma página feita com paixão, de fãs dedicados para fãs sedentos que buscam desde 2012 ambientar da melhor forma possível o RPG dentro do cenário brasileiro, e trazer para seus fãs notícias e conteúdo original de qualidade.",
+    "imagem": "rageacrossbrasil.png",
+    "links": [
+      {
+        "rede": "instagram",
+        "href": "https://www.instagram.com/rageacrossbr/"
+      },
+      {
+        "rede": "facebook",
+        "href": "https://www.facebook.com/rageacrossbr/"
+      },
+      {
+        "rede": "blogspot",
+        "href": "http://rageacrossbr.blogspot.com/"
       }
     ]
   },
@@ -113,12 +159,12 @@
         "href": "https://www.instagram.com/brinthedark/"
       },
       {
-        "rede": "twitch",
-        "href": "https://www.twitch.tv/brinthedark"
-      },
-      {
         "rede": "youtube",
         "href": "https://www.youtube.com/channel/UCU3ESPgM8DJi6gRuEIdwgow"
+      },
+      {
+        "rede": "twitch",
+        "href": "https://www.twitch.tv/brinthedark"
       },
       {
         "rede": "facebook",
@@ -131,40 +177,9 @@
     ]
   },
   {
-    "nome": "Nação Garou",
-    "descrição": "Desde 2006, a maior referência de Lobisomem: o Apocalipse do Brasil!",
-    "imagem": "",
-    "links": [
-      {
-        "rede": "instagram",
-        "href": "https://www.instagram.com/nacaogarou/"
-      },
-      {
-        "rede": "facebook",
-        "href": "https://www.facebook.com/NacaoGarouTraducoes/"
-      },
-      {
-        "rede": "twitch",
-        "href": "https://www.twitch.tv/nacaogarou?lang=pt-br"
-      },
-      {
-        "rede": "spotify",
-        "href": "https://open.spotify.com/show/1KGVvCp6FbNKZJsU5MplJK?si=n6pNzVPzTnaCYu2jRcGa3A"
-      },
-      {
-        "rede": "youtube",
-        "href": "https://www.youtube.com/nacaogarou"
-      },
-      {
-        "rede": "discord",
-        "href": "https://discord.com/invite/A4X9EaJW"
-      }
-    ]
-  },
-  {
     "nome": "O Conclave",
     "descrição": "",
-    "imagem": "",
+    "imagem": "oconclave.png",
     "links": [
       {
         "rede": "instagram",

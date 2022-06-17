@@ -1,41 +1,75 @@
 import React from 'react';
 import '../css/navegation.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import GoToTop from '../components/GoToTop';
 import Transition from '../components/Transition';
+import navegation from '../data/navegation.json';
 
 export default class Navegation extends React.Component {
   render() {
     const { homeReturn } = this.props;
+    const item = {
+      hidden: {
+        x: 20,
+        opacity: 0
+      },
+      visible: (index) => ({
+        x: 0,
+        opacity: 1,
+        transition: {
+          delay: 0.5 + (0.1 * index),
+          duration: 0.5,
+          type: 'spring',
+          stiffness: 150
+        }
+      }),
+      exit: (index) => ({
+        x: 20,
+        opacity: 0,
+        transition: {
+          delay: (0.1 * index),
+          duration: 0.1,
+        }
+      }),
+    }
+
     return (
       <div className="navegation navegation-grid">
-        <div className="nav-default navegation0">
+        <motion.div
+          className="nav-default navegation0"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 0.5,
+            duration: 1,
+            type: 'spring',
+            stiffness: 150
+          }}
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        >
           <div className="darkness-more"></div>
           <Transition homeReturn={homeReturn} />
-        </div>
-        <Link to="/garou-nordeste" className="navegation-default navegation1">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Garou Nordeste</p>
-        </Link>
-        <Link to="/matilha-da-kombi" className="navegation-default navegation2">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Matilha da Kombi</p>
-        </Link>
-        <Link to="/page" className="navegation-default navegation3">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Insira um texto aqui</p>
-        </Link>
-        <Link to="/dons" className="navegation-default navegation4">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Dons</p>
-        </Link>
-        <Link to="/rituais" className="navegation-default navegation5">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Rituais</p>
-        </Link>
-        <Link to="/parceiros" className="navegation-default navegation6">
-          <div className="darkness2"></div>
-          <p className="navegation-p">Parceiros</p>
-        </Link>
+        </motion.div>
+
+        {
+          navegation.map((nav, index) => (
+            <motion.div
+              className={nav.class}
+              custom={index}
+              variants={item}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <Link to={nav.link} className="link-menu">
+                <p className="navegation-p">{nav.nome}</p>
+              </Link>
+              <GoToTop />
+            </motion.div>
+          ))
+        }
+
       </div>
     );
   }

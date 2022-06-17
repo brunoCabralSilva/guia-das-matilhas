@@ -1,18 +1,68 @@
 import React from 'react';
 import '../css/aboutUs.css';
+import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import { getByTitle } from '@testing-library/react';
 
 export default class AboutUs extends React.Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
+    const text = {
+      hidden: { opacity: 0, y: 30 },
+      visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: 0.2 + index * 0.2, duration: 0.5 }
+      }),
+      exit: (index) => ({
+        opacity: 0,
+        y: 30,
+        transition: { delay: 0.2 + index * 0.1, duration: 0.5 }
+      }),
+    };
+
+    const title = {
+      hidden: { opacity: 0, x: -20 },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: { delay: 0.5, duration: 0.5 }
+      },
+      exit: {
+        opacity: 0,
+        x: -20,
+        transition: { delay: 0.5, duration: 0.5 }
+      },
+    };
+
     return (
       <div className="about">
         <Nav />
         <section className="about-us">
           <div>
-            <h2 className="title-page">Quem Somos?</h2>
+            <motion.h2
+              className="title-page"
+              variants={title}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              Quem Somos?
+            </motion.h2>
             <div className="about-content" >
-              <div className='about-description'>
+              <motion.div
+                className="about-description"
+                custom={1}
+                variants={text}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
                 <img src={require('../images/logos/Garou Nordeste2.png')} alt="Garou Nordeste" className="about_logo" />
                 <div className="interation-contact">
                   <h1>Garou Nordeste</h1>
@@ -47,8 +97,15 @@ export default class AboutUs extends React.Component {
                     Bruno Gabryell (Garou Nordeste) e Thiago Lucas (Matilha da Kombi) são os criadores deste site, sendo o primeiro o editor e o segundo o idealizador, revisor e tradutor!
                   </p>
                 </div>
-              </div>
-              <div className='about-description'>
+              </motion.div>
+              <motion.div
+                className="about-description"
+                custom={2}
+                variants={text}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
                 <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="about_logo" />
                 <div className="interation-contact">
                   <h1>Matilha da Kombi</h1>
@@ -69,7 +126,7 @@ export default class AboutUs extends React.Component {
                     Conhecidos pela criatividade e pelo humor ácido, logo as piadas internas romperam as barreiras da nossa mesa e começaram a ocupar o Feed do Rage Across Brasil. Com textos autorais e diversos memes sobre todos os cenários de WoD, logo alçamos voo solo e começamos a página Crônicas da Kombi, no facebook e no instagram, valorizando o que há de melhor no RPG: a diversão.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

@@ -26,6 +26,18 @@
     align-items: flex-end;
 }
 
+.navegation-default:hover {
+    border: 1px solid white;
+}
+
+.link-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
 .nav-default {
     margin: 5px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/gifts.css';
 import '../css/popup.css';
+import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Filter from '../components/Filter';
 import GiftSearch from '../components/GiftSearch';
@@ -29,6 +30,10 @@ export default class Gifts extends React.Component {
     showGifts: false,
     animationPopUp: 'selected-popUp2',
     nameFilter: '',
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   giftReturn = () => {
@@ -63,7 +68,7 @@ export default class Gifts extends React.Component {
     if (!rankSelected.includes(info)) {
       this.setState((prevState) => ({ rankSelected: [...prevState.rankSelected, info] }));
     } else {
-      const removeItem = rankSelected.filter((item)=> {
+      const removeItem = rankSelected.filter((item) => {
         return (!item.includes(info));
       });
       this.setState({ rankSelected: removeItem });
@@ -77,7 +82,7 @@ export default class Gifts extends React.Component {
     if (!bookSelected.includes(info)) {
       this.setState((prevState) => ({ bookSelected: [...prevState.bookSelected, info] }));
     } else {
-      const removeItem = bookSelected.filter((item)=> {
+      const removeItem = bookSelected.filter((item) => {
         return (!item.includes(info));
       });
       this.setState({ bookSelected: removeItem });
@@ -91,7 +96,7 @@ export default class Gifts extends React.Component {
     if (!feature.includes(info)) {
       this.setState((prevState) => ({ feature: [...prevState.feature, info] }));
     } else {
-      const removeItem = feature.filter((item)=> {
+      const removeItem = feature.filter((item) => {
         return (!item.includes(info));
       });
       this.setState({ feature: removeItem });
@@ -314,7 +319,17 @@ export default class Gifts extends React.Component {
         <div className="main-nav">
           <Nav />
         </div>
-        <div className="gift-content">
+        <motion.div
+          className="gift-content"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          exit={{
+            y: -20,
+            opacity: 0,
+            transition: { duration: 0.5 }
+          }}
+        >
           <div className="search-by-gifts">
             <h1 className="title-page">Dons</h1>
             <div className="div-gift-text">
@@ -419,7 +434,7 @@ export default class Gifts extends React.Component {
               : null
             }
           </div>
-        </div>
+        </motion.div>
         <div className="footer-gifts">
           <Footer />
         </div>

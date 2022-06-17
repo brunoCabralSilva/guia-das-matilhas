@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/nav.css';
+import { motion } from 'framer-motion';
 
 export default class Nav extends React.Component {
   render() {
     return (
       <nav className="nav-nav">
-        <ul className="nav-ulNav">
+        <motion.ul className="nav-ulNav"
+          initial={{ x: 30, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          exit={{ y: -30, opacity: 0, transition: { duration: 0.5 } }}>
           <li className="nav-liNav">
             <Link
               to="/guia-das-matilhas"
@@ -47,7 +52,7 @@ export default class Nav extends React.Component {
               Quem Somos
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </nav >
     );
   }

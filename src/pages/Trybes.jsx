@@ -1,14 +1,30 @@
 import React from 'react';
 import '../css/features.css';
+import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import tribos from '../data/tribos.json';
 
 export default class Trybes extends React.Component {
-   render() {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
     return (
-      <section className="features">
+      <motion.section
+        className="features"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        exit={{
+          y: -20,
+          opacity: 0,
+          transition: { duration: 0.5 }
+        }}
+      >
         <div className=""></div>
         <div className="features-div">
           <div className="nav-features">
@@ -16,11 +32,11 @@ export default class Trybes extends React.Component {
           </div>
           <h1 className="title-page title-features">Tribos</h1>
           <Carousel list={tribos} repository={'trybes'} />
-          </div>
-          <div className="footer-features">
+        </div>
+        <div className="footer-features">
           <Footer />
         </div>
-      </section>
+      </motion.section>
     );
   }
 }

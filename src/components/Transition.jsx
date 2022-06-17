@@ -15,7 +15,7 @@ export default class Transition extends React.Component {
         />
         <div className="transition-all-content">
           <h3 className="transition-text">
-            Frase pequena
+            Que Gaia tenha piedade de nós!
           </h3>
           <h4 className="transition-author">- Lobisomem: O Apocalipse (Ed. Revisada)</h4>
         </div>
