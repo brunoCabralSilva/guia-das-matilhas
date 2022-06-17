@@ -114,7 +114,7 @@
 * <strong>Bruno Gabryell Cabral da Silva</strong> - Desenvolvedor Web;
 * <strong>Thiago Lucas Martins da Silva</strong> - Tradutor e transcritor dos textos dos livros nos arquivos JSON;
 * <strong>Erika Emanuelly da Silva Cruz</strong> - Experiência do Usuário;
-* <strong>Patrick</strong> - Experiência do Usuário;
+* <strong>Patrick Cosme de Oliveira</strong> - Experiência do Usuário;
 
 <h2 id="conclusão">Conclusão</h2>
 
