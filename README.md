@@ -41,6 +41,8 @@
 <ol>
 <li><h4>Menu Principal</h4></li> 
 
+<p>Lugar de acesso a diversas das informações do site. Por meio desta página, é possível ser direcionado para as páginas Dons, Rituais, Fetiches, Parceiros, Garou Nordeste e Matilha da Kombi</p>
+
 <p> </p>
 
 <li><h4>Dons</h4></li> 
