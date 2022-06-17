@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/guia-das-matilhas/static/css/main.c318337e.css",
-    "main.js": "/guia-das-matilhas/static/js/main.4a2dabbb.js",
+    "main.js": "/guia-das-matilhas/static/js/main.0e914b8b.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -31,6 +31,7 @@
     "static/media/werewolfw20.png": "/guia-das-matilhas/static/media/werewolfw20.6d448191040f7b79515d.png",
     "static/media/bunyip_slide.png": "/guia-das-matilhas/static/media/bunyip_slide.1de659be0ad24fb1925d.png",
     "static/media/getOfFenris_slide.png": "/guia-das-matilhas/static/media/getOfFenris_slide.d5cb233f38cbb0a623c0.png",
+    "static/media/apresentation02.png": "/guia-das-matilhas/static/media/apresentation02.7a9cdd47a503ae1feb6f.png",
     "static/media/croatan_slide.png": "/guia-das-matilhas/static/media/croatan_slide.6ad5592f588aae8a5fad.png",
     "static/media/shadowLords_slide.png": "/guia-das-matilhas/static/media/shadowLords_slide.92c20660b0c4977f5366.png",
     "static/media/uktena_slide.png": "/guia-das-matilhas/static/media/uktena_slide.e7637792a68977d8a389.png",
@@ -104,6 +105,7 @@
     "static/media/thunder-wyrm.png": "/guia-das-matilhas/static/media/thunder-wyrm.7f214c4be6944d8771e8.png",
     "static/media/wolf_soul.png": "/guia-das-matilhas/static/media/wolf_soul.de835020c57b6bd76c71.png",
     "static/media/Crônicas da Kombi.png": "/guia-das-matilhas/static/media/Crônicas da Kombi.d4d8e354dfd0561d71b3.png",
+    "static/media/apresentation01.png": "/guia-das-matilhas/static/media/apresentation01.218e9bdea98a1637336b.png",
     "static/media/003.jpg": "/guia-das-matilhas/static/media/003.2ea3fb6798bae6993666.jpg",
     "static/media/Garou Nordeste2.png": "/guia-das-matilhas/static/media/Garou Nordeste2.f34c8bdaaff6fdfb7a0d.png",
     "static/media/garou_nordeste.jpg": "/guia-das-matilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
@@ -162,10 +164,10 @@
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
     "main.c318337e.css.map": "/guia-das-matilhas/static/css/main.c318337e.css.map",
-    "main.4a2dabbb.js.map": "/guia-das-matilhas/static/js/main.4a2dabbb.js.map"
+    "main.0e914b8b.js.map": "/guia-das-matilhas/static/js/main.0e914b8b.js.map"
   },
   "entrypoints": [
     "static/css/main.c318337e.css",
-    "static/js/main.4a2dabbb.js"
+    "static/js/main.0e914b8b.js"
   ]
 }
