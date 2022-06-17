@@ -85,6 +85,7 @@
 - `Funcionalidade 4`: Raças
 
 - `Funcionalidade 2`: Quem Somos
+</ol>
 
 <h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
 
