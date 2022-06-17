@@ -37,7 +37,10 @@
 
 <h2 id="mapeamento">Mapeamento do site </h2>
 
-- `Funcionalidade 1`: Menu Principal
+<ol>
+<li><h4>Menu Principal</h4></li> 
+
+</ol>
 - `Funcionalidade 1a`: Dons - Nele, é possível encontrar uma breve descrição do que são os dons, além de uma descrição sobre como utilizar os filtros para as buscas. Os aludidos filtros são cinco: raça, tribo, augúrio, posto e/ou livro. Ao clicar uma vez, o item é adicionado e pode ser visualizado em um pop-up no canto superior direito da tela. Ele pode ser removido clicando novamente no ícone ou removendo a seleção no pop-up. Ao clicar em buscar, a aplicação retorna uma lista com todos os dons que se adequam aos filtros selecionados.
 
 - `Funcionalidade 1b`: Rituais - Em construção
