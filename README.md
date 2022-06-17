@@ -1,3 +1,9 @@
+<h1 align="center">Guia das Matilhas</h1>
+
+![Tela Inicial da Aplicação](src/images/menu/apresentation01.png)
+
+![Menu principal](src/images/menu/apresentation02.png)
+
 Projeto criado entre um membro do Garou Nordeste (Bruno Gabryell Cabral da Silva) e um membro da Matilha da Kombi (Thiago Lucas) com o intuito de criarmos uma enciclopédia de dons de Lobisomem: O apocalipse e outras informações!
 
 Antes de explicar com mais detalhes sobre o projeto, precisamos entender alguns conceitos:
