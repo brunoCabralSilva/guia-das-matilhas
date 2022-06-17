@@ -17,9 +17,7 @@
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Mapeamento do Site](#mapeamento)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
-* [Pessoas Contribuidoras](#pessoas-contribuidoras)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Licença](#licença)
+* [Desenvolvedores e demais contribuidores](#pessoas-envolvidas)
 * [Conclusão](#conclusão)
 
 <h2 id="intro">Introdução</h2>
@@ -64,8 +62,13 @@
 * `Bootstrap CSS`
 * `Font Awesome`
 
-<h2 id="pessoas-contribuidoras">Pessoas Contribuidoras</h2>
+<h2 id="pessoas-envolvidas">Desenvolvedores e demais contribuidores</h2>
 
-<h2 id="pessoas-desenvolvedoras">Pessoas Desenvolvedoras do Projeto</h2>
+* <strong>Bruno Gabryell Cabral da Silva</strong> - Desenvolvedor Web;
+* <strong>Thiago Lucas Martins da Silva</strong> - Tradutor e transcritor dos textos dos livros nos arquivos JSON;
+* <strong>Erika Emanuelly da Silva Cruz</strong> - Experiência do Usuário;
+* <strong>Patrick</strong> - Experiência do Usuário;
 
 <h2 id="conclusão">Conclusão</h2>
+
+<p>Programar é um eterno aprendizado. Quanto mais se pratica, mais se melhora. Praticar conceitos de programação com coisas que se é apaixonado apimenta ainda mais a relação! Muits aprendizados novos são adicionados a cada dia, fazendo com que este projeto já tenha valido a pena antes mesmo de ser concluído!</p>
