@@ -1,10 +1,14 @@
 <h1 align="center">Guia das Matilhas</h1>
 
-<h3>https://brunocabralsilva.github.io/guia-das-matilhas/<p>
+<h3 align="center">https://brunocabralsilva.github.io/guia-das-matilhas/</h3>
 
 ![Tela Inicial da Aplicação](src/images/menu/apresentation01.png)
 
 ![Menu principal](src/images/menu/apresentation02.png)
+
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
 Projeto criado entre um membro do Garou Nordeste (Bruno Gabryell Cabral da Silva) e um membro da Matilha da Kombi (Thiago Lucas) com o intuito de criarmos uma enciclopédia de dons de Lobisomem: O apocalipse e outras informações!
 
