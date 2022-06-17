@@ -23,13 +23,13 @@
 
 <h2 id="intro">Introdução</h2>
 
-<p>Role-playing game, também conhecido como RPG, é um tipo de jogo em que os jogadores assumem papéis de personagens e criam narrativas de forma geralmente colaborativas. O progresso de um jogo se dá de acordo com um sistema de regras predeterminado, dentro das quais os jogadores podem improvisar livremente. É aí que entra o sistema de RPG <strong>World of Darkness</strong>.</p>
+<p>Role-playing game, também conhecido como RPG, é um tipo de jogo em que os jogadores assumem papéis de personagens e criam narrativas geralmente colaborativas. O progresso de um jogo se dá de acordo com um sistema de regras predeterminado, dentro das quais os jogadores podem improvisar livremente. É aí que entra o sistema de RPG <strong>World of Darkness</strong>.</p>
 
 <p><strong>World of Darkness</strong> é nome dado a dois universos ficcionais relacionados, mas distintos, criados como configurações de campanha para role-playing games de horror originalmente da editora estadunidense White Wolf. O primeiro foi concebido por Mark Rein-Hagen, enquanto o segundo foi projetado por várias pessoas da White Wolf Gaming Studio, que Rein-Hagen ajudou a criar.</p>
 
-<p>Dentro do <strong>World of Darkness</strong> o jogo de <strong>Lobisomem: O Apocalipse</strong> é um dos muitos jogos existentes e possíveis existentes na franquia, tendo sido este publicado no Brasil pela Devir Livraria. É um dos mais conhecidos títulos da série e usa o sistema Storyteller para o desenvolvimento e a interpretação dos fatos e eventos.</p>
+<p>Dentro do <strong>World of Darkness</strong> o jogo de <strong>Lobisomem: O Apocalipse</strong> é um dos muitos jogos possíveis e existentes na franquia, tendo sido este publicado no Brasil pela Devir Livraria. É um dos mais conhecidos títulos da série e usa o sistema Storyteller para o desenvolvimento e a interpretação dos fatos e eventos.</p>
 
-<p>Por existirem mais de cem livros de <strong>Lobisomem: O Apocalipse</strong> como resultado de complementos das versões básicas do cenário, fica difícil ou no mínimo moroso pesquisar por entre estes informações a serem adicionadas nas fichas de cada personagem. Visando este déficit, decidimos criar uma aplicação que ajude nessas buscas, economizando tempo dos jogadores e auxiliando de forma eficaz em encontrar as informações requeridas.</p>
+<p>Por existir uma quantidade enorme de livros de <strong>Lobisomem: O Apocalipse</strong> como resultado de complementos das versões básicas do cenário, fica difícil ou no mínimo moroso pesquisar por entre estes informações a serem adicionadas nas fichas de cada personagem. Visando este déficit, decidimos criar uma aplicação que ajude nessas buscas, economizando tempo dos jogadores e auxiliando de forma eficaz em encontrar as informações requeridas.</p>
 
 <h2 id="descrição-do-projeto">Descrição do Projeto</h2>
 
@@ -41,12 +41,12 @@
 <ol>
 <li><h4>Menu Principal</h4></li> 
 
-<p>Lugar de acesso a diversas das informações do site. Por meio desta página, é possível ser direcionado para as páginas Dons, Rituais, Fetiches, Parceiros, Garou Nordeste e Matilha da Kombi</p>
+<p>Lugar de acesso a diversas das informações do site. Por meio desta página, é possível ser direcionado para as páginas Dons, Rituais, Fetiches, Parceiros, Garou Nordeste e Matilha da Kombi.</p>
 
 <p> </p>
 
 <li><h4>Dons</h4></li> 
-<p>Na página de dons é possível encontrar uma breve descrição do que são os dons, além de é possível utilizar os filtros de busca, que podem ser maximixados para que se escolham itens de cada lista. As aludidas listas são cinco:</p>
+<p>Na página é possível encontrar uma breve descrição do que são os dons, além de ser possível utilizar os filtros de busca, que podem ser maximixados para que se escolham itens de cada lista. As aludidas listas são cinco:</p>
 
 <ul>
 <li>Raça;</li>
@@ -69,7 +69,7 @@
 
 <li><h4>Parceiros</h4></li>
 
-<p>Nesta página é disponibilizada uma lista de todos os parceiros dos grupos ao qual os desenvolvedores pertencem. Nesta página, é possível encontrar todos os links de contato com estes parceiros, além de uma breve descrição dos mesmos e uma imagem da logo que os representa.</p>
+<p>Nesta página é disponibilizada uma lista de todos os parceiros dos grupos ao qual os desenvolvedores pertencem ou possuem uma grande proximidade. É possível encontrar todos os links de contato com estes parceiros, além de uma breve descrição dos mesmos e uma imagem da logo que os representa.</p>
 
 <li><h4>Garou Nordeste</h4></li>
 
@@ -81,15 +81,15 @@
 
 <li><h4>Tribos</h4></li>
 
-<p> Área do site onde são disponibilizadas todas as tribos para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
+<p> Área do site onde são disponibilizadas as dezessete tribos para consulta. Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações sobre a tribo ao clicar em uma delas.</p>
 
 <li><h4>Augúrios</h4></li>
 
-<p> Área do site onde são disponibilizadas todas os Augúrios para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
+<p> Área do site onde são disponibilizados os cinco Augúrios para consulta. Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada augúrio, além de, no futuro, ter acesso a informações ao clicar em uma delas.</p>
 
 <li><h4>Raças</h4></li>
 
-<p> Área do site onde são disponibilizadas todas as Raças para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
+<p> Área do site onde são disponibilizadas as três raças para consulta. Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada raça, além de, no futuro, ter acesso a informações e pontos de vista dos autores ao clicar em um deles.</p>
 
 <li><h4>Quem Somos</h4></li>
 
