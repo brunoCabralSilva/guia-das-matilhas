@@ -53,7 +53,7 @@
 <li>Posto;</li>
 <li>Livro.</li>
 </ul>
-
+<br>
 <p>Ao clicar uma vez, o item da lista selecionado é adicionado e pode ser visualizado em um pop-up no canto superior direito da tela. Ele pode ser removido clicando novamente no ícone ou desmarcando o checkbox referente ao mesmo no pop-up.</p>
 <p>Ao clicar em buscar, a aplicação retorna uma lista com todos os dons que se adequam aos filtros selecionados.</p>
 
@@ -77,14 +77,22 @@
 
 <p> Área do site ainda em processo de construção.</p>
 
+<li><h4>Tribos</h4></li>
 
-- `Funcionalidade 2`: Tribos
+<p> Área do site onde são disponibilizadas todas as tribos para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
 
-- `Funcionalidade 3`: Augúrios
+<li><h4>Augúrios</h4></li>
 
-- `Funcionalidade 4`: Raças
+<p> Área do site onde são disponibilizadas todas os Augúrios para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
 
-- `Funcionalidade 2`: Quem Somos
+<li><h4>Raças</h4></li>
+
+<p> Área do site onde são disponibilizadas todas as Raças para consulta Em uma lista no formato carrossel, o usuário poderá navegar entre as imagens de cada tribo, além de, no futuro, ter acesso a informações e pontos de vista dos autores sobre a tribo.</p>
+
+<li><h4>Quem Somos</h4></li>
+
+<p> Lugar reservado para falarmos um pouco a respeito de quem somos, quem são nossos grupos e como tudo começou, além de serem compartilhados todos os nossos links de contato.</p>
+
 </ol>
 
 <h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
