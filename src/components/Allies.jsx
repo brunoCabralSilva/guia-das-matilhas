@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/allies.css';
 import { motion } from 'framer-motion';
 
 
@@ -55,7 +54,7 @@ export default class Allies extends React.Component {
           }
         >
           <a href={href} target="_blank" rel="noreferrer">
-            <i className={` ${this.returnCont(rede)} friend-i `}></i>
+            <i className={` ${this.returnCont(rede)} px-2 text-xl hover:text-crepusculo transition duration-1000`}></i>
           </a>
         </motion.div >
       );

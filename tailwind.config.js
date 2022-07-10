@@ -20,10 +20,12 @@ module.exports = {
         '45vh': '45vh',
         '80vw': '80vw',
         '80%': '80%',
+        '95%':'95%,'
       },
       colors: {
         'h-transp': 'rgb(0,0,0,0.3)',
         'f-transp': 'rgb(0,0,0,0.6)',
+        'g-transp': 'rgb(0,0,0,0.8)',
         'crepusculo': '#df9793',
       },
       animation: {
