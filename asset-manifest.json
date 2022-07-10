@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.c318337e.css",
-    "main.js": "/guia-das-matilhas/static/js/main.0e914b8b.js",
+    "main.css": "/guia-das-matilhas/static/css/main.993e5cb0.css",
+    "main.js": "/guia-das-matilhas/static/js/main.92c2666b.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -95,7 +95,6 @@
     "static/media/uktena.png": "/guia-das-matilhas/static/media/uktena.c2e7f23fd1ff5adf933f.png",
     "static/media/Wendigo.png": "/guia-das-matilhas/static/media/Wendigo.9f1582fa726253d10e39.png",
     "static/media/boneGnawers.png": "/guia-das-matilhas/static/media/boneGnawers.376f9090840e353cdb11.png",
-    "static/media/001.jpg": "/guia-das-matilhas/static/media/001.10fe93a822b2e6a0585f.jpg",
     "static/media/caern.png": "/guia-das-matilhas/static/media/caern.9a544120713f4c0d7987.png",
     "static/media/RedTalons.png": "/guia-das-matilhas/static/media/RedTalons.d49a4a41c196f4e11d9d.png",
     "static/media/bunyip.png": "/guia-das-matilhas/static/media/bunyip.81ff0a230f4893301cd6.png",
@@ -112,6 +111,7 @@
     "static/media/rageacrossbrasil.png": "/guia-das-matilhas/static/media/rageacrossbrasil.19d0526d3fc599e1e4b9.png",
     "static/media/glassWalkers_book.jpg": "/guia-das-matilhas/static/media/glassWalkers_book.b4b603ac31a4b4c961af.jpg",
     "static/media/blackSpiralDancers_semFundo.png": "/guia-das-matilhas/static/media/blackSpiralDancers_semFundo.19a39553462af6d5b819.png",
+    "static/media/001.jpg": "/guia-das-matilhas/static/media/001.7732ba41059acaae2499.jpg",
     "static/media/moon.jpg": "/guia-das-matilhas/static/media/moon.688b0ea20a5dc4947ad8.jpg",
     "static/media/rpgclandestino.png": "/guia-das-matilhas/static/media/rpgclandestino.d680c63003c4e4c07e96.png",
     "static/media/apocalypse.jpg": "/guia-das-matilhas/static/media/apocalypse.7da44b0ee68b338a55a5.jpg",
@@ -163,11 +163,11 @@
     "static/media/SilverFangs_semFundo.png": "/guia-das-matilhas/static/media/SilverFangs_semFundo.99553b1220086c81e8c2.png",
     "static/media/silentStriders_semFundo.png": "/guia-das-matilhas/static/media/silentStriders_semFundo.05bfe73dbbd5c64a76e0.png",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.c318337e.css.map": "/guia-das-matilhas/static/css/main.c318337e.css.map",
-    "main.0e914b8b.js.map": "/guia-das-matilhas/static/js/main.0e914b8b.js.map"
+    "main.993e5cb0.css.map": "/guia-das-matilhas/static/css/main.993e5cb0.css.map",
+    "main.92c2666b.js.map": "/guia-das-matilhas/static/js/main.92c2666b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c318337e.css",
-    "static/js/main.0e914b8b.js"
+    "static/css/main.993e5cb0.css",
+    "static/js/main.92c2666b.js"
   ]
 }
