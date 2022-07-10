@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: white;
-  font-family: Andika New Basic, sans-serif;
-  background-color: black;
-}
-
 .main {
   height: 100vh;
   position: relative;
@@ -22,4 +16,6 @@ body {
   -webkit-text-stroke-color: #000;
   z-index: 1;
   position: relative;
+  background-color: #82332F;
 }
+

@@ -13,10 +13,10 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <main>
-        <div className="bg-black">
-          <div className=""></div>
-          <div className="">
+      <main className="bg-wolf-01 bg-cover bg-center md:bg-top">
+        <div className="h-screen relative">
+          <div className="h-full w-full absolute bg-h-transp"></div>
+          <div className="z-10 relative">
             <Nav />
           </div>
           <motion.div
@@ -27,15 +27,17 @@ export default class Home extends React.Component {
               duration: 1,
             }}
             exit={{ y: -20, opacity: 0, transition: { duration: 0.3 } }}
+            className="z-10 relative flex flex-col items-center w-full"
           >
-            <div className="">
-              <h1 className="">Guia das Matilhas</h1>
+            <div className="w-80% h-45vh text-center text-white flex items-end justify-center font-amatic text-5xl md:text-7xl 2xl:text-8xl">
+              <h1 className="animate-pulse ">Guia das Matilhas</h1>
             </div>
-            <div className="">
+            <div className="w-full h-40vh flex justify-center items-end">
               <Link to="/menu" className="">
                 <img
                   src={require('../images/logos/arrow-down.png')}
                   alt="Seta para baixo"
+                  className="animate-pulse hover:animate-pulse-fast w-16 md:w-20"
                 />
               </Link>
             </div>

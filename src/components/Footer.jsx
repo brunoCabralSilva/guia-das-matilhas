@@ -4,13 +4,21 @@ import '../css/footer.css';
 export default class Footer extends React.Component {
   render() {
     return (
-      <footer>
-        <div className="footer-divImg">
-          <img src={require('../images/logos/Garou Nordeste.png')} alt="Logo do Garou Nordeste" className="footer-img" />
-          <img src={require('../images/logos/Crônicas da Kombi.png')} alt="Logo da Matilha da Kombi" className="footer-img" />
+      <footer className="bg-f-transp text-white p-0 flex flex-col sm:flex-row justify-between">
+        <div className="w-1/4 flex flex-row justify-center sm:justify-start p-2 my-4 sm:my-0">
+          <img
+            src={require('../images/logos/Garou Nordeste.png')}
+            alt="Logo do Garou Nordeste"
+            className="w-16"
+          />
+          <img
+            src={require('../images/logos/Crônicas da Kombi.png')}
+            alt="Logo da Matilha da Kombi"
+            className="w-16"
+          />
         </div>
-        <div className="footer-copyright">
-          <p>© 2022 Copyright - Bruno Gabryell Cabral da Silva & Thiago Lucas Martins da Silva</p>
+        <div className="w-3/4 p-2">
+          <p className="text-center sm:text-right w-full">© 2022 Copyright - Bruno Gabryell Cabral da Silva & Thiago Lucas Martins da Silva</p>
         </div>
       </footer>
     );
