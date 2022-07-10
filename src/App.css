@@ -2,20 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-  height: 100vh;
-  position: relative;
+
+.constr-gif-wolf {
+  animation: run linear 5s infinite;
 }
 
-.title-page {
-  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
-  color: white;
-  font-size: 50px;
-  padding: 20px 30px 20px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #000;
-  z-index: 1;
-  position: relative;
-  background-color: #82332F;
+.constr-gif-wolf:nth-child(01) {
+  animation: run linear 7s infinite;
 }
 
+.constr-gif-wolf:nth-child(02) {
+  animation: run linear 2s infinite;
+}
+
+.constr-gif-wolf:nth-child(03) {
+  animation: run linear 4s infinite;
+}
+
+.constr-gif-wolf:nth-child(04) {
+  animation: run linear 3s infinite;
+}
+
+@keyframes run {
+  0% {
+    transform: translate(-75px, 0px);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translate(-50px, 0px);
+  }
+
+  50% {
+    transform: translate(-25px, 0px);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(25px, 0px);
+    opacity: 0;
+  }
+}

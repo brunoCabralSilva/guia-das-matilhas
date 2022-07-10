@@ -13,11 +13,13 @@ module.exports = {
         'wolf-01': "url('/src/images/wallpapers/001.jpg')",
       },
       spacing: {
-        '80%': '80%',
-        '45vh': '45vh',
-        '40vh': '40vh',
         '20vw': '20vw',
+        '33vh': '33vh',
+        '35vh': '35vh',
+        '40vh': '40vh',
+        '45vh': '45vh',
         '80vw': '80vw',
+        '80%': '80%',
       },
       colors: {
         'h-transp': 'rgb(0,0,0,0.3)',

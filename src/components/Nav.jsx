@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
               Augúrios
             </Link>
           </li>
-          <span className=" mt-2"><span className="flex mob-1:hidden mob-2:flex">|</span></span>
+          <span className=" mt-2">|</span>
           <li className="px-2 mt-2">
             <Link to="/breeds"
               className="text-white hover:text-crepusculo transition duration-1000 px-2"
@@ -44,7 +44,7 @@ export default class Nav extends React.Component {
               Raças
             </Link>
           </li>
-          <span className=" mt-2"><span className="flex mob-1:flex mob-2:hidden mob-3:flex">|</span></span>
+          <span className=" mt-2">|</span>
           <li className="px-2 mt-2">
             <Link to="/about"
               className="text-white hover:text-crepusculo transition duration-1000 px-2"

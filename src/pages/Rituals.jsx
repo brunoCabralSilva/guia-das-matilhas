@@ -12,13 +12,17 @@ export default class Rituals extends React.Component {
 
   render() {
     return (
-      <div className="main">
-        <div className="darkness"></div>
-        <div className="main-nav">
-          <Nav />
-          <Construction />
-          <Footer />
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative">
+        <div className="relative z-20 h-screen">
+          <div className="h-full w-full absolute"></div>
+          <div className="main-nav relative z-20">
+            <Nav />
+          </div>
+          <div className="flex items-center justify-center h-full">
+            <Construction />
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }

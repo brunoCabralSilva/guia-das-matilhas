@@ -35,7 +35,7 @@ export default class Navegation extends React.Component {
     }
 
     return (
-      <div className="navegation navegation-grid">
+      <div className="navegation navegation-grid h-screen">
         <motion.div
           className="nav-default navegation0"
           initial={{ opacity: 0, x: 20 }}

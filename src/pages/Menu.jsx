@@ -15,7 +15,7 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <section className="menu">
+      <section className="">
         <Navegation
           homeReturn={this.homeReturn}
         />
