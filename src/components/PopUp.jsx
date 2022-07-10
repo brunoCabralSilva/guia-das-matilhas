@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/popup.css';
+import { IoIosArrowDown } from "react-icons/io";
 
 export default class PopUp extends React.Component {
 
@@ -16,15 +16,15 @@ export default class PopUp extends React.Component {
 
     const rankList = rankSelected.map((item) => {
       return (
-        <div>
-          <label htmlFor={item} className="label-item">
+        <div className="">
+          <label htmlFor={item} className="">
             <input
               checked={true}
               id={item}
               name={item}
               type="checkbox"
               onChange={removeRank}
-              className="label-item"
+              className=""
             />
             {` ${item} `}
           </label>
@@ -34,9 +34,9 @@ export default class PopUp extends React.Component {
     const bookList = bookSelected.map((item) => {
       return (
         <div>
-          <label htmlFor={item} className="label-item">
+          <label htmlFor={item} className="">
             <input
-              className="label-item"
+              className=""
               checked={true}
               id={item}
               name={item}
@@ -52,22 +52,22 @@ export default class PopUp extends React.Component {
       <div className={
         minimizePopUp
           ? null
-          : "disable"}
+          : "hidden"}
       >
         <scroll-container>
           {divideFeature(feature)}
           <p className={
             rankSelected.length === 0
-              ? "disable"
-              : "title-pop-up"}
+              ? "hidden"
+              : "flex"}
           >
             Postos:
           </p>
           {rankList}
           <p className={
             bookSelected.length === 0
-              ? "disable"
-              : "title-pop-up"}
+              ? "hidden"
+              : "flex"}
           >
             Livros:
           </p>
@@ -91,37 +91,23 @@ export default class PopUp extends React.Component {
       <div
         className={
           feature.length === 0 && rankSelected.length === 0 && bookSelected.length === 0
-            ? "disable"
-            : animationPopUp
+            ? "hidden transition duration-500"
+            : 'bg-black flex flex-col right-0 top-0 fixed w-60 transition duration-500'
         }
       >
         <div
-          className="div-pop-up"
+          className="flex flex-row p-2 text-white"
           onClick={() => minimizes('minimizePopUp')}
         >
-          <p className={`${nameFilterDisable()}`}>Filtros selecionados:</p>
-          {minimizePopUp
-            ? <img
-              src={require('../images/logos/arrow-up.png')}
-              alt="Seta para cima"
+          <p className={`${nameFilterDisable()} p-3 w-80%`}>Filtros selecionados:</p>
+          <IoIosArrowDown
               onClick={() => minimizes('minimizePopUp')}
               className={
                 minimizePopUp
-                  ? "img-arrow-pop-up-max"
-                  : "img-arrow-pop-up"
+                  ? "w-20% p-3 object-cover text-white transition duration-500"
+                  : "w-20% p-4'object-cover text-white transition duration-500"
               }
             />
-            : <img
-              src={require('../images/logos/arrow-down.png')}
-              alt="seta para baixo"
-              onClick={() => minimizes('minimizePopUp')}
-              className={
-                minimizePopUp
-                  ? "img-arrow-pop-up-max"
-                  : "img-arrow-pop-up"
-              }
-            />
-          }
         </div>
         {this.allFiltersReturn()}
       </div>

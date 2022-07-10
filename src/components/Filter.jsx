@@ -14,23 +14,23 @@ export default class Filter extends React.Component {
       itemsSelected,
     } = this.props;
     return (
-      <section className="filter">
+      <section className="w-full">
         <div
-          className="filter-name-arrow"
+          className="w-full flex flex-row justify-between items-center bg-f-transp pt-2 px-4 my-2"
           onClick={() => funcMin(nameMinimize)}>
-          <h2 className="h2-filter" onClick={() => funcMin(nameMinimize)}>{name}</h2>
-          <div className="filter-arrow-animate" onClick={() => funcMin(nameMinimize)}>
+          <h2 className="" onClick={() => funcMin(nameMinimize)}>{name}</h2>
+          <div className="" onClick={() => funcMin(nameMinimize)}>
             {
               statusMinimize
                 ? <img
                   alt="seta para cima"
                   src={require('../images/logos/arrow-up.png')}
-                  className="img-arrow"
+                  className="w-12"
                 />
                 : <img
                   alt="seta para baixo"
                   src={require('../images/logos/arrow-down.png')}
-                  className="img-arrow"
+                  className="w-12"
                 />
             }
           </div>
@@ -40,7 +40,7 @@ export default class Filter extends React.Component {
             className={
               statusMinimize
                 ? null
-                : "disable"}
+                : "hidden"}
           >
             <List
               list={list}

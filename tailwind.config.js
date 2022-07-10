@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    minHeight: {
+      '33vh': '33vh',
+    },
     extend: {
       fontFamily: {
         'amatic': ['Amatic SC'],
@@ -20,6 +23,7 @@ module.exports = {
         '45vh': '45vh',
         '80vw': '80vw',
         '80%': '80%',
+        '20%': '20%',
         '95%':'95%,'
       },
       colors: {

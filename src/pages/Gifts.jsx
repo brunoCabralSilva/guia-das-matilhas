@@ -1,6 +1,4 @@
 import React from 'react';
-import '../css/gifts.css';
-import '../css/popup.css';
 import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Filter from '../components/Filter';
@@ -270,24 +268,24 @@ export default class Gifts extends React.Component {
       <div>
         <p className={
           breeds.length === 0
-            ? "disable"
-            : "title-pop-up"}
+            ? "hidden"
+            : "flex"}
         >
           Raças:
         </p>
         {breeds}
         <p className={
           augurios.length === 0
-            ? "disable"
-            : "title-pop-up"}
+            ? "hidden"
+            : "flex"}
         >
           Augúrios:
         </p>
         {augurios}
         <p className={
           tribos.length === 0
-            ? "disable"
-            : "title-pop-up"}
+            ? "hidden"
+            : "flex"}
         >
           Tribos:
         </p>
@@ -314,13 +312,13 @@ export default class Gifts extends React.Component {
       animationPopUp,
     } = this.state;
     return (
-      <div className="gifts">
-        <div className="darkness-gift"></div>
-        <div className="main-nav">
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative flex flex-col text-white">
+        <div className="bg-f-transp absolute"></div>
+        <div className="z-20">
           <Nav />
         </div>
         <motion.div
-          className="gift-content"
+          className="z-20 m-3"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -330,33 +328,29 @@ export default class Gifts extends React.Component {
             transition: { duration: 0.5 }
           }}
         >
-          <div className="search-by-gifts">
-            <h1 className="title-page">Dons</h1>
-            <div className="div-gift-text">
-              <div className="gift-text">
-                <p className="gift-p">
+          <div className="flex flex-col leading-9">
+            <h1 className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 mt-3">
+              Dons
+            </h1>
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+                <p className="w-11/12 md:w-1/2 md:py-0 p-3">
                   O mundo espiritual divide muitos segredos com os lobisomens e outros metamorfos.
                   De acordo com um antigo pacto, os espíritos ensinam habilidades mágicas chamadas Dons aos Garou. Os Dons permitem aos lobisomens concentrar uma energia espiritual para afetar a Tellurian. Tribos, augúrios e até mesmo raças diferentes aprendem Dons dinstintos.
                 </p>
-              </div>
-              <img src={require('../images/wallpapers/wolf_soul.png')} alt="Dois Garou em comunhão" className="gift-img" />
+              <img src={require('../images/wallpapers/wolf_soul.png')} alt="Dois Garou em comunhão" className="w-11/12 md:w-1/2 h-60 object-cover md:py-0 py-3" />
             </div>
-            <div className="div-gift-text">
-              <img src={require('../images/wallpapers/caern.png')} alt="Caern em festa" className="gift-img" id="fire-image" />
-              <div>
-                <p className="gift-p">
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col-reverse text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+              <img src={require('../images/wallpapers/caern.png')} alt="Caern em festa" className="w-11/12 md:w-1/2  h-60 object-cover md:py-0 py-3" />
+                <p className="w-11/12 md:w-1/2 md:py-0 p-3">
                   Cada Grupo tem seus próprios segredos e suas próprias e exclusivas ligações espirituais e, como consequência, existem muitos Dons espalhados ao longo de todos os livros que foram publicados, dificultando a busca ou tornando-a no mínimo massiva. Esta área foi criada para auxiliar esta oportunidade encontrada e aqui você pode pesquisar rapidamente por um ou mais dons que desejar.
                 </p>
-              </div>
             </div>
-            <div className="div-gift-text">
-              <div className="gift-text">
-                <p className="gift-p">
-                  Para realizar a busca, você pode escolher um ou mais filtros: filtros de Raças, Tribos e Augúrios retornarão qualquer dom que inclua um dos selecionados. Filtros de posto e livro só retornarão os dons que tiverem os filtros selecionados. Ao selecionar algum filtro, ele aparecerá em um pop-up no canto superior direito, onde você poderá acompanhar todos os filtros escolhidos e também removê-los caso deseje.
-                  Não selecionar nenhum filtro retornará uma lista com todos os dons.
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+                <p className="w-11/12 md:w-1/2 md:py-0 p-3">
+                Para realizar a busca, você pode escolher um ou mais filtros: filtros de Raças, Tribos e Augúrios retornarão qualquer dom que inclua um dos selecionados. Filtros de posto e livro só retornarão os dons que tiverem os filtros selecionados. Ao selecionar algum filtro, ele aparecerá em um pop-up no canto superior direito, onde você poderá acompanhar todos os filtros escolhidos e também removê-los caso deseje.
+                Não selecionar nenhum filtro retornará uma lista com todos os dons.
                 </p>
-              </div>
-              <img src={require('../images/wallpapers/thunder-wyrm.png')} alt="Lobisomem enfrentando Wyrm Trovão" className="gift-img" />
+              <img src={require('../images/wallpapers/thunder-wyrm.png')} alt="Lobisomem enfrentando Wyrm Trovão" className="w-11/12 md:w-1/2 object-cover md:py-0 py-3 h-60" />
             </div>
             <PopUp
               feature={feature}
@@ -370,7 +364,7 @@ export default class Gifts extends React.Component {
               animationPopUp={animationPopUp}
               nameFilterDisable={this.nameFilterDisable}
             />
-            <div className="gift-pop-up-list">
+            <div className="">
               <Filter
                 name="Raças"
                 select={this.featureSelected}
@@ -417,7 +411,7 @@ export default class Gifts extends React.Component {
                 itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
               <button
-                className="btn-gift-search"
+                className="w-full bg-black my-3 py-2 hover:border hover-border-white"
                 onClick={this.giftReturn}
               >
                 Realizar Busca
@@ -435,9 +429,7 @@ export default class Gifts extends React.Component {
             }
           </div>
         </motion.div>
-        <div className="footer-gifts">
           <Footer />
-        </div>
       </div>
     );
   }
