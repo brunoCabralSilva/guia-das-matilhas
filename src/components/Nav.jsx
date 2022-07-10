@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/nav.css';
 import { motion } from 'framer-motion';
 
 export default class Nav extends React.Component {

@@ -1,6 +1,4 @@
 import React from 'react';
-import '../css/transition.css';
-import { Link } from 'react-router-dom';
 
 export default class Transition extends React.Component {
   render() {

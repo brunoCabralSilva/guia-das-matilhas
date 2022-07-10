@@ -87,14 +87,14 @@ export default class Allies extends React.Component {
 
     return (
       <motion.section
-        className="friend-section"
+        className="flex flex-col md:flex-row m-3 text-white 2xl:leading-8 md:leading-7 leading-8 text-base 2xl:text-xl"
         variants={parceiros}
         custom={index}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <div className="friend-div-img">
+        <div className="w-full md:w-1/3 lg:w-1/6 min-h-48 md:mr-3 md:bg-f-transp bg-gradient-to-r from-f-transp to-transparent flex items-center justify-center">
           {
             image === ""
               ? "Sem imagem"
@@ -102,19 +102,19 @@ export default class Allies extends React.Component {
                 whileHover={{ scale: 1.1 }}
                 src={require(`../images/logos/${image}`)}
                 alt="imagem do parceiro"
-                className="friend-img"
+                className="sm:w-11/12 w-8/12 p-4"
               />
           }
         </div>
-        <div className="friend-text">
-          <h1 className="friend-name">{name}</h1>
-          <p className="friend-description">{
+        <div className="w-full md:w-2/3 lg:w-5/6 bg-gradient-to-r from-f-transp to-transparent mt-3 md:mt-0">
+          <h1 className="text-2xl 2xl:text-4xl p-6 md:p-4">{name}</h1>
+          <p className="px-6 md:px-4">{
             description === ''
               ? 'Aguardando texto descritivo por parte dos colaboradores'
               : description
           }
           </p>
-          <div className="friend-contact">
+          <div className="p-6 md:p-4 flex flex-row">
             {this.contact()}
           </div>
         </div>

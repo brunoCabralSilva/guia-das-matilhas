@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/rituals.css';
 import Nav from '../components/Nav';
 import Construction from '../components/Construction';
 import Footer from '../components/Footer';

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/friends.css';
 import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -44,13 +43,13 @@ export default class Friends extends React.Component {
     };
 
     return (
-      <div className="main">
-        <div className="friends">
-          <div className="friends-nav">
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative">
+        <div className="min-h-screen">
+          <div className="">
             <Nav />
           </div>
           <motion.h2
-            className="title-page title-friend"
+            className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-3"
             custom={0}
             variants={parceiros}
             initial="hidden"
@@ -61,9 +60,7 @@ export default class Friends extends React.Component {
           </motion.h2>
           {this.allFriends(parceiros)}
         </div>
-        <div className="friends-footer">
           <Footer />
-        </div>
       </div>
     );
   }
