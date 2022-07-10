@@ -14,9 +14,9 @@ export default class Home extends React.Component {
   render() {
     return (
       <main>
-        <div className="wallpaper01 main">
-          <div className="darkness"></div>
-          <div className="main-nav">
+        <div className="bg-black">
+          <div className=""></div>
+          <div className="">
             <Nav />
           </div>
           <motion.div
@@ -28,11 +28,11 @@ export default class Home extends React.Component {
             }}
             exit={{ y: -20, opacity: 0, transition: { duration: 0.3 } }}
           >
-            <div className="home-title">
-              <h1 className="content-title-page">Guia das Matilhas</h1>
+            <div className="">
+              <h1 className="">Guia das Matilhas</h1>
             </div>
-            <div className="home-arrow-image">
-              <Link to="/menu" className="link-arrow-image">
+            <div className="">
+              <Link to="/menu" className="">
                 <img
                   src={require('../images/logos/arrow-down.png')}
                   alt="Seta para baixo"
