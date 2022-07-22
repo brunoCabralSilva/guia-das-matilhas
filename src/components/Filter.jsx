@@ -14,7 +14,7 @@ export default class Filter extends React.Component {
       itemsSelected,
     } = this.props;
     return (
-      <section className="w-full">
+      <section className=" mx-3">
         <div
           className="w-full flex flex-row justify-between items-center bg-f-transp pt-2 px-4 my-2"
           onClick={() => funcMin(nameMinimize)}>

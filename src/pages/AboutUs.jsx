@@ -40,18 +40,18 @@ export default class AboutUs extends React.Component {
     };
 
     return (
-      <div className="bg-wolf-01 bg-cover bg-center bg-fixed sm:bg-top relative text-white">
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative pt-2">
+      <section className="min-h-screen text-white">
         <Nav />
-        <section className="flex flex-col">
-            <motion.h2
-              className="text-4xl bg-gradient-to-r from-g-transp to-transparent p-5 ml-3 mt-3"
-              variants={title}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              Quem Somos?
-            </motion.h2>
+        <motion.h2
+          className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"
+          custom={0}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          Quem Somos
+        </motion.h2>
             <div className="flex flex-col sm:flex-row m-3">
               <motion.div
                 className="w-full sm:w-1/2 mr-3 md:mr-0 "
@@ -64,7 +64,7 @@ export default class AboutUs extends React.Component {
                 <img
                   src={require('../images/logos/Garou Nordeste2.png')}
                   alt="Garou Nordeste"
-                  className="p-2 bg-g-transp mb-3 object-cover h-96"
+                  className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw"
                 />
 
                 <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
@@ -109,7 +109,7 @@ export default class AboutUs extends React.Component {
                 animate="visible"
                 exit="exit"
               >
-                <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96" />
+                <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw" />
                 <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
                   <h1 className="text-2xl">Matilha da Kombi</h1>
                   <div className="flex flex-row">

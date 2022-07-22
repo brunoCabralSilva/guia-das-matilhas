@@ -19,7 +19,7 @@ export default class Home extends React.Component {
         <Navegation
           homeReturn={this.homeReturn}
         />
-        <div className="menu-footer"><Footer /></div>
+        <div className="bg-black"><Footer /></div>
       </section>
     );
   }

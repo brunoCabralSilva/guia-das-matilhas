@@ -43,13 +43,11 @@ export default class Friends extends React.Component {
     };
 
     return (
-      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative">
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative pt-2">
         <div className="min-h-screen">
-          <div className="">
-            <Nav />
-          </div>
+          <Nav />
           <motion.h2
-            className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-3"
+            className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"
             custom={0}
             variants={parceiros}
             initial="hidden"

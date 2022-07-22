@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 export default class Construction extends React.Component {
   render() {
     return (
-      <section className="flex flex-col items-center justify-center text-white text-2xl font-andika">
+      <section className="h-full flex flex-col items-center justify-center text-white text-2xl font-andika">
         <motion.h2
           initial={{opacity:0}}
           animate={{opacity:1, transition: {delay: 0.5, duration: 1 }}}
           exit={{opacity:0, transition: { duration: 0.5 }}}
-          className="mb-6 text-center w-10/12"
+          className="mb-6 text-center w-10/12 mt-20 sm:mt-0"
         >
           Estamos em Construção...
         </motion.h2>

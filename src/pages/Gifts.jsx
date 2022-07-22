@@ -312,13 +312,11 @@ export default class Gifts extends React.Component {
       animationPopUp,
     } = this.state;
     return (
-      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative flex flex-col text-white">
+      <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative pt-2 flex flex-col text-white">
         <div className="bg-f-transp absolute"></div>
-        <div className="z-20">
           <Nav />
-        </div>
         <motion.div
-          className="z-20 m-3"
+          className="z-20"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -329,23 +327,28 @@ export default class Gifts extends React.Component {
           }}
         >
           <div className="flex flex-col leading-9">
-            <h1 className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 mt-3">
+          <motion.h2
+              className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
               Dons
-            </h1>
-            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+            </motion.h2>
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh  mx-3">
                 <p className="w-11/12 md:w-1/2 md:py-0 p-3">
                   O mundo espiritual divide muitos segredos com os lobisomens e outros metamorfos.
                   De acordo com um antigo pacto, os espíritos ensinam habilidades mágicas chamadas Dons aos Garou. Os Dons permitem aos lobisomens concentrar uma energia espiritual para afetar a Tellurian. Tribos, augúrios e até mesmo raças diferentes aprendem Dons dinstintos.
                 </p>
               <img src={require('../images/wallpapers/wolf_soul.png')} alt="Dois Garou em comunhão" className="w-11/12 md:w-1/2 h-60 object-cover md:py-0 py-3" />
             </div>
-            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col-reverse text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col-reverse text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh mx-3">
               <img src={require('../images/wallpapers/caern.png')} alt="Caern em festa" className="w-11/12 md:w-1/2  h-60 object-cover md:py-0 py-3" />
                 <p className="w-11/12 md:w-1/2 md:py-0 p-3">
                   Cada Grupo tem seus próprios segredos e suas próprias e exclusivas ligações espirituais e, como consequência, existem muitos Dons espalhados ao longo de todos os livros que foram publicados, dificultando a busca ou tornando-a no mínimo massiva. Esta área foi criada para auxiliar esta oportunidade encontrada e aqui você pode pesquisar rapidamente por um ou mais dons que desejar.
                 </p>
             </div>
-            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh">
+            <div className="flex bg-gradient-to-r from-f-transp to-transparent mt-3 flex-col text-center md:text-left p-2 md:flex-row items-center justify-center md:justify-between md:min-h-33vh mx-3">
                 <p className="w-11/12 md:w-1/2 md:py-0 p-3">
                 Para realizar a busca, você pode escolher um ou mais filtros: filtros de Raças, Tribos e Augúrios retornarão qualquer dom que inclua um dos selecionados. Filtros de posto e livro só retornarão os dons que tiverem os filtros selecionados. Ao selecionar algum filtro, ele aparecerá em um pop-up no canto superior direito, onde você poderá acompanhar todos os filtros escolhidos e também removê-los caso deseje.
                 Não selecionar nenhum filtro retornará uma lista com todos os dons.
@@ -410,12 +413,14 @@ export default class Gifts extends React.Component {
                 list={this.bookList().sort()}
                 itemsSelected={[...feature, ...rankSelected, ...bookSelected]}
               />
+              <div className="w-full flex justify-center">
               <button
-                className="w-full bg-black my-3 py-2 hover:border hover-border-white"
+                className="w-95% sm:w-99% m-3 bg-black py-2 hover:border hover-border-white"
                 onClick={this.giftReturn}
               >
                 Realizar Busca
               </button>
+              </div>
             </div>
             {showGifts
               ? <div>

@@ -26,7 +26,7 @@ export default class Home extends React.Component {
               duration: 1,
             }}
             exit={{ y: -20, opacity: 0, transition: { duration: 0.3 } }}
-            className="z-10 relative flex flex-col items-center w-full"
+            className="relative flex flex-col items-center w-full"
           >
             <div className="w-80% h-35vh md:h-45vh text-center text-white flex items-end justify-center font-amatic text-5xl md:text-7xl 2xl:text-8xl">
               <h1 className="animate-pulse ">Guia das Matilhas</h1>
