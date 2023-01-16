@@ -1,5 +1,4 @@
 import BlocoAtributo from './BlocoAtributo';
-import Points from './Points';
 
 export default function Attributes() {
   return (

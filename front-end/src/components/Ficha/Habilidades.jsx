@@ -1,4 +1,3 @@
-import Points from './Points';
 import BlocoHabilidade from './BlocoHabilidade';
 
 export default function Habilidades() {
