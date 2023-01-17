@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('./api/connection');
 
 const getAll = async () => {
     const [get] = await connection.execute('SELECT * FROM guia-das-matilhas.trybes');
