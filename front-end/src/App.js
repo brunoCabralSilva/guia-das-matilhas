@@ -17,7 +17,7 @@ import Gifts from './pages/Gifts';
 import Login from './pages/Login';
 import Painel from './pages/admin/Painel';
 import RegisterGift from './pages/admin/RegisterGift';
-import Ficha from './components/Ficha/Ficha';
+// import Ficha from './components/Ficha/Ficha';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
       <Route path='/login' component={Login} />
       <Route path="/painel-admin" component={Painel} />
       <Route path="/painel-dons" component={RegisterGift} />
-      <Route path="/ficha" component={Ficha} />
+      {/* <Route path="/ficha" component={Ficha} /> */}
       <Route exact path="/" component={Home} />
       <Route path="/trybes" component={Trybes} />
       <Route path="/breeds" component={Breeds} />

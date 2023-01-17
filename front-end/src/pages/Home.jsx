@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../components/Nav';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
+// import Nav from '../components/Nav';
+// import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 
 export default class Home extends React.Component {
@@ -16,7 +16,7 @@ export default class Home extends React.Component {
         <div className="h-screen relative">
           <div className="h-full w-full absolute bg-h-transp"></div>
           <div className="z-10 relative">
-            <Nav />
+            {/* <Nav /> */}
           </div>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -32,17 +32,17 @@ export default class Home extends React.Component {
               <h1 className="animate-pulse ">Guia das Matilhas</h1>
             </div>
             <div className="w-full h-33vh md:h-40vh flex justify-center items-end">
-              <Link to="/menu" className="">
+              {/* <Link to="/menu" className="">
                 <img
                   src={require('../images/logos/arrow-down.png')}
                   alt="Seta para baixo"
                   className="animate-pulse hover:animate-pulse-fast w-16 md:w-20"
                 />
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </main >
     );
   }

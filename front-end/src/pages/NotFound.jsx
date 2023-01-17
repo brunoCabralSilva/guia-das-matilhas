@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
+// import Nav from '../components/Nav';
+// import Footer from '../components/Footer';
 
 export default class NotFound extends React.Component {
 
@@ -11,11 +11,11 @@ export default class NotFound extends React.Component {
     render() {
         return (
             <div className="main">
-                <Nav />
+                {/* <Nav /> */}
                 <section className="content">
                     Not Found
                 </section>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         );
     }

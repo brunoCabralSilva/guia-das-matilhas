@@ -40,12 +40,12 @@ module.exports = {
       rotate: {
         '45deg': '-45deg',
       },
-      backgroundImage: {
-        'wolf-01': "url('/src/images/wallpapers/001.jpg')",
-        "w20":"url('/src/images/werewolfw20.png",
-        'boca':"url('/src/images/wallpapers/moon.jpg')",
-        'night': "url('/src/images/wallpapers/ceu_noturno.jpeg')",
-      },
+      // backgroundImage: {
+      //   'wolf-01': "url('/src/images/wallpapers/001.jpg')",
+      //   "w20":"url('/src/images/werewolfw20.png",
+      //   'boca':"url('/src/images/wallpapers/moon.jpg')",
+      //   'night': "url('/src/images/wallpapers/ceu_noturno.jpeg')",
+      // },
       spacing: {
         '13': '2.7rem',
         '20%': '20%',

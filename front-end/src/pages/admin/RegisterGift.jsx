@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import Nav from '../../components/Nav';
-import GiftExibition from '../../components/GiftExibition';
+// import Nav from '../../components/Nav';
+// import GiftExibition from '../../components/GiftExibition';
 import fetch from '../../fetch';
 
 export default function RegisterGift() {
@@ -168,16 +168,16 @@ export default function RegisterGift() {
   return (
     <div className={`w-full ${showFormGift ? 'min-h-screen' : 'h-screen'} bg-wolf-01 bg-cover flex flex-col relative`}>
       <div className="main-nav relative z-20">
-        <Nav />
+        {/* <Nav /> */}
       </div>
       <div className="w-full mt-14 sm:mt-6 items-center" onClick={() => setShowFormGift(!showFormGift)}>
         <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => setShowFormGift(!showFormGift)}>
           <h1 className="text-4xl text-white" onClick={() => setShowFormGift(!showFormGift)}>Adicionar um Dom</h1>
-          <img
+          {/* <img
             className="h-14 object-cover"
             src={require(`../../images/logos/${!showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
             onClick={() => setShowFormGift(!showFormGift)}
-          />
+          /> */}
         </div>
       </div>
       {
@@ -440,14 +440,14 @@ export default function RegisterGift() {
       <div className="w-full mt-2 sm:mt-2 items-center">
         <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => setShowGifts(!showGifts)}>
           <h1 className="text-4xl text-white" onClick={() => setShowGifts(!showGifts)}>Lista de Dons</h1>
-          <img
+          {/* <img
             className="h-14 object-cover"
             src={require(`../../images/logos/${showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}
             onClick={() => setShowGifts(!showGifts)}
-          />
+          /> */}
         </div>
         <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
-          {
+          {/* {
             listGifts &&  listGifts.data.map((gifts, index) => (
               <GiftExibition
                 key={ index }
@@ -464,7 +464,7 @@ export default function RegisterGift() {
                 admin={true}
               />
             ))
-          }
+          } */}
         </div>
       </div>
     </div>

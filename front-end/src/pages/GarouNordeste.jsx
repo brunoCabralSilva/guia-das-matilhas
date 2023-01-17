@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../components/Nav';
-import Construction from '../components/Construction';
-import Footer from '../components/Footer';
+// import Nav from '../components/Nav';
+// import Construction from '../components/Construction';
+// import Footer from '../components/Footer';
 
 export default class GarouNordeste extends React.Component {
 
@@ -15,13 +15,13 @@ export default class GarouNordeste extends React.Component {
         <div className="relative z-20 h-screen">
           <div className="h-full w-full absolute"></div>
           <div className="main-nav relative z-20">
-            <Nav />
+            {/* <Nav /> */}
           </div>
           <div className="flex items-center justify-center h-full">
-            <Construction />
+            {/* <Construction /> */}
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
