@@ -76,6 +76,17 @@ var GiftService = /** @class */ (function () {
                 }
             });
         }); };
+        this.returnFeatures = function () { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.model.returnFeatures()];
+                    case 1:
+                        query = _a.sent();
+                        return [2 /*return*/, query];
+                }
+            });
+        }); };
         this.model = new GiftModel_1.default();
     }
     return GiftService;

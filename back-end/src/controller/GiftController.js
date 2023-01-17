@@ -122,6 +122,36 @@ var GiftController = /** @class */ (function () {
                 }
             });
         }); };
+        this.returnFeatures = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+            var query, error_4;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.service.returnFeatures()];
+                    case 1:
+                        query = _a.sent();
+                        if (query) {
+                            return [2 /*return*/, res.status(201).json(query)];
+                        }
+                        return [2 /*return*/, res.status(404).json({
+                                queryBooks: [],
+                                queryBreeds: [],
+                                queryAuspices: [],
+                                queryTrybes: [],
+                            })];
+                    case 2:
+                        error_4 = _a.sent();
+                        return [2 /*return*/, res.status(404).json({
+                                queryBooks: [],
+                                queryBreeds: [],
+                                queryAuspices: [],
+                                queryTrybes: [],
+                            })];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        }); };
         this.service = new GiftService_1.default();
     }
     return GiftController;

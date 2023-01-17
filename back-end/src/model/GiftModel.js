@@ -173,6 +173,31 @@ var GiftModel = /** @class */ (function () {
                 }
             });
         }); };
+        this.returnFeatures = function () { return __awaiter(_this, void 0, void 0, function () {
+            var queryBooks, queryBreeds, queryAuspices, queryTrybes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.fonts')];
+                    case 1:
+                        queryBooks = (_a.sent())[0];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.breeds')];
+                    case 2:
+                        queryBreeds = (_a.sent())[0];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.auspices')];
+                    case 3:
+                        queryAuspices = (_a.sent())[0];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.trybes')];
+                    case 4:
+                        queryTrybes = (_a.sent())[0];
+                        return [2 /*return*/, {
+                                queryBooks: queryBooks,
+                                queryBreeds: queryBreeds,
+                                queryAuspices: queryAuspices,
+                                queryTrybes: queryTrybes,
+                            }];
+                }
+            });
+        }); };
         this.connection = connection_1.default;
     }
     return GiftModel;

@@ -21,4 +21,9 @@ export default class GiftService {
     const query = await this.model.registerGift(gift);
     return query;
   };
+
+  returnFeatures = async() => {
+    const query = await this.model.returnFeatures();
+    return query;
+  }
 };

@@ -55,4 +55,25 @@ export default class GiftController {
       return res.status(404).json({ register: error });
     }
   };
+
+  returnFeatures = async(req: Request, res: Response) => {
+    try {
+      const query = await this.service.returnFeatures();
+      if (query) {
+        return res.status(201).json(query);
+      } return res.status(404).json({
+        queryBooks: [],
+        queryBreeds: [],
+        queryAuspices: [],
+        queryTrybes: [],
+      });
+    } catch(error) {
+      return res.status(404).json({
+        queryBooks: [],
+        queryBreeds: [],
+        queryAuspices: [],
+        queryTrybes: [],
+      });
+    }
+  }
 };

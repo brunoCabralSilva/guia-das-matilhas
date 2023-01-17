@@ -40,19 +40,13 @@ export default class RegisterGift extends React.Component {
   async componentDidMount() {
     await this.showAllGifts();
     const { history } = this.props;
+    const getLists = await axios.get(`${fetch()}/gifts/lists`);
     this.setState({
-      listBreeds: [],
-      listAuspices: [],
-      listTrybes: [],
-      listBooks: [],
+      listBreeds: getLists.data.queryBreeds,
+      listAuspices: getLists.data.queryAuspices,
+      listTrybes: getLists.data.queryTrybes,
+      listBooks: getLists.data.queryBooks,
     });
-    // const register = await axios.get(`${fetch()}/gifts/lists`);
-    // this.setState({
-    //   listBreeds: register.data.queryBreeds,
-    //   listAuspices: register.data.queryAuspices,
-    //   listTrybes: register.data.queryTrybes,
-    //   listBooks: register.data.queryBooks,
-    // });
     const token = localStorage.getItem('token');
     const authentication = await axios.post (`${fetch()}/authenticate`, {
       token, 

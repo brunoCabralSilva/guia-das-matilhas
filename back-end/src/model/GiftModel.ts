@@ -97,4 +97,17 @@ export default class GiftModel {
     const foundGift = await this.getGiftById(query.insertId);
     return foundGift;
   };
+
+  returnFeatures = async() => {
+    const [queryBooks]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.fonts');
+    const [queryBreeds]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.breeds');
+    const [queryAuspices]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.auspices');
+    const [queryTrybes]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.trybes');
+    return {
+      queryBooks,
+      queryBreeds,
+      queryAuspices,
+      queryTrybes,
+    };
+  }
 };
