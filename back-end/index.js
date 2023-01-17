@@ -1,10 +1,8 @@
-import getAll from "../getall";
-
 const express = require('express');
+const getAll = require('./src/getAll');
 require('dotenv').config();
 
 const app = express();
-
 app.use(express.json());
 
 const port = process.env.PORT || 3001;
