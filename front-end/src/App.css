@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: url('./images/wallpapers/model.jpg');
+  /* background-image: url('./images/wallpapers/model.jpg'); */
   background-size: cover;
   background-position: center;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .swiper-slide {
-  background-image: url('./images/wallpapers/001.jpg');
+  /* background-image: url('./images/wallpapers/001.jpg'); */
   background-position: center;
   background-size: cover;
 }
