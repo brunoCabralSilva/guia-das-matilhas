@@ -177,7 +177,7 @@ var GiftModel = /** @class */ (function () {
             var queryBooks, queryBreeds, queryAuspices, queryTrybes;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM fonts')];
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM belongs')];
                     case 1:
                         queryBooks = (_a.sent())[0];
                         return [4 /*yield*/, this.connection.execute('SELECT * FROM breeds')];

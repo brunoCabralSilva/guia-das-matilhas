@@ -99,7 +99,7 @@ export default class GiftModel {
   };
 
   returnFeatures = async() => {
-    const [queryBooks]: any = await this.connection.execute('SELECT * FROM fonts');
+    const [queryBooks]: any = await this.connection.execute('SELECT * FROM belongs');
     const [queryBreeds]: any = await this.connection.execute('SELECT * FROM breeds');
     const [queryAuspices]: any = await this.connection.execute('SELECT * FROM auspices');
     const [queryTrybes]: any = await this.connection.execute('SELECT * FROM trybes');
