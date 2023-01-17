@@ -6,34 +6,41 @@ export default class Login extends React.Component{
   state = {
     user: '',
     password: '',
-
   };
   
   async componentDidMount() {
     const { history } = this.props;
-    const token = localStorage.getItem('token');
-    const resp =  await axios.post(`${fetch()}/login/verify`, { token });
-    if(resp) {
-      history.push('/painel-admin');
+    try {
+      const token = localStorage.getItem('token');
+      const resp =  await axios.post(`${fetch()}/login/verify`, { token });
+      if(resp) {
+        history.push('/painel-admin');
+      }
+    } catch(error) {
+      console.log(error.message);
     }
   };
 
   submit = async () => {
     const { history } = this.props;
-    const { user, password } = this.state;
-    const resp = await axios.post(`${fetch()}/login`,
-      {
-        user,
-        password,
-      }
-    );
-    localStorage.setItem('token', resp.data.token );
-    window.alert(resp.data.message);
+    try {
+      const { user, password } = this.state;
+      const resp = await axios.post(`${fetch()}/login`,
+        {
+          user,
+          password,
+        },
+      );
+      localStorage.setItem('token', resp.data.token );
+      window.alert(resp.data.message);
 
-    if(resp.data.message === 'Usuário autorizado!') {
-      history.push('/painel-admin');
-    } 
-  }
+      if(resp.data.resp) {
+        history.push('/painel-admin');
+      }
+    } catch(error) {
+      console.log(error.message);
+    }
+  };
 
   render() {
     return (
