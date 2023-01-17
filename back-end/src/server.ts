@@ -1,12 +1,16 @@
 import express from 'express';
 import dotenv from "dotenv";
 import login from './routes/login';
+import cors from 'cors';
+
 // import gifts from './routes/gifts';
 // import authenticate from './routes/authenticate';
 
 dotenv.config();
-
 const app = express();
+
+app.use(cors());
+
 app.use(express.json());
 
 const port = process.env.PORT || 3001;

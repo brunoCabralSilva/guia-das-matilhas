@@ -24,7 +24,7 @@ export default class LoginController {
   };
 
   login = async (req: Request, res: Response): Promise<Response> => {
-    const { user, password, } = req.body;
+    const { user, password } = req.body;
     const search = await this.service.login(user, password);
     if (search) {
       return res.status(201).json({ token: search });

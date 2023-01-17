@@ -54,7 +54,6 @@ var LoginModel = /** @class */ (function () {
                     case 0: return [4 /*yield*/, this.connection.execute("SELECT * FROM login_app WHERE login_user = ? AND login_password = ?", [user, password])];
                     case 1:
                         search = (_a.sent())[0];
-                        console.log(search);
                         if (search.length === 0) {
                             return [2 /*return*/, false];
                         }

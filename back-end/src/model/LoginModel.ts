@@ -13,7 +13,6 @@ export default class LoginModel {
 
   async login(user: string, password: string): Promise<boolean | string> {
     const [search] = await this.connection.execute<RowDataPacket[]>(`SELECT * FROM login_app WHERE login_user = ? AND login_password = ?`, [user, password]);
-    console.log(search);
     if (search.length === 0) {
       return false;
     } else {
