@@ -1,5 +1,5 @@
 const express = require('express');
-const getAll = require('./src/getAll');
+const getAll = require('./getAll');
 require('dotenv').config();
 
 const app = express();
