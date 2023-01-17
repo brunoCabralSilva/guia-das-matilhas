@@ -12,11 +12,6 @@ dotenv_1.default.config();
 var app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
 var port = process.env.PORT || 3001;
 app.listen(port, function () { return console.log("Funcionando na porta ".concat(port)); });
 app.use('/login', login_1.default);
