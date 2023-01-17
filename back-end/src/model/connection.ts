@@ -6,7 +6,7 @@ const connection = mysql.createPool({
   user: process.env.MYSQLUSER || 'root',
   port: process.env.MYSQLPORT || 3307,
   password: process.env.MYSQLPASSWORD || 'root',
-  database: process.env.MYSQLDATABASE || 'guia-das-matilhas',
+  database: process.env.MYSQLDATABASE || 'guia_das_matilhas',
 });
 
-module.exports = connection;
+export default connection;
