@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nome": "Hominídeos",
+        "gnose": 1,
+        "imagem": "homid.png",
+        "imgGlifo": "homid.png"
+    },
+    {
+        "id": 2,
+        "nome": "Impuros",
+        "gnose": 3,
+        "imagem": "metis.png",
+        "imgGlifo": "metis.png"
+    },
+    {
+        "id": 3,
+        "nome": "Lupinos",
+        "gnose": 5,
+        "imagem": "lupus.png",
+        "imgGlifo": "lupus.png"
+    }
+]
