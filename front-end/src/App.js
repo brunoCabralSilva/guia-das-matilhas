@@ -14,9 +14,9 @@ import Trybes from './pages/Trybes';
 import Breeds from './pages/Breeds';
 import Auspices from './pages/Auspices';
 import Gifts from './pages/Gifts';
-import Login from './pages/Login';
-import Painel from './pages/admin/Painel';
-import RegisterGift from './pages/admin/RegisterGift';
+// import Login from './pages/Login';
+// import Painel from './pages/admin/Painel';
+// import RegisterGift from './pages/admin/RegisterGift';
 // import Ficha from './components/Ficha/Ficha';
 
 
@@ -25,9 +25,9 @@ function App() {
     <AnimateSharedLayout>
       <AnimatePresence>
         <Switch>
-          <Route path='/login' component={Login} />
+          {/* <Route path='/login' component={Login} />
           <Route path="/painel-admin" component={Painel} />
-          <Route path="/painel-dons" component={RegisterGift} />
+          <Route path="/painel-dons" component={RegisterGift} /> */}
           {/* <Route path="/ficha" component={Ficha} /> */}
           <Route exact path="/guia-das-matilhas" component={Home} />
           <Route path="/trybes" component={Trybes} />
