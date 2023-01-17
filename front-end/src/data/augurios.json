@@ -1,0 +1,42 @@
+[
+    {
+        "nome": "Ragabash",
+        "lua": "Lua Nova",
+        "furia": 1,
+        "imagem": "ragabash__invertido-removebg-preview.png",
+        "imagemGlifoBranco": "ragabash2.png",
+        "imagemGlifoPreto": "ragabash.png"
+    },
+    {
+        "nome": "Theurge",
+        "lua": "Lua Crescente",
+        "furia": 2,
+        "imagem": "theurge_invertido-removebg-preview.png",
+        "imagemGlifoBranco": "theurge2.png",
+        "imagemGlifoPreto": "theurge.png"
+    },
+    {
+        "nome": "Philodox",
+        "lua": "Meia Lua",
+        "furia": 3,
+        "imagem": "philodox_invertido-removebg-preview.png",
+        "imagemGlifoBranco": "philodox2.png",
+        "imagemGlifoPreto": "philodox"
+    },
+    {
+        "nome": "Galliard",
+        "lua": "Lua Gibosa",
+        "furia": 4,
+        "imagem": "galliard_invertido-removebg-preview.png",
+        "imagemGlifoBranco": "galliard2.png",
+        "imagemGlifoPreto": "galliard.png"
+    },
+    {
+        "nome": "Ahroun",
+        "lua": "Lua Cheia",
+        "furia": 5,
+        "imagem": "ahroun_invertido-removebg-preview.png",
+        "imagemGlifoBranco": "ahroun2.png",
+        "imagemGlifoPreto": "ahroun.png"
+    }
+]

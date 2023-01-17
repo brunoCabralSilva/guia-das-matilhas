@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "nome": "Andarilhos do Asfalto",
+        "imagem": "glassWalkers.png",
+        "imgFiltro": "glassWalkers_slide.png",
+        "imgGlifoFundoBranco": "glassWalkers_glifo.jpg",
+        "imgGlifoSemFundo": "glassWalkers_semFundo.png",
+        "imagemTransp": "glassWalkers_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 2,
+        "nome": "Crias de Fenris",
+        "imagem": "getOfFenris.png",
+        "imgFiltro": "getOfFenris_slide.png",
+        "imgGlifoFundoBranco": "getOfFenris_glifo.jpg",
+        "imgGlifoSemFundo": "getOfFenris_semFundo.png",
+        "imagemTransp": "getOfFenris_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 3,
+        "nome": "Fianna",
+        "imagem": "fianna.png",
+        "imgFiltro": "fianna_slide.png",
+        "imgGlifoFundoBranco": "fianna_glifo.jpg",
+        "imgGlifoSemFundo": "fianna_semFundo.png",
+        "imagemTransp": "fianna_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 4,
+        "nome": "Filhos de Gaia",
+        "imagem": "childrenOfGaia.png",
+        "imgFiltro": "childrenOfGaia_slide.png",
+        "imgGlifoFundoBranco": "childrenOfGaia_glifo.jpg",
+        "imgGlifoSemFundo": "childrenOfGaia_semFundo.png",
+        "imagemTransp": "childrenOfGaia_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 4
+    },
+    {
+        "id": 5,
+        "nome": "Fúrias Negras",
+        "imagem": "blackFuries.png",
+        "imgFiltro": "blackFuries_slide.png",
+        "imgGlifoFundoBranco": "blackFuries_glifo.jpg",
+        "imgGlifoSemFundo": "blackFuries_semFundo.png",
+        "imagemTransp": "blackFuries_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 6,
+        "nome": "Garras Vermelhas",
+        "imagem": "RedTalons.png",
+        "imgFiltro": "RedTalons_slide.png",
+        "imgGlifoFundoBranco": "RedTalons_glifo.jpg",
+        "imgGlifoSemFundo": "RedTalons_semFundo.png",
+        "imagemTransp": "RedTalons_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 7,
+        "nome": "Peregrinos Silenciosos",
+        "imagem": "silentStriders.png",
+        "imgFiltro": "silentStriders_slide.png",
+        "imgGlifoFundoBranco": "silentStriders_glifo.jpg",
+        "imgGlifoSemFundo": "silentStriders_semFundo.png",
+        "imagemTransp": "silentStriders_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 8,
+        "nome": "Portadores da Luz Interior",
+        "imagem": "stargazers.png",
+        "imgFiltro": "stargazers_slide.png",
+        "imgGlifoFundoBranco": "stargazers_glifo.jpg",
+        "imgGlifoSemFundo": "stargazers_semFundo.png",
+        "imagemTransp": "stargazers_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 4
+    },
+    {
+        "id": 9,
+        "nome": "Presas de Prata",
+        "imagem": "SilverFangs.png",
+        "imgFiltro": "SilverFangs_slide.png",
+        "imgGlifoFundoBranco": "SilverFangs_glifo.jpg",
+        "imgGlifoSemFundo": "SilverFangs_semFundo.png",
+        "imagemTransp": "SilverFangs_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 10,
+        "nome": "Roedores de Ossos",
+        "imagem": "boneGnawers.png",
+        "imgFiltro": "boneGnawers_slide.png",
+        "imgGlifoFundoBranco": "boneGnawers_glifo.jpg",
+        "imgGlifoSemFundo": "boneGnawers_semFundo.png",
+        "imagemTransp": "boneGnawers_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 4
+    },
+    {
+        "id": 11,
+        "nome": "Senhores das Sombras",
+        "imagem": "shadowLords.png",
+        "imgFiltro": "shadowLords_slide.png",
+        "imgGlifoFundoBranco": "shadowLords_glifo.jpg",
+        "imgGlifoSemFundo": "shadowLords_semFundo.png",
+        "imagemTransp": "shadowLords_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 12,
+        "nome": "Uktena",
+        "imagem": "uktena.png",
+        "imgFiltro": "uktena_slide.png",
+        "imgGlifoFundoBranco": "uktena_glifo.jpg",
+        "imgGlifoSemFundo": "uktena_semFundo.png",
+        "imagemTransp": "uktena_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 3
+    },
+    {
+        "id": 13,
+        "nome": "Wendigo",
+        "imagem": "Wendigo.png",
+        "imgFiltro": "Wendigo_slide.png",
+        "imgGlifoFundoBranco": "Wendigo_glifo.jpg",
+        "imgGlifoSemFundo": "Wendigo_semFundo.png",
+        "imagemTransp": "Wendigo_transp.png",
+        "estado": "Nação Garou",
+        "fdv": 4
+    },
+    {
+        "id": 14,
+        "nome": "Bunyip",
+        "imagem": "bunyip.png",
+        "imgFiltro": "bunyip_slide.png",
+        "imgGlifoFundoBranco": "bunyip_glifo.jpg",
+        "imgGlifoSemFundo": "bunyip_semFundo.png",
+        "imagemTransp": "bunyip_transp.png",
+        "estado": "Extinta",
+        "fdv": 3
+    },
+    {
+        "id": 15,
+        "nome": "Croatan",
+        "imagem": "croatan.png",
+        "imgFiltro": "croatan_slide.png",
+        "imgGlifoFundoBranco": "croatan_glifo.jpg",
+        "imgGlifoSemFundo": "croatan_semFundo.png",
+        "imagemTransp": "croatan_transp.png",
+        "estado": "Extinta",
+        "fdv": 3
+    },
+    {
+        "id": 16,
+        "nome": "Uivadores Brancos",
+        "imagem": "Howlers.png",
+        "imgFiltro": "Howlers_slide.png",
+        "imgGlifoFundoBranco": "Howlers_glifo.jpg",
+        "imgGlifoSemFundo": "Howlers_semFundo.png",
+        "imagemTransp": "Howlers_transp.png",
+        "estado": "Extinta",
+        "fdv": 3
+    },
+    {
+        "id": 17,
+        "nome": "Dançarinos da Espiral Negra",
+        "imagem": "blackSpiralDancers.png",
+        "imgFiltro": "blackSpiralDancers_slide.png",
+        "imgGlifoFundoBranco": "blackSpiralDancers_semFundo.png",
+        "imgGlifoSemFundo": "blackSpiralDancers_semFundo.png",
+        "imagemTransp": "blackSpiralDancers_transp.png",
+        "estado": "Caída",
+        "fdv": 3
+    }
+]
