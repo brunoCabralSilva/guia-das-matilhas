@@ -41,6 +41,7 @@ export default class RegisterGift extends React.Component {
     await this.showAllGifts();
     const { history } = this.props;
     const getLists = await axios.get(`${fetch()}/gifts/lists`);
+    console.log(getLists);
     this.setState({
       listBreeds: getLists.data.queryBreeds,
       listAuspices: getLists.data.queryAuspices,
@@ -135,7 +136,7 @@ export default class RegisterGift extends React.Component {
       window.alert('Necessário inserir uma descrição maior para o campo "Texto original".');
     } else if (systemOriginal.length <= 10 ) {
       window.alert('Necessário inserir uma descrição maior para o campo "Sistema original"');
-    } else if (verify.data.length !== 0) {
+    } else if (verify.data.gift) {
       window.alert('Dom já existe na base de dados');
     }
     else {
@@ -180,7 +181,7 @@ export default class RegisterGift extends React.Component {
       const verify = await axios.post(`${fetch()}/gifts/name`, {
         name,
       });
-      if (verify.data.length === 0) {
+      if (!verify.data.gift) {
         this.setState({ vName: "Nome disponível para cadastro" });
       } else {
         this.setState({ vName: "Nome já existente na base de dados" });
