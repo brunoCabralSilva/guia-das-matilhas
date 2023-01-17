@@ -14,10 +14,10 @@ export default class LoginController {
   verifyLogin = async (req: Request, res: Response): Promise<Response> => {
     const { token } = req.body;
     try{
-      const search = await this.token.verify(token);
+      const search = this.token.verify(token);
       if (search) {
         return res.status(201).json({ token: true });
-      } return res.status(201).json({ token: true });
+      } return res.status(201).json({ token: false });
     } catch(error) {
       return res.status(404).json({ token: false });
     }
