@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 // import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import './App.css';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 // import NotFound from './pages/NotFound';
 // import Menu from './pages/Menu';
 // import MatilhaDaKombi from './pages/MatilhaDaKombi';
@@ -14,7 +14,7 @@ import './App.css';
 // import Breeds from './pages/Breeds';
 // import Auspices from './pages/Auspices';
 // import Gifts from './pages/Gifts';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 // import Painel from './pages/admin/Painel';
 // import RegisterGift from './pages/admin/RegisterGift';
 // import Ficha from './components/Ficha/Ficha';
@@ -22,12 +22,12 @@ import Login from './pages/Login';
 function App() {
   return (
     <Switch>
-      <Route path='/login' component={Login} />
+      {/* <Route path='/login' component={Login} /> */}
       {/* <Route path="/painel-admin" component={Painel} />
       <Route path="/painel-dons" component={RegisterGift} />
-      <Route path="/ficha" component={Ficha} />
-      <Route exact path="/guia-das-matilhas" component={Home} />
-      <Route path="/trybes" component={Trybes} />
+      <Route path="/ficha" component={Ficha} /> */}
+      <Route exact path="/" component={Home} />
+      {/* <Route path="/trybes" component={Trybes} />
       <Route path="/breeds" component={Breeds} />
       <Route path="/auspices" component={Auspices} />
       <Route path="/about" component={AboutUs} />
