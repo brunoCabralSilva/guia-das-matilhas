@@ -111,10 +111,10 @@ var GiftModel = /** @class */ (function () {
                             var id, query;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
-                                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.belongs WHERE belong_name = ?', [belong])];
+                                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM belongs WHERE belong_name = ?', [belong])];
                                     case 1:
                                         id = (_a.sent())[0];
-                                        return [4 /*yield*/, this.connection.execute('INSERT INTO guia_das_matilhas.gifts_belong (gift_id, belong_id) VALUES (?, ?)', [idGift, id[0].belong_id])];
+                                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts_belong (gift_id, belong_id) VALUES (?, ?)', [idGift, id[0].belong_id])];
                                     case 2:
                                         query = (_a.sent())[0];
                                         return [2 /*return*/, ({
@@ -139,10 +139,10 @@ var GiftModel = /** @class */ (function () {
                                 switch (_a.label) {
                                     case 0:
                                         book = font.book, page = font.page, edition = font.edition;
-                                        return [4 /*yield*/, this.connection.execute('INSERT INTO guia_das_matilhas.fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition])];
+                                        return [4 /*yield*/, this.connection.execute('INSERT INTO fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition])];
                                     case 1:
                                         query = (_a.sent())[0];
-                                        return [4 /*yield*/, this.connection.execute('INSERT INTO guia_das_matilhas.gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId])];
+                                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId])];
                                     case 2:
                                         query2 = (_a.sent())[0];
                                         return [2 /*return*/];
@@ -161,7 +161,7 @@ var GiftModel = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         name = gift.name, rank = gift.rank, font = gift.font, belong = gift.belong, textPtbr = gift.textPtbr, systemPtbr = gift.systemPtbr, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
-                        return [4 /*yield*/, this.connection.execute('INSERT INTO guia_das_matilhas.gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal])];
+                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal])];
                     case 1:
                         query = (_a.sent())[0];
                         this.registerBelong(query.insertId, belong);
@@ -177,16 +177,16 @@ var GiftModel = /** @class */ (function () {
             var queryBooks, queryBreeds, queryAuspices, queryTrybes;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.fonts')];
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM fonts')];
                     case 1:
                         queryBooks = (_a.sent())[0];
-                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.breeds')];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM breeds')];
                     case 2:
                         queryBreeds = (_a.sent())[0];
-                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.auspices')];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM auspices')];
                     case 3:
                         queryAuspices = (_a.sent())[0];
-                        return [4 /*yield*/, this.connection.execute('SELECT * FROM guia_das_matilhas.trybes')];
+                        return [4 /*yield*/, this.connection.execute('SELECT * FROM trybes')];
                     case 4:
                         queryTrybes = (_a.sent())[0];
                         return [2 /*return*/, {

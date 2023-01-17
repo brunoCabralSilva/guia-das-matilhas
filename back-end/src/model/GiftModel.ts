@@ -55,9 +55,9 @@ export default class GiftModel {
   registerBelong = async (idGift: number, belongs: string[]) => {
     await Promise.all(
       belongs.map( async(belong: string) => {
-        const [id]: any = await this.connection.execute<RowDataPacket[]>('SELECT * FROM guia_das_matilhas.belongs WHERE belong_name = ?', [belong]);
+        const [id]: any = await this.connection.execute<RowDataPacket[]>('SELECT * FROM belongs WHERE belong_name = ?', [belong]);
 
-        const [query]: any = await this.connection.execute<RowDataPacket[]>('INSERT INTO guia_das_matilhas.gifts_belong (gift_id, belong_id) VALUES (?, ?)', [idGift, id[0].belong_id]);
+        const [query]: any = await this.connection.execute<RowDataPacket[]>('INSERT INTO gifts_belong (gift_id, belong_id) VALUES (?, ?)', [idGift, id[0].belong_id]);
 
         return ({
           'belong': query.insertId,
@@ -70,9 +70,9 @@ export default class GiftModel {
     await Promise.all(
       fonts.map( async(font: giftFont) => {
         const { book, page, edition } = font;
-        const [query]: any = await this.connection.execute<RowDataPacket[]>('INSERT INTO guia_das_matilhas.fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition]);
+        const [query]: any = await this.connection.execute<RowDataPacket[]>('INSERT INTO fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition]);
 
-        const [query2] = await this.connection.execute<RowDataPacket[]>('INSERT INTO guia_das_matilhas.gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
+        const [query2] = await this.connection.execute<RowDataPacket[]>('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
       }
     ));
   };
@@ -89,7 +89,7 @@ export default class GiftModel {
       systemOriginal
     } = gift;
     
-    const [query]: any = await this.connection.execute('INSERT INTO guia_das_matilhas.gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal]);
+    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);
@@ -99,10 +99,10 @@ export default class GiftModel {
   };
 
   returnFeatures = async() => {
-    const [queryBooks]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.fonts');
-    const [queryBreeds]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.breeds');
-    const [queryAuspices]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.auspices');
-    const [queryTrybes]: any = await this.connection.execute('SELECT * FROM guia_das_matilhas.trybes');
+    const [queryBooks]: any = await this.connection.execute('SELECT * FROM fonts');
+    const [queryBreeds]: any = await this.connection.execute('SELECT * FROM breeds');
+    const [queryAuspices]: any = await this.connection.execute('SELECT * FROM auspices');
+    const [queryTrybes]: any = await this.connection.execute('SELECT * FROM trybes');
     return {
       queryBooks,
       queryBreeds,

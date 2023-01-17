@@ -289,7 +289,7 @@ export default class RegisterGift extends React.Component {
                     >
                       <option disabled selected>Selecione um Livro</option>
                       {
-                        listBooks.length > 0 && listBooks.map((book, index) => (
+                        listBooks && listBooks.map((book, index) => (
                           <option
                             key={ index }
                             className=""
@@ -339,7 +339,7 @@ export default class RegisterGift extends React.Component {
                 </button>
               </div>
               {
-                listOfFonts.length > 0 && listOfFonts.map((fonts, index) => (
+                listOfFonts && listOfFonts.map((fonts, index) => (
                   <div key={index} className="ml-5 mr-1 my-3 border border-gray-300 p-2 flex justify-between bg-white pl-10 rounded-lg">
                     <div className="w-10/12 flex items-center">
                       <p className="w-1/3">
@@ -389,19 +389,19 @@ export default class RegisterGift extends React.Component {
                   <option disabled value={0} selected>Selecione</option>
                   <option disabled value={0}>Tribos</option>
                   {
-                    listTrybes.length > 0 && listTrybes.map((li, index) => (
+                    listTrybes && listTrybes.map((li, index) => (
                       <option key={ index } value={ li.trybes_name }>{ li.trybes_name }</option>
                     ))
                   }
                   <option disabled value={0}>Raça</option>
                   {
-                    listBreeds.length > 0 && listBreeds.map((li, index) => (
+                    listBreeds && listBreeds.map((li, index) => (
                       <option key={ index } value={ li.breeds_name }>{ li.breeds_name }</option>
                     ))
                   }
                   <option disabled value={0}>Augúrios</option>
                   {
-                    listAuspices.length > 0 && listAuspices.map((li, index) => (
+                    listAuspices && listAuspices.map((li, index) => (
                       <option key={ index } value={ li.auspices_name }>{ li.auspices_name }</option>
                     ))
                   }
@@ -416,7 +416,7 @@ export default class RegisterGift extends React.Component {
               </label>
               <div className="flex flex-col mb-3">
                 {
-                  listOfBelongs.length > 0 && listOfBelongs.map((bel, index) => (
+                  listOfBelongs && listOfBelongs.map((bel, index) => (
                     <div key={index} className="ml-5 mr-1 mt-3 border border-gray-300 p-2 flex justify-between bg-white pl-10 rounded-lg items-center">
                       <div className="w-10/12 mr-4">
                         { bel }
