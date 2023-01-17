@@ -29,7 +29,7 @@ function App() {
           <Route path="/painel-admin" component={Painel} />
           <Route path="/painel-dons" component={RegisterGift} /> */}
           {/* <Route path="/ficha" component={Ficha} /> */}
-          <Route exact path="/guia-das-matilhas" component={Home} />
+          <Route exact path="/" component={Home} />
           {/* <Route path="/trybes" component={Trybes} />
           <Route path="/breeds" component={Breeds} />
           <Route path="/auspices" component={Auspices} />
