@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Transition from '../components/Transition';
 import navegation from '../data/navegation.json';

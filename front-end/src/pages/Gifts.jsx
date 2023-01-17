@@ -232,7 +232,7 @@ export default class Gifts extends React.Component {
         if (item !== "Ahroun" && item !== "Philodox" && item !== "Galliard" && item !== "Theurge" && item !== "Ragabash") {
           return <span className="label-item">item</span>;
         }
-      }
+      } return null;
     });
 
     const tribos = filtroTribos.map((item, index) => {

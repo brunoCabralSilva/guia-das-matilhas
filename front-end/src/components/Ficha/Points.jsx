@@ -8,6 +8,8 @@ export default function Points(type, func) {
   const [lv5, setLv5] = useState(false);
   const [value, setValue] = useState(1);
 
+  console.log(lv1, value);
+
   const nivel1 = () => { 
     setLv2(false);
     setLv3(false);

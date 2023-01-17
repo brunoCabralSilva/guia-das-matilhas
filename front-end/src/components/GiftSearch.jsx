@@ -16,8 +16,10 @@ export default class GiftSearch extends React.Component {
         const books = bookSearch.map((book) => {
           const fontFiltered = font.filter((f) => f.book === book);
           if(fontFiltered.length > 0) return true;
+          return false;
         });
         if (books.includes(true)) return dom;
+        return false;
       });
     } else if (bookSearch.length === 0) {
       filter = listAllGifts;
@@ -39,6 +41,7 @@ export default class GiftSearch extends React.Component {
         const { rank } = eachGift;
         const items = rankNames.filter((item) => item === rank);
         if(items.length > 0) return items;
+        return false;
       });
     }
 
@@ -48,8 +51,10 @@ export default class GiftSearch extends React.Component {
         const items = featureSearch.map((item) => {
           const eachName = belong.map((cat) => cat.includes(item));
           if (eachName.includes(true)) return true;
+          return false;
         });
         if (items.includes(true)) return dom;
+        return false;
       });
     }
     const filtredGifts = filter.map((dom, index) => (
