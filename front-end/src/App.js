@@ -1,5 +1,5 @@
 // import { Switch, Route } from 'react-router-dom';
-import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+// import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import './App.css';
 // import Home from './pages/Home';
 // import NotFound from './pages/NotFound';
@@ -21,29 +21,25 @@ import './App.css';
 
 function App() {
   return (
-    <AnimateSharedLayout>
-      <AnimatePresence>
-        {/* <Switch>
-          <Route path='/login' component={Login} />
-          <Route path="/painel-admin" component={Painel} />
-          <Route path="/painel-dons" component={RegisterGift} />
-          <Route path="/ficha" component={Ficha} />
-          <Route exact path="/guia-das-matilhas" component={Home} />
-          <Route path="/trybes" component={Trybes} />
-          <Route path="/breeds" component={Breeds} />
-          <Route path="/auspices" component={Auspices} />
-          <Route path="/about" component={AboutUs} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/dons" component={Gifts} />
-          <Route path="/matilha-da-kombi" component={MatilhaDaKombi} />
-          <Route path="/garou-nordeste" component={GarouNordeste} />
-          <Route path="/page" component={Page} />
-          <Route path="/rituais" component={Rituals} />
-          <Route path="/parceiros" component={Friends} />
-          <Route exact path="*" component={NotFound} />
-        </Switch> */}
-      </AnimatePresence>
-    </AnimateSharedLayout>
+    {/* <Switch>
+      <Route path='/login' component={Login} />
+      <Route path="/painel-admin" component={Painel} />
+      <Route path="/painel-dons" component={RegisterGift} />
+      <Route path="/ficha" component={Ficha} />
+      <Route exact path="/guia-das-matilhas" component={Home} />
+      <Route path="/trybes" component={Trybes} />
+      <Route path="/breeds" component={Breeds} />
+      <Route path="/auspices" component={Auspices} />
+      <Route path="/about" component={AboutUs} />
+      <Route path="/menu" component={Menu} />
+      <Route path="/dons" component={Gifts} />
+      <Route path="/matilha-da-kombi" component={MatilhaDaKombi} />
+      <Route path="/garou-nordeste" component={GarouNordeste} />
+      <Route path="/page" component={Page} />
+      <Route path="/rituais" component={Rituals} />
+      <Route path="/parceiros" component={Friends} />
+      <Route exact path="*" component={NotFound} />
+    </Switch> */}
   );
 }
 
