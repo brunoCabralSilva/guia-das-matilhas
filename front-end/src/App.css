@@ -1,101 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-image: url('./images/wallpapers/model.jpg');
-  background-size: cover;
-  background-position: center;
+.App {
+  text-align: center;
 }
 
-.constr-gif-wolf {
-  animation: run linear 5s infinite;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.constr-gif-wolf:nth-child(01) {
-  animation: run linear 7s infinite;
-}
-
-.constr-gif-wolf:nth-child(02) {
-  animation: run linear 2s infinite;
-}
-
-.constr-gif-wolf:nth-child(03) {
-  animation: run linear 4s infinite;
-}
-
-.constr-gif-wolf:nth-child(04) {
-  animation: run linear 3s infinite;
-}
-
-@keyframes run {
-  0% {
-    transform: translate(-75px, 0px);
-    opacity: 0;
-  }
-
-  25% {
-    transform: translate(-50px, 0px);
-  }
-
-  50% {
-    transform: translate(-25px, 0px);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translate(0px, 0px);
-  }
-
-  100% {
-    transform: translate(25px, 0px);
-    opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  font-size: 60px;
-  font-weight: bolder;
-  -webkit-text-stroke-width: 1px; /* largura da borda */
-  -webkit-text-stroke-color: #000; /* cor da borda */
 }
 
-.swiper-slide-active {
-  filter: blur(0);
+.App-link {
+  color: #61dafb;
 }
 
-.swiper-slide {
-  background-image: url('./images/wallpapers/001.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.slider-swiper-div {
-  max-width: 30%;
-}
-
-@media (min-width: 650px) and (max-width: 965px) {
-  .swiper-slide {
-    max-width: 45%;
-  }  
-}
-
-@media (min-width: 350px) and (max-width: 649px) {
-  .swiper-slide {
-    max-width: 70%;
-  }  
-}
-
-@media (max-width: 349px) {
-  .swiper-slide {
-    max-width: 95%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  .swiper-button-next::after, .swiper-button-prev::after {
-    display: none;
+  to {
+    transform: rotate(360deg);
   }
-}
-
-.h {
-  height: 100%;
 }
