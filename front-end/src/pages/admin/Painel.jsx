@@ -57,10 +57,14 @@ export default class Painel extends React.Component {
   async componentDidMount() {
     const { history } = this.props;
     const token = localStorage.getItem('token');
-    const authentication = await axios.post (`${fetch()}/painel`, {
-      token, 
-    });
-    if (!authentication.data.token) {
+    try {
+      const authentication = await axios.post (`${fetch()}/login/verify`, {
+        token, 
+      });
+      if (!authentication.data.token) {
+        history.push('/login');
+      }
+    } catch(error) {
       history.push('/login');
     }
   };

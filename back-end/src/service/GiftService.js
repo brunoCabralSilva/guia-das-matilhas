@@ -39,47 +39,46 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var LoginService_1 = __importDefault(require("../service/LoginService"));
-var Token_1 = __importDefault(require("../utils/Token"));
-var LoginController = /** @class */ (function () {
-    function LoginController() {
+var GiftModel_1 = __importDefault(require("../model/GiftModel"));
+var GiftService = /** @class */ (function () {
+    function GiftService() {
         var _this = this;
-        this.verifyLogin = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
-            var token, search;
+        this.getGiftByName = function (name) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
             return __generator(this, function (_a) {
-                token = req.body.token;
-                try {
-                    search = this.token.verify(token);
-                    if (search) {
-                        return [2 /*return*/, res.status(201).json({ token: true })];
-                    }
-                    return [2 /*return*/, res.status(201).json({ token: false })];
-                }
-                catch (error) {
-                    return [2 /*return*/, res.status(404).json({ token: false })];
-                }
-                return [2 /*return*/];
-            });
-        }); };
-        this.login = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
-            var _a, user, password, search;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        _a = req.body, user = _a.user, password = _a.password;
-                        return [4 /*yield*/, this.service.login(user, password)];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.model.getGiftByName(name)];
                     case 1:
-                        search = _b.sent();
-                        if (search) {
-                            return [2 /*return*/, res.status(201).json({ token: search })];
-                        }
-                        return [2 /*return*/, res.status(404).json({ token: false })];
+                        query = _a.sent();
+                        return [2 /*return*/, query];
                 }
             });
         }); };
-        this.service = new LoginService_1.default();
-        this.token = new Token_1.default();
+        this.getAllGifts = function () { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.model.getAllGifts()];
+                    case 1:
+                        query = _a.sent();
+                        return [2 /*return*/, query];
+                }
+            });
+        }); };
+        this.registerGift = function (gift) { return __awaiter(_this, void 0, void 0, function () {
+            var query;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.model.registerGift(gift)];
+                    case 1:
+                        query = _a.sent();
+                        return [2 /*return*/, query];
+                }
+            });
+        }); };
+        this.model = new GiftModel_1.default();
     }
-    return LoginController;
+    return GiftService;
 }());
-exports.default = LoginController;
+exports.default = GiftService;
+;

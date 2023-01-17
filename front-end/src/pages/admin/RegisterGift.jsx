@@ -30,21 +30,31 @@ export default class RegisterGift extends React.Component {
 
   showAllGifts = async () => {
     const register = await axios.get(`${fetch()}/gifts`);
-    this.setState({ listGifts: register });
+    if (register.data.list) {
+      this.setState({ listGifts: register.data.list });
+    } else {
+      this.setState({ listGifts: [] });
+    }
   };
 
   async componentDidMount() {
     await this.showAllGifts();
     const { history } = this.props;
-    const register = await axios.get(`${fetch()}/gifts/lists`);
     this.setState({
-      listBreeds: register.data.queryBreeds,
-      listAuspices: register.data.queryAuspices,
-      listTrybes: register.data.queryTrybes,
-      listBooks: register.data.queryBooks,
+      listBreeds: [],
+      listAuspices: [],
+      listTrybes: [],
+      listBooks: [],
     });
+    // const register = await axios.get(`${fetch()}/gifts/lists`);
+    // this.setState({
+    //   listBreeds: register.data.queryBreeds,
+    //   listAuspices: register.data.queryAuspices,
+    //   listTrybes: register.data.queryTrybes,
+    //   listBooks: register.data.queryBooks,
+    // });
     const token = localStorage.getItem('token');
-    const authentication = await axios.post (`${fetch()}/painel`, {
+    const authentication = await axios.post (`${fetch()}/authenticate`, {
       token, 
     });
     if (!authentication.data.token) {
@@ -135,16 +145,21 @@ export default class RegisterGift extends React.Component {
       window.alert('Dom já existe na base de dados');
     }
     else {
-      await axios.post(`${fetch()}/gifts`, {
-        name,
-        rank,
-        font: listOfFonts,
-        belong: listOfBelongs,
-        textPtbr,
-        systemPtbr,
-        textOriginal,
-        systemOriginal
-      });
+      try {
+        const register = await axios.post(`${fetch()}/gifts`, {
+          name,
+          rank,
+          font: listOfFonts,
+          belong: listOfBelongs,
+          textPtbr,
+          systemPtbr,
+          textOriginal,
+          systemOriginal
+        });
+        window.alert(register.data);
+      } catch(error) {
+        console.log(error.message);
+      }
 
       const rankSelect = document.getElementById("rank");
       rankSelect.selectedIndex = 0;

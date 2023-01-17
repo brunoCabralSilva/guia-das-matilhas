@@ -17,10 +17,16 @@ var Token = /** @class */ (function () {
             return json;
         };
         this.verify = function (token) {
-            var ver = jsonwebtoken_1.default.verify(token, _this.jwtSecret);
-            if (ver)
-                return true;
-            return false;
+            try {
+                var ver = jsonwebtoken_1.default.verify(token, _this.jwtSecret);
+                if (ver) {
+                    return true;
+                }
+                return false;
+            }
+            catch (error) {
+                return false;
+            }
         };
         this.jwtConfig = {
             expiresIn: '1000min',
