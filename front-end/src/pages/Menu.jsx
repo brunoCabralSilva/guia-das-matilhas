@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
-// import Footer from '../components/Footer';
-// import Transition from '../components/Transition';
-// import navegation from '../data/navegation.json';
-// import '../css/navegation.css';
-// import '../css/menu.css';
+import Footer from '../components/Footer';
+import Transition from '../components/Transition';
+import navegation from '../data/navegation.json';
+import '../css/navegation.css';
+import '../css/menu.css';
 
 export default class Menu extends React.Component {
 
@@ -60,10 +60,10 @@ export default class Menu extends React.Component {
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
           <div className="darkness-more"></div>
-          {/* <Transition homeReturn={this.homeReturn} /> */}
+          <Transition homeReturn={this.homeReturn} />
         </motion.div>
 
-        {/* {
+        {
           navegation.map((nav, index) => (
             <motion.div
               key={index}
@@ -79,10 +79,10 @@ export default class Menu extends React.Component {
               </Link>
             </motion.div>
           ))
-        } */}
+        }
 
       </div>
-        {/* <div className="bg-black"><Footer /></div> */}
+        <div className="bg-black"><Footer /></div>
       </section>
     );
   }

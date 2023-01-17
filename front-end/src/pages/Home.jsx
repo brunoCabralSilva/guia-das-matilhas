@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 
 export default class Home extends React.Component {

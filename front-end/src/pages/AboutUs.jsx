@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import Nav from '../components/Nav';
-// import ContactIcon from '../components/ContactIcon'
-// import Footer from '../components/Footer';
+import Nav from '../components/Nav';
+import ContactIcon from '../components/ContactIcon'
+import Footer from '../components/Footer';
 
 export default class AboutUs extends React.Component {
 
@@ -29,7 +29,7 @@ export default class AboutUs extends React.Component {
     return (
       <div className="bg-wolf-01 bg-cover bg-center sm:bg-top relative pt-2">
       <section className="text-white h-full">
-        {/* <Nav /> */}
+        <Nav />
         <motion.h2
           className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"
           custom={0}
@@ -48,20 +48,20 @@ export default class AboutUs extends React.Component {
             animate="visible"
             exit="exit"
           >
-            {/* <img
+            <img
               src={require('../images/logos/Garou Nordeste2.png')}
               alt="Garou Nordeste"
               className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw"
-            /> */}
+            />
 
             <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
               <h1 className="text-2xl">Garou Nordeste</h1>
-              {/* <div className="flex flex-row flex-wrap">
+              <div className="flex flex-row flex-wrap">
                 <ContactIcon iconName="fa-instagram" link="https://www.instagram.com/garounordeste/" />
                 <ContactIcon iconName="fa-spotify" link="https://open.spotify.com/show/7kal4LDO3ptHc3sG64btYI" />
                 <ContactIcon iconName="fa-youtube" link="https://www.youtube.com/c/GarouNordeste" />
                 <ContactIcon iconName="fa-facebook-f" link="https://www.facebook.com/garounordeste" />
-              </div> */}
+              </div>
             </div>
             <div className="bg-gradient-to-r from-g-transp to-transparent p-5 mt-3 leading-8 text-center md:text-left">
               <p className="pt-4">
@@ -96,12 +96,12 @@ export default class AboutUs extends React.Component {
             animate="visible"
             exit="exit"
           >
-            {/* <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw" /> */}
+            <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw" />
             <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
               <h1 className="text-2xl">Matilha da Kombi</h1>
               <div className="flex flex-row flex-wrap">
-                {/* <ContactIcon iconName="fa-instagram" link="https://www.instagram.com/cronicas_da_kombi/" />
-                <ContactIcon iconName="fa-facebook-f" link="https://www.facebook.com/cronicasdakombi" /> */}
+                <ContactIcon iconName="fa-instagram" link="https://www.instagram.com/cronicas_da_kombi/" />
+                <ContactIcon iconName="fa-facebook-f" link="https://www.facebook.com/cronicasdakombi" />
               </div>
             </div>
             <div className="bg-gradient-to-r from-g-transp to-transparent p-5 mt-3 leading-8 text-center md:text-left">
@@ -123,7 +123,7 @@ export default class AboutUs extends React.Component {
           </motion.div>
         </div>
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </div>
     );
   }

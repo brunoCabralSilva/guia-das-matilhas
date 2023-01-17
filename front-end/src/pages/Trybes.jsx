@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-// import Nav from '../components/Nav';
-// import Footer from '../components/Footer';
-// import Carousel from '../components/Carousel';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import Carousel from '../components/Carousel';
 import fetch from '../fetch';
 
 export default class Trybes extends React.Component { 
@@ -33,10 +33,10 @@ export default class Trybes extends React.Component {
       >
         <div className="features-div">
           <div className="nav-features">
-            {/* <Nav /> */}
+            <Nav />
           </div>
           <h1 className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3">Tribos</h1>
-          {/* {
+          {
             this.state.trybeLists.length> 0 &&
               <Carousel
               list={this.state.trybeLists}
@@ -44,10 +44,10 @@ export default class Trybes extends React.Component {
               navigation={true}
               loop={true}
             />
-          } */}
+          }
         </div>
         <div className="footer-features">
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </motion.section>
     );

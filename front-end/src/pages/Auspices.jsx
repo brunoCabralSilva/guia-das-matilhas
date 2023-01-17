@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import axios from 'axios';
+import Carousel from '../components/Carousel';
 import fetch from '../fetch';
-// import Nav from '../components/Nav';
-// import Footer from '../components/Footer';
-// import Carousel from '../components/Carousel';
 
 export default class Auspices extends React.Component {
   state = {
@@ -33,12 +33,12 @@ export default class Auspices extends React.Component {
       >
         <div className="features-div">
           <div className="nav-features">
-            {/* <Nav /> */}
+            <Nav />
           </div>
           <h1 className="text-4xl text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3">
             Augúrios
           </h1>
-          {/* {
+          {
             this.state.trybeLists.length> 0 &&
             <Carousel
               list={this.state.trybeLists}
@@ -46,10 +46,10 @@ export default class Auspices extends React.Component {
               navigation={true}
               loop={true}
             />
-          } */}
+          }
         </div>
         <div className="footer-features">
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </motion.section>
     );
