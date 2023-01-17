@@ -11,7 +11,7 @@ export default class List extends React.Component {
 
     const divList = list.map((element, index) => {
       if (type === "Augúrios") {
-        const { auspices_name, auspices_image2 } = element;
+        const { auspices_name } = element;
         return (
           <div
             key={ index } 
@@ -22,19 +22,19 @@ export default class List extends React.Component {
             }
             name={auspices_name} onClick={select}
           >
-            <img
+            {/* <img
               src={require(`../images/auspices/${auspices_image2}`)}
               alt={auspices_name}
               name={auspices_name}
               className="object-contain sm:h-32 h-28 p-2"
-            />
+            /> */}
             <p name={auspices_name} className="leading-6 pb-2 text-sm sm:text-xl font-bold w-90% text-center">{auspices_name}</p>
           </div>
         );
       }
 
       if (type === "Tribos") {
-        const { trybes_name, trybes_image4 } = element;
+        const { trybes_name } = element;
         return (
           <div
             className={
@@ -44,12 +44,12 @@ export default class List extends React.Component {
             }
             name={trybes_name} onClick={select}
           >
-            <img
+            {/* <img
               src={require(`../images/trybes/${trybes_image4}`)}
               className="object-contain sm:h-32 h-28 p-2"
               alt={trybes_name}
               name={trybes_name}
-            />
+            /> */}
             <p className="leading-6 pb-2 text-sm sm:text-base font-bold w-95% text-center">{trybes_name}</p>
           </div>
         );
@@ -72,7 +72,7 @@ export default class List extends React.Component {
       }
 
       if (type === 'Raças') {
-        const { breeds_name, breeds_image1 } = element;
+        const { breeds_name } = element;
         return (
           <div
             className={
@@ -82,12 +82,12 @@ export default class List extends React.Component {
             }
             name={breeds_name} onClick={select}
           >
-            <img
+            {/* <img
               src={require(`../images/breeds/${breeds_image1}`)}
               className="object-contain sm:h-32 h-28 p-2"
               alt={breeds_name}
               name={breeds_name}
-            />
+            /> */}
             <p name={breeds_name} className="leading-6 pb-2 text-sm sm:text-xl font-bold w-95% text-center">{breeds_name}</p>
           </div>
         );

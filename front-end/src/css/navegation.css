@@ -42,63 +42,7 @@
     margin: 5px;
 }
 
-.navegation0 {
-    grid-area: navegation0;
-    background-image: url('../images/menu/werewolfw20.png');
-    background-size: cover;
-    background-position: 0 5%;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
-.navegation1 {
-    grid-area: navegation1;
-    background-image: url('../images/menu/garou_nordeste.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.navegation2 {
-    grid-area: navegation2;
-    background-image: url('../images/menu/kombi.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.navegation3 {
-    grid-area: navegation3;
-    background-image: url('../images/menu/forest.gif');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.navegation4 {
-    grid-area: navegation4;
-    background-image: url('../images/menu/earthblood.gif');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.navegation5 {
-    grid-area: navegation5;
-    background-image: url('../images/menu/ritual.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.navegation6 {
-    grid-area: navegation6;
-    background-image: url('../images/menu/watterfall.gif');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
 
 .darkness2 {
     display: flex;
@@ -152,13 +96,4 @@
             "navegation5 navegation5 navegation6 navegation6"
         ;
     }
-
-    .navegation6 {
-        grid-area: navegation6;
-        background-image: url('../images/menu/watterfall.gif');
-        background-size: cover;
-        background-position: 70%;
-        position: relative;
-    }
-
 }

@@ -33,11 +33,11 @@ export default class Home extends React.Component {
             </div>
             <div className="w-full h-33vh md:h-40vh flex justify-center items-end">
               <Link to="/menu" className="">
-                <img
+                {/* <img
                   src={require('../images/logos/arrow-down.png')}
                   alt="Seta para baixo"
                   className="animate-pulse hover:animate-pulse-fast w-16 md:w-20"
-                />
+                /> */}
               </Link>
             </div>
           </motion.div>

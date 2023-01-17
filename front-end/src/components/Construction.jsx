@@ -27,7 +27,7 @@ export default class Construction extends React.Component {
           exit={{opacity:0, transition: { duration: 0.5 }}}
           className="flex flex-row justify-center"
         >
-          <img
+          {/* <img
             src={require("../images/logos/wolf_run.gif")}
             alt="gif de lobo branco correndo"
             className="constr-gif-wolf"
@@ -41,7 +41,7 @@ export default class Construction extends React.Component {
             src={require("../images/logos/wolf_run.gif")}
             alt="gif de lobo branco correndo"
             className="hidden md:flex an constr-gif-wolf"
-          />
+          /> */}
         </motion.div>
       </section>
     );

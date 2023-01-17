@@ -19,7 +19,7 @@ export default class Filter extends React.Component {
           onClick={() => funcMin(nameMinimize)}>
           <h2 className="text-xl" onClick={() => funcMin(nameMinimize)}>{name}</h2>
           <div className="" onClick={() => funcMin(nameMinimize)}>
-            {
+            {/* {
               statusMinimize
                 ? <img
                   alt="seta para cima"
@@ -31,7 +31,7 @@ export default class Filter extends React.Component {
                   src={require('../images/logos/arrow-down.png')}
                   className="w-12"
                 />
-            }
+            } */}
           </div>
         </div>
         <div>

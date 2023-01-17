@@ -112,7 +112,7 @@ export default class Nav extends React.Component {
                 <p className="text-white font-bold">Login</p>
               </Link>
               <div className="flex pt-10">
-              <img
+              {/* <img
                 src={require('../images/logos/Garou Nordeste.png')}
                 alt="Logo do Garou Nordeste"
                 className="w-16"
@@ -121,7 +121,7 @@ export default class Nav extends React.Component {
                 src={require('../images/logos/Crônicas da Kombi.png')}
                 alt="Logo da Matilha da Kombi"
                 className="w-16"
-              />
+              /> */}
               </div>
         </div>
         </motion.ul>

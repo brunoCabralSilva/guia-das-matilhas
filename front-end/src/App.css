@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url('./images/wallpapers/model.jpg');
-  background-size: cover;
-  background-position: center;
-}
+
 
 .constr-gif-wolf {
   animation: run linear 5s infinite;
@@ -65,11 +61,7 @@ body {
   filter: blur(0);
 }
 
-.swiper-slide {
-  background-image: url('./images/wallpapers/001.jpg');
-  background-position: center;
-  background-size: cover;
-}
+
 
 .slider-swiper-div {
   max-width: 30%;

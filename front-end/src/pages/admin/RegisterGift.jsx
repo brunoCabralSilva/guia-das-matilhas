@@ -209,12 +209,12 @@ export default class RegisterGift extends React.Component {
         <div className="w-full mt-14 sm:mt-6 items-center" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>
           <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>
             <h1 className="text-4xl text-white" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>Adicionar um Dom</h1>
-            <img
+            {/* <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${!showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
               onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}
               alt="arrow"
-            />
+            /> */}
           </div>
         </div>
         {
@@ -477,12 +477,12 @@ export default class RegisterGift extends React.Component {
         <div className="w-full mt-2 sm:mt-2 items-center">
           <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>
             <h1 className="text-4xl text-white" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>Lista de Dons</h1>
-            <img
+            {/* <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}
               onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}
               alt=""
-            />
+            /> */}
           </div>
           <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
             {

@@ -317,7 +317,7 @@ export default class Gifts extends React.Component {
             <div className="flex flex-col items-start my-2 ml-3">
               <div className="flex flex-col sm:flex-row sm:items-start">
                 <div className="w-99% md:py-0 relative my-3 py-2 flex flex-col sm:flex-col justify-center sm:justify-start mr-4">
-                  <img src={require('../images/wallpapers/002.jpg')} alt="Dois Garou em comunhão" className="w-full object-cover h-full absolute z-0" />
+                  {/* <img src={require('../images/wallpapers/002.jpg')} alt="Dois Garou em comunhão" className="w-full object-cover h-full absolute z-0" /> */}
                   <div className="bg-7-transp absolute h-full w-full"/>
                   <p className="z-10 relative pt-4 px-4 text-center sm:text-left w-full">
                     O mundo espiritual divide muitos segredos com os lobisomens e outros metamorfos.
@@ -329,7 +329,7 @@ export default class Gifts extends React.Component {
                 </div>
               </div>
               <div className="w-99% md:py-0 relative mt-2 mb-3 flex flex-col justify-center sm:justify-start mr-4">
-                  <img src={require('../images/wallpapers/touch.jpg')} alt="Dois Garou em comunhão" className="w-full object-cover h-full absolute z-0" />
+                  {/* <img src={require('../images/wallpapers/touch.jpg')} alt="Dois Garou em comunhão" className="w-full object-cover h-full absolute z-0" /> */}
                   <div className="bg-7-transp absolute h-full w-full"/>
                 <h1 className="w-full my-6 sm:ml-4 text-2xl font-bold relative text-center sm:text-left">Como utilizar o filtro de busca</h1>
                 <ul className="list-disc ml-10 relative pb-5">

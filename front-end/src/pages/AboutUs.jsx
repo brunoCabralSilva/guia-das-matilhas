@@ -48,11 +48,11 @@ export default class AboutUs extends React.Component {
             animate="visible"
             exit="exit"
           >
-            <img
+            {/* <img
               src={require('../images/logos/Garou Nordeste2.png')}
               alt="Garou Nordeste"
               className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw"
-            />
+            /> */}
 
             <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
               <h1 className="text-2xl">Garou Nordeste</h1>
@@ -96,7 +96,7 @@ export default class AboutUs extends React.Component {
             animate="visible"
             exit="exit"
           >
-            <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw" />
+            {/* <img src={require('../images/logos/kombi.jpg')} alt="Matilha da Kombi" className="p-2 bg-g-transp mb-3 object-cover h-96 sm:w-50vw" /> */}
             <div className="flex flex-col items-center justify-center bg-gradient-to-r from-g-transp to-transparent p-5 mt-3">
               <h1 className="text-2xl">Matilha da Kombi</h1>
               <div className="flex flex-row flex-wrap">

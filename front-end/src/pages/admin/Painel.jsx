@@ -75,11 +75,11 @@ export default class Painel extends React.Component {
             className={`${list.col} h-30vh relative`}
             to={list.link}
             >
-            <img
+            {/* <img
               src={require(`../../images/menu/${list.img}`)}
               alt="werewolf"
               className="h-full w-full absolute object-cover"
-            />
+            /> */}
             <p className="w-full h-full absolute z-10 text-white font-bold flex items-end p-2">
               {list.name}
             </p>

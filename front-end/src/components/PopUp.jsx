@@ -103,11 +103,11 @@ export default class PopUp extends React.Component {
               minimizes(minimizePopUp);
             }}
           >
-            <img
+            {/* <img
               src={require('../images/logos/filter.png')}
               className={`object-contain h-8 ${value && 'mt-3 ml-2 mb-3 animate-pulse-fast'}`}
               alt="filter"
-            />
+            /> */}
             {value && <span className="text-2xl font-bold pl-5">Filtros</span>}
           </div>
           <span className="text-white text-left z-40">{value && this.allFiltersReturn() }</span>

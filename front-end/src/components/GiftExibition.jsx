@@ -92,7 +92,7 @@ export default class GiftExibition extends React.Component {
           >
             <strong>{name} (Nível {level})</strong>
           </p>
-          {
+          {/* {
             giftDescription === 'hidden'
               ? <img
                 alt="seta para baixo"
@@ -104,7 +104,7 @@ export default class GiftExibition extends React.Component {
                 src={require('../images/logos/arrow-up.png')}
                 className="h-12 pr-4"
               />
-          }
+          } */}
         </div>
         {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}
         <div className={giftDescription}>
