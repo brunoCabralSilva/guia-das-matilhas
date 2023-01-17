@@ -15,7 +15,7 @@ export default class Menu extends React.Component {
 
   homeReturn = () => {
     const { history } = this.props;
-    history.push('/guia-das-matilhas');
+    history.push('/');
     
   }
   render() {

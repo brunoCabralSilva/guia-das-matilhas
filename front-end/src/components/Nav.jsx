@@ -70,7 +70,7 @@ export default class Nav extends React.Component {
           >
             <li className={this.returnLiMenu()}>
               <Link
-                to="/guia-das-matilhas"
+                to="/"
                 className="text-white hover:text-crepusculo transition duration-1000 px-2"
               >
                 Início
@@ -133,7 +133,7 @@ export default class Nav extends React.Component {
           exit={{ y: -30, opacity: 0, transition: { duration: 0.5 } }}>
           <li className="px-3 mt-2">
             <Link
-              to="/guia-das-matilhas"
+              to="/"
               className="text-white hover:text-crepusculo transition duration-1000 px-2"
             >
               Início
