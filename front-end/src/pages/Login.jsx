@@ -32,7 +32,6 @@ export default class Login extends React.Component{
         },
       );
       localStorage.setItem('token', resp.data.token );
-      console.log(resp);
       if(resp.data.token) {
         history.push('/painel-admin');
       }
