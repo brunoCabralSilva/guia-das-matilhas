@@ -32,8 +32,12 @@ export default class Token {
   };
 
   verify = (token: string): boolean => {
-    const ver = jwt.verify(token, this.jwtSecret);
-    if (ver) return true;
-    return false;
+    try {
+      const ver = jwt.verify(token, this.jwtSecret);
+      if (ver) { return true }
+      return false;
+    } catch( error) {
+      return false;
+    }
   }
 };
