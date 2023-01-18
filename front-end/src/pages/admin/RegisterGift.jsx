@@ -181,13 +181,13 @@ export default class RegisterGift extends React.Component {
         const verify = await axios.post(`${fetch()}/gifts/name`, {
           name,
         });
-        if (!verify.data.gift) {
-          this.setState({ vName: "Nome disponível para cadastro" });
-        } else {
+        if (verify.data.gift) {
           this.setState({ vName: "Nome já existente na base de dados" });
+        } else {
+          this.setState({ vName: "Nome disponível para cadastro" });
         }
       } catch(error) {
-        console.log(error.message);
+        this.setState({ vName: "Nome disponível para cadastro" });
       }
     }
     setTimeout(() => {
