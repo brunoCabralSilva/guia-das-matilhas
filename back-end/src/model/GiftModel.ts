@@ -42,7 +42,7 @@ export default class GiftModel {
     const namefonts = await Promise.all(
       fonts.map( async (fnt: any) => {
         const [searchfont]: any = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
-        return searchfont;
+        return searchfont[0];
       }),
     );
 
@@ -53,9 +53,11 @@ export default class GiftModel {
       }),
     );
 
-    return {
-      fonts: namefonts,
-      belongs: nameBelongs,
+    if(nameBelongs && namefonts) {
+      return {
+        fonts: namefonts,
+        belongs: nameBelongs,
+      }
     };
   };
 

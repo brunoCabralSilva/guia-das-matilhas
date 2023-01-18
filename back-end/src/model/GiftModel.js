@@ -96,7 +96,7 @@ var GiftModel = /** @class */ (function () {
                                         case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id])];
                                         case 1:
                                             searchfont = (_a.sent())[0];
-                                            return [2 /*return*/, searchfont];
+                                            return [2 /*return*/, searchfont[0]];
                                     }
                                 });
                             }); }))];
@@ -117,10 +117,14 @@ var GiftModel = /** @class */ (function () {
                     case 4: return [4 /*yield*/, _b.apply(_a, [_c.sent()])];
                     case 5:
                         nameBelongs = (_c.sent())[0];
-                        return [2 /*return*/, {
-                                fonts: namefonts,
-                                belongs: nameBelongs,
-                            }];
+                        if (nameBelongs && namefonts) {
+                            return [2 /*return*/, {
+                                    fonts: namefonts,
+                                    belongs: nameBelongs,
+                                }];
+                        }
+                        ;
+                        return [2 /*return*/];
                 }
             });
         }); };
