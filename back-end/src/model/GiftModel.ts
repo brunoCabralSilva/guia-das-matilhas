@@ -47,9 +47,44 @@ export default class GiftModel {
     return query;
   };
 
-  getAllGifts = async(): Promise<RowDataPacket[] | null> => {
+  returnFontByGift = async(id: number) => {
+    const [fonts]: any = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
+    const [namefonts] = await Promise.all(
+      fonts.map( async (fnt: any) => {
+        const [searchfont]: any = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
+        return searchfont;
+      }));
+    console.log('namefonts', namefonts);
+    return namefonts;
+  };
+
+  returnBelongByGift = async(id: number): Promise<string[]> => {
+    const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
+    const nameBelongs = await Promise.all(
+      belongs.map( async (bel: any) => {
+        const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
+        return searchBelong[0];
+      }));
+    return nameBelongs;
+  };
+
+  getAllGifts = async() => {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts');
-    return query;
+    console.log('list', query);
+    const fontsBelongs = Promise.all(
+      query.map( async(item) => {
+        const listBelongs = await this.returnBelongByGift(item.gift_id);
+        const listFonts = await this.returnFontByGift(item.gift_id);
+        const obj = {
+          ...item,
+          fonts: listFonts,
+          belongs: listBelongs,
+        }
+        return obj;
+      })
+    );
+    console.log('lista completa', fontsBelongs);
+    return fontsBelongs;
   };
 
   registerBelong = async (idGift: number, belongs: string[]) => {

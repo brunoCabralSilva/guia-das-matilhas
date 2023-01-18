@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -92,14 +103,83 @@ var GiftModel = /** @class */ (function () {
                 }
             });
         }); };
+        this.returnFontByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
+            var fonts, namefonts;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id])];
+                    case 1:
+                        fonts = (_a.sent())[0];
+                        return [4 /*yield*/, Promise.all(fonts.map(function (fnt) { return __awaiter(_this, void 0, void 0, function () {
+                                var searchfont;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id])];
+                                        case 1:
+                                            searchfont = (_a.sent())[0];
+                                            return [2 /*return*/, searchfont];
+                                    }
+                                });
+                            }); }))];
+                    case 2:
+                        namefonts = (_a.sent())[0];
+                        console.log('namefonts', namefonts);
+                        return [2 /*return*/, namefonts];
+                }
+            });
+        }); };
+        this.returnBelongByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
+            var belongs, nameBelongs;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id])];
+                    case 1:
+                        belongs = (_a.sent())[0];
+                        return [4 /*yield*/, Promise.all(belongs.map(function (bel) { return __awaiter(_this, void 0, void 0, function () {
+                                var searchBelong;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id])];
+                                        case 1:
+                                            searchBelong = (_a.sent())[0];
+                                            return [2 /*return*/, searchBelong[0]];
+                                    }
+                                });
+                            }); }))];
+                    case 2:
+                        nameBelongs = _a.sent();
+                        return [2 /*return*/, nameBelongs];
+                }
+            });
+        }); };
         this.getAllGifts = function () { return __awaiter(_this, void 0, void 0, function () {
-            var query;
+            var query, fontsBelongs;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts')];
                     case 1:
                         query = (_a.sent())[0];
-                        return [2 /*return*/, query];
+                        console.log('list', query);
+                        fontsBelongs = Promise.all(query.map(function (item) { return __awaiter(_this, void 0, void 0, function () {
+                            var listBelongs, listFonts, obj;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0: return [4 /*yield*/, this.returnBelongByGift(item.gift_id)];
+                                    case 1:
+                                        listBelongs = _a.sent();
+                                        return [4 /*yield*/, this.returnFontByGift(item.gift_id)];
+                                    case 2:
+                                        listFonts = _a.sent();
+                                        obj = __assign(__assign({}, item), { fonts: listFonts, belongs: listBelongs });
+                                        return [2 /*return*/, obj];
+                                }
+                            });
+                        }); }));
+                        console.log('lista completa', fontsBelongs);
+                        return [2 /*return*/, fontsBelongs];
                 }
             });
         }); };
