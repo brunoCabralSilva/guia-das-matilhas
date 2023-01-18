@@ -442,11 +442,11 @@ export default class RegisterGift extends React.Component {
                 onChange={ (e) => this.setState({ textPtbr: e.target.value }) }
               />
             </label>
-            <label htmlFor="systemPtBr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
+            <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
               <span className="py-3 font-bold pl-3">Sistema Traduzido:</span>
               <textarea
                 className="ml-3 mb-3 border p-2"
-                id="systemPtBr"
+                id="systemPtbr"
                 value={systemPtbr}
                 onChange={ (e) => this.setState({ systemPtbr: e.target.value })}
               />
