@@ -29,10 +29,14 @@ export default class RegisterGift extends React.Component {
   };
 
   showAllGifts = async () => {
-    const register = await axios.get(`${fetch()}/gifts`);
-    if (register.data.list) {
-      this.setState({ listGifts: register.data.list });
-    } else {
+    try {
+      const register = await axios.get(`${fetch()}/gifts`);
+      if (register.data.list) {
+        this.setState({ listGifts: register.data.list });
+      } else {
+        this.setState({ listGifts: [] });
+      }
+    } catch(error) {
       this.setState({ listGifts: [] });
     }
   };
@@ -40,13 +44,17 @@ export default class RegisterGift extends React.Component {
   async componentDidMount() {
     await this.showAllGifts();
     const { history } = this.props;
-    const getLists = await axios.get(`${fetch()}/gifts/lists`);
-    this.setState({
-      listBreeds: getLists.data.queryBreeds,
-      listAuspices: getLists.data.queryAuspices,
-      listTrybes: getLists.data.queryTrybes,
-      listBooks: getLists.data.queryBooks,
-    });
+    try {
+      const getLists = await axios.get(`${fetch()}/gifts/lists`);
+      this.setState({
+        listBreeds: getLists.data.queryBreeds,
+        listAuspices: getLists.data.queryAuspices,
+        listTrybes: getLists.data.queryTrybes,
+        listBooks: getLists.data.queryBooks,
+      });
+    } catch(error) {
+      window.alert(error);
+    }
     const token = localStorage.getItem('token');
     const authentication = await axios.post (`${fetch()}/authenticate`, {
       token, 
