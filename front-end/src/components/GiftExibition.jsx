@@ -100,7 +100,7 @@ export default class GiftExibition extends React.Component {
             }
             onClick={this.enableDisableGift}
           >
-            <strong>{this.firstLetterUpper(namePtBr)} (Nível {level})</strong>
+            <strong>{namePtBr && this.firstLetterUpper(namePtBr)} (Nível {level})</strong>
           </p>
           {
             giftDescription === 'hidden'

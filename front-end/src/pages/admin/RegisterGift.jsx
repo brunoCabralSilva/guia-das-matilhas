@@ -538,7 +538,7 @@ export default class RegisterGift extends React.Component {
               </label>
               <button
                 type="button"
-                className="p-4 bg-gray-200 my-2 border border-black hover:border-white hover:bg-black hover:text-white transition duration-500"
+                className="p-4 bg-gray-200 my-2 border border-black hover:border-white hover:bg-black hover:text-white transition duration-500 font-bold"
                 onClick={this.addGift}
               >
                 Adicionar dom
