@@ -210,7 +210,7 @@ export default class RegisterGift extends React.Component {
   };
 
   render() {
-    const { listGifts } = this.props;
+    const { listGifts } = this.state;
     console.log('Lista de Dons', listGifts);
     const { 
       name,

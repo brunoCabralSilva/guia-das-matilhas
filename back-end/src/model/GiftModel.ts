@@ -46,7 +46,7 @@ export default class GiftModel {
 
   getBelongByGift = async(id: number): Promise<string[]> => {
     const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
-    const nameBelongs = await Promise.all(
+    const [nameBelongs] = await Promise.all(
       await belongs.map( async (bel: any) => {
         const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
         return searchBelong[0];
