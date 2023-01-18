@@ -116,9 +116,16 @@ export default class RegisterGift extends React.Component {
       textOriginal,
       systemOriginal,
     } = this.state;
-    const verify = await axios.post(`${fetch()}/gifts/name`, {
-      name,
-    });
+    
+    let verifyBoolean = false;
+    try {
+      const verify = await axios.post(`${fetch()}/gifts/name`, {
+        name,
+      });
+      verifyBoolean = verify.data.gift;
+    } catch(error) {
+      verifyBoolean = false;
+    }
     if (name === '' || name.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
     } else if (rank === 0) {
@@ -135,7 +142,7 @@ export default class RegisterGift extends React.Component {
       window.alert('Necessário inserir uma descrição maior para o campo "Texto original".');
     } else if (systemOriginal.length <= 10 ) {
       window.alert('Necessário inserir uma descrição maior para o campo "Sistema original"');
-    } else if (verify.data.gift) {
+    } else if (verifyBoolean) {
       window.alert('Dom já existe na base de dados');
     }
     else {
