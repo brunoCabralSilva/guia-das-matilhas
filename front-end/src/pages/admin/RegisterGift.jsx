@@ -52,10 +52,13 @@ export default class RegisterGift extends React.Component {
       window.alert(error);
     }
     const token = localStorage.getItem('token');
+    try {
     const authentication = await axios.post (`${fetch()}/authenticate`, {
       token, 
     });
     if (!authentication.data.token) {
+      history.push('/login');
+    }} catch(error) {
       history.push('/login');
     }
   };
