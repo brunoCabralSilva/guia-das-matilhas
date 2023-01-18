@@ -119,8 +119,7 @@ export default class GiftExibition extends React.Component {
             : <p className="my-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</p>}
           <p className="my-2"><strong>Texto Traduzido: </strong>{ descriptionPtBr }</p>
           <p className="my-2"><strong>Sistema:</strong> { systemPtBr }</p>
-          <p className="my-2"><strong>Texto do livro:</strong></p>
-          <p className="my-2">{description}</p>
+          <p className="my-2"><strong>Texto do livro:</strong> {description}</p>
           <p className="my-2"><strong>System:</strong> {system}</p>
           {
             admin &&
