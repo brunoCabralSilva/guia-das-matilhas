@@ -3,6 +3,7 @@ import axios from 'axios';
 import Nav from '../../components/Nav';
 import fetch from '../../fetch';
 import GiftExibition from '../../components/GiftExibition';
+import { AiFillCloseCircle } from "react-icons/ai";
 
 export default class RegisterGift extends React.Component {
   state = {
@@ -11,6 +12,7 @@ export default class RegisterGift extends React.Component {
     page: 0,
     belong: '',
     vName: '',
+    showPopUpIfGiftExists: false,
     listBreeds: [],
     listAuspices: [],
     listTrybes: [],
@@ -202,6 +204,7 @@ export default class RegisterGift extends React.Component {
   }
 
   verifyName = async () => {
+    this.setState({ showPopUpIfGiftExists: true })
     const { nameOriginal } = this.state;
     if (nameOriginal === '' || nameOriginal.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
@@ -210,7 +213,6 @@ export default class RegisterGift extends React.Component {
         const verify = await axios.post(`${fetch()}/gifts/name`, {
           nameOriginal,
         });
-        console.log('data', verify.data.gift);
         if (verify.data.gift) {
           this.setState({ vName: "Nome já existente na base de dados" });
         } else {
@@ -246,15 +248,47 @@ export default class RegisterGift extends React.Component {
       note,
       textOriginal,
       showGifts,
+      showPopUpIfGiftExists,
     } = this.state;
     return (
       <div className={`w-full ${showFormGift ? 'min-h-screen' : 'h-screen'} bg-wolf-01 bg-cover flex flex-col relative`}>
         <div className="main-nav relative z-20">
           <Nav />
         </div>
+        {
+          showPopUpIfGiftExists && 
+          <div className="fixed z-50 top-0 left-0 h-screen w-full bg-black/80 flex flex-col items-center justify-center">
+            <p className="text-white font-bold px-4 text-center">
+              Já existe um Dom na base de dados cadastrado com este nome:
+            </p>
+             <GiftExibition
+                // source={gifts.gifts_fonts}
+                // arrayCategories={gifts.gifts_belongs}
+                arraysubtypes={[]}
+                description={''}
+                system={''}
+                note={''}
+                descriptionPtBr={''}
+                systemPtBr={''}
+                level={''}
+                name={''}
+                gifts={true}
+                admin={true}
+                color={'white'}
+                showData={true}
+              />
+            <button
+              type="button"
+              className="z-50"
+              onClick={ () => this.setState({ showPopUpIfGiftExists: false }) }
+            >
+              <AiFillCloseCircle className="text-white z-50 fixed top-0 right-0 text-5xl mt-10 mr-10" />
+            </button>
+          </div>
+        }
         <div className="w-full mt-14 cursor-pointer sm:mt-6 items-center" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>
-          <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5">
-            <h1 className="text-4xl text-white" >Adicionar um Dom</h1>
+          <div className="pl-5 mx-3 flex items-center justify-between bg-gradient-to-r from-f-transp to-transparent py-5">
+            <h1 className="text-2xl md:text-4xl text-white" >Adicionar um Dom</h1>
             <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${!showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
@@ -263,14 +297,14 @@ export default class RegisterGift extends React.Component {
           </div>
         </div>
         {
-          showFormGift && <form className={`bg-gradient-to-r from-f-transp to-transparent m-3 flex flex-col p-8 z-10`}>
-            <div className={`flex w-full bg-white ${vName !== '' ? 'rounded-t-lg' : 'rounded-lg' } p-2`}>
+          showFormGift && <form className={`bg-gradient-to-r from-f-transp to-transparent m-3 flex flex-col md:p-8 z-10`}>
+            <div className={`flex flex-col md:flex-row w-full bg-white ${vName !== '' ? 'rounded-t-lg' : 'rounded-lg' } p-2`}>
               <label
                 htmlFor="name"
-                className="mb-1 w-1/2 flex justify-between items-center"
+                className="mb-1 md:w-1/2 flex flex-col md:flex-row justify-between items-center"
               >
-                <span className="w-1/3 p-3 font-bold">Nome(Inglês):</span>
-                <div className="w-full h-full flex mr-8">
+                <span className="w-full md:w-1/3 p-3 font-bold">Nome(Inglês):</span>
+                <div className="w-full h-full flex flex-col md:flex-row md:mr-8">
                   <input
                     type="text"
                     value={nameOriginal}
@@ -280,7 +314,7 @@ export default class RegisterGift extends React.Component {
                   />
                   <button
                     type="button"
-                    className="h-full ml-1 rounded px-2 border border-black hover:bg-black hover:text-white transition duration-500"
+                    className="h-full mt-2 py-2 md:py-0 md:mt-0 md:ml-1 rounded px-2 border border-black hover:bg-black hover:text-white transition duration-500"
                     onClick={this.verifyName}
                   >
                     Verificar
@@ -289,10 +323,10 @@ export default class RegisterGift extends React.Component {
               </label>
               <label
                 htmlFor="name"
-                className="mb-1 w-1/2 flex justify-between items-center"
+                className="mb-1 md:w-1/2 flex flex-col md:flex-row justify-between items-center"
               >
-                <span className="w-1/3 p-3 font-bold">Nome(Pt-br):</span>
-                <div className="w-full h-full flex mr-8">
+                <span className="w-full md:w-1/3 p-3 font-bold">Nome(Pt-br):</span>
+                <div className="w-full h-full flex md:mr-8">
                   <input
                     type="text"
                     value={namePtBr}
@@ -307,12 +341,12 @@ export default class RegisterGift extends React.Component {
               vName !== '' ? <p className="bg-white py-5 rounded-b-lg w-full text-center font-bold">{vName}</p> : <div />
             }
             <div className="bg-white rounded-lg mt-3">
-              <div className="pl-4 p-2 border rounded-lg border-white flex gap-10 mb-2">
+              <div className="md:pl-4 p-2 flex-col md:flex-row border rounded-lg border-white flex gap-10 mb-2">
                 <label
                     htmlFor="book"
-                    className="pl-2 w-full flex items-center"
+                    className="md:pl-2 w-full flex flex-col md:flex-row items-center"
                   >
-                    <span className="w-1/3 font-bold">Fonte:</span>
+                    <span className="w-full p-3 md:p-0 md:w-1/3 font-bold">Fonte:</span>
                     <select
                       id="book"
                       className="w-full p-2 border text-center border-gray-300"
@@ -334,11 +368,11 @@ export default class RegisterGift extends React.Component {
                   </label>
                 <label
                   htmlFor="page"
-                  className="pl-2 py-1 w-full flex items-center"
+                  className="p-3 md:p-0 md:pl-2 py-1 w-full flex flex-col md:flex-row items-center"
                 >
-                <span className="w-1/3 font-bold">Página:</span>
+                <span className="w-full md:w-1/3 font-bold">Página:</span>
                   <input
-                    className="w-2/3 p-2 border text-center"
+                    className="md:w-2/3 p-2 border text-center"
                     type="number"
                     id="page"
                     value={page}
@@ -347,12 +381,12 @@ export default class RegisterGift extends React.Component {
                 </label>
                 <label
                   htmlFor="edition"
-                  className="pl-2 w-full flex items-center"
+                  className="pl-2 w-full flex flex-col md:flex-row items-center"
                 >
-                  <span className="w-1/3 font-bold">Edição:</span>
+                  <span className="w-full md:w-1/3 font-bold">Edição:</span>
                   <select
                     id="edition"
-                    className="w-2/3 p-2 border text-center"
+                    className="w-full md:w-2/3 p-2 border text-center"
                     onChange={(e) => this.setState({ edition: e.target.value })}
                   >
                     <option disabled selected>Selecione uma Edição</option>
@@ -410,11 +444,11 @@ export default class RegisterGift extends React.Component {
               <label
                 htmlFor="belong"
                 id="idBelong"
-                className="p-2 pl-4 w-full flex items-center">
-                <span className="w-1/3 my-4 font-bold">Posto:</span>
+                className="p-2 pl-4 w-full flex flex-col md:flex-row items-center">
+                <span className="w-full md:w-1/3 my-4 font-bold">Posto:</span>
                 <select
                   id="rank"
-                  className="w-2/3 mr-24 h-full p-2 rounded border border-gray-300 text-center"
+                  className="w-full md:w-2/3 md:mr-24 h-full p-2 rounded border border-gray-300 mb-3 md-mb-0 text-center"
                   onChange={(e) => this.setState({ rank: e.target.value })}
                 >
                   <option disabled selected>Selecione um Posto</option>
@@ -431,11 +465,11 @@ export default class RegisterGift extends React.Component {
               <label
                 htmlFor="belong"
                 id="idBelong"
-                className="p-2 pl-4 w-full flex items-center">
-                <span className="w-1/3 my-4 font-bold">Pertencente a:</span>
+                className="p-2 pl-4 w-full flex flex-col md:flex-row items-center">
+                <span className="w-full md:w-1/3 my-4 font-bold">Pertencente a:</span>
                 <select
                   id="selectBelong"
-                  className="w-2/3 p-2 border text-center"
+                  className="w-full md:w-2/3 p-2 border text-center"
                   onChange={(e) => this.setState({ belong: e.target.value })}
                 >
                   <option disabled value={0} selected>Selecione</option>
@@ -545,9 +579,9 @@ export default class RegisterGift extends React.Component {
               </button>
           </form>
         }
-        <div className="w-full mt-2 sm:mt-2 items-center">
-          <div className="pl-5 mx-3 cursor-pointer flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>
-            <h1 className="text-4xl text-white">Lista de Dons</h1>
+        <div className="w-full mt-2 md:mt-2 items-center">
+          <div className="pl-5 mx-3 cursor-pointer items-center flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>
+            <h1 className="text-2xl md:text-4xl text-white">Lista de Dons</h1>
             <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}

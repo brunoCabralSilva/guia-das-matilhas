@@ -7,6 +7,14 @@ export default class GiftExibition extends React.Component {
     giftDescription: 'hidden',
   }
 
+  componentDidMount() {
+    const { showData } = this.props;
+    if (showData) {
+      this.setState({ giftDescription: 'gift-found-content' });
+    }
+
+  }
+
   deleteItem = async (name, level, description) => {
     const deleteGift =  await axios.delete(`${fetch()}/gifts/delete`, { data: { name, level, description }});
     window.alert(deleteGift.data.message);
@@ -82,34 +90,44 @@ export default class GiftExibition extends React.Component {
       namePtBr,
       nameOriginal,
       level,
-      admin
+      admin,
+      color,
+      showData,
     } = this.props;
     const { giftDescription } = this.state;
     return (
-      <section className={
-        giftDescription !== 'hidden'
-          ? "w-full bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"
-          : "w-full sm:w-48% bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3"}
+      <section className={`${color === 'white' && 'text-white'} 
+        ${giftDescription !== 'hidden'
+          ? ' w-full text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'
+          : ' w-full text-white sm:w-48% bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'}`}
       >
-        <div className='flex items-center justify-between' onClick={this.enableDisableGift}>
+        <div className='flex items-center justify-between' onClick={() => {
+              if(!showData) {
+                this.enableDisableGift()
+              } 
+            }}>
           <p
             className={
               giftDescription !== 'hidden'
                 ? "w-full"
                 : "w-full sm:w-1/2"
             }
-            onClick={this.enableDisableGift}
+            onClick={() => {
+              if(!showData) {
+                this.enableDisableGift()
+              } 
+            }}
           >
             <strong>{namePtBr && this.firstLetterUpper(namePtBr)} (Nível {level})</strong>
           </p>
           {
             giftDescription === 'hidden'
-              ? <img
+              ? !showData && <img
                 alt="seta para baixo"
                 src={require('../images/logos/arrow-down.png')}
                 className="h-12 pr-4"
               />
-              : <img
+              : !showData && <img
                 alt="seta para cima"
                 src={require('../images/logos/arrow-up.png')}
                 className="h-12 pr-4"
