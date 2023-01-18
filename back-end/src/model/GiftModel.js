@@ -78,17 +78,14 @@ var GiftModel = /** @class */ (function () {
                 }
             });
         }); };
-        this.getFontAndBelongsByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
-            var belongs, fonts, namefonts, nameBelongs, _a, _b;
+        this.getFontByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
+            var fonts, namefonts;
             var _this = this;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id])];
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id])];
                     case 1:
-                        belongs = (_c.sent())[0];
-                        return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id])];
-                    case 2:
-                        fonts = (_c.sent())[0];
+                        fonts = (_a.sent())[0];
                         return [4 /*yield*/, Promise.all(fonts.map(function (fnt) { return __awaiter(_this, void 0, void 0, function () {
                                 var searchfont;
                                 return __generator(this, function (_a) {
@@ -96,12 +93,24 @@ var GiftModel = /** @class */ (function () {
                                         case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id])];
                                         case 1:
                                             searchfont = (_a.sent())[0];
-                                            return [2 /*return*/, searchfont[0]];
+                                            return [2 /*return*/, searchfont];
                                     }
                                 });
                             }); }))];
-                    case 3:
-                        namefonts = _c.sent();
+                    case 2:
+                        namefonts = _a.sent();
+                        return [2 /*return*/, namefonts];
+                }
+            });
+        }); };
+        this.getBelongByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
+            var belongs, nameBelongs, _a, _b;
+            var _this = this;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id])];
+                    case 1:
+                        belongs = (_c.sent())[0];
                         _b = (_a = Promise).all;
                         return [4 /*yield*/, belongs.map(function (bel) { return __awaiter(_this, void 0, void 0, function () {
                                 var searchBelong;
@@ -114,22 +123,15 @@ var GiftModel = /** @class */ (function () {
                                     }
                                 });
                             }); })];
-                    case 4: return [4 /*yield*/, _b.apply(_a, [_c.sent()])];
-                    case 5:
-                        nameBelongs = (_c.sent())[0];
-                        if (nameBelongs && namefonts) {
-                            return [2 /*return*/, {
-                                    fonts: namefonts,
-                                    belongs: nameBelongs,
-                                }];
-                        }
-                        ;
-                        return [2 /*return*/];
+                    case 2: return [4 /*yield*/, _b.apply(_a, [_c.sent()])];
+                    case 3:
+                        nameBelongs = _c.sent();
+                        return [2 /*return*/, nameBelongs];
                 }
             });
         }); };
         this.getAllGifts = function () { return __awaiter(_this, void 0, void 0, function () {
-            var query, gifts;
+            var query, fontsBelongs;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -137,22 +139,41 @@ var GiftModel = /** @class */ (function () {
                     case 1:
                         query = (_a.sent())[0];
                         return [4 /*yield*/, Promise.all(query.map(function (item) { return __awaiter(_this, void 0, void 0, function () {
-                                var belongs, objFontBelong;
-                                return __generator(this, function (_a) {
-                                    switch (_a.label) {
+                                var belongs, nameBelongs, _a, _b, objGift, _c;
+                                var _d;
+                                var _this = this;
+                                return __generator(this, function (_e) {
+                                    switch (_e.label) {
                                         case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [item.gift_id])];
                                         case 1:
-                                            belongs = (_a.sent())[0];
-                                            return [4 /*yield*/, this.getFontAndBelongsByGift(item.gift_id)];
-                                        case 2:
-                                            objFontBelong = _a.sent();
-                                            return [2 /*return*/, __assign(__assign({}, item), objFontBelong)];
+                                            belongs = (_e.sent())[0];
+                                            _b = (_a = Promise).all;
+                                            return [4 /*yield*/, belongs.map(function (bel) { return __awaiter(_this, void 0, void 0, function () {
+                                                    var searchBelong;
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id])];
+                                                            case 1:
+                                                                searchBelong = (_a.sent())[0];
+                                                                return [2 /*return*/, searchBelong[0]];
+                                                        }
+                                                    });
+                                                }); })];
+                                        case 2: return [4 /*yield*/, _b.apply(_a, [_e.sent()])];
+                                        case 3:
+                                            nameBelongs = _e.sent();
+                                            _c = [__assign({}, item)];
+                                            _d = { belongs: nameBelongs };
+                                            return [4 /*yield*/, this.getFontByGift(item.gift_id)];
+                                        case 4:
+                                            objGift = __assign.apply(void 0, _c.concat([(_d.fonts = _e.sent(), _d)]));
+                                            return [2 /*return*/, objGift];
                                     }
                                 });
                             }); }))];
                     case 2:
-                        gifts = _a.sent();
-                        return [2 /*return*/, gifts];
+                        fontsBelongs = _a.sent();
+                        return [2 /*return*/, fontsBelongs];
                 }
             });
         }); };
