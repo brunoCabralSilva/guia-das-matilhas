@@ -59,11 +59,10 @@ export default class GiftModel {
     const fontsBelongs = await Promise.all(
       query.map( async(item) => {
         const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [item.gift_id]);
-        const nameBelongs = await Promise.all(
-          await belongs.map( async (bel: any) => {
+        const nameBelongs = await belongs.map( async (bel: any) => {
             const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
             return searchBelong[0];
-          }));
+          });
         const objGift = {
           ...item,
           belongs: nameBelongs,
