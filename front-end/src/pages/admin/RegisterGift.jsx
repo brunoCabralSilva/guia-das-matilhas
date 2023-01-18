@@ -524,15 +524,15 @@ export default class RegisterGift extends React.Component {
               listGifts.length > 0 && listGifts.map((gifts, index) => (
                 <GiftExibition
                   key={ index }
-                  // source={gifts.font}
-                  // arrayCategories={gifts.belong}
+                  // source={gifts.gifts_fonts}
+                  // arrayCategories={gifts.gifts_belongs}
                   arraysubtypes={[]}
-                  description={gifts.textOriginal}
-                  system={gifts.systemOriginal}
-                  descriptionPtBr={gifts.textPtBr}
-                  systemPtBr={gifts.systemPtBr}
-                  level={gifts.rank}
-                  name={gifts.name_gift}
+                  description={gifts.gifts_textOriginal}
+                  system={gifts.gifts_systemOriginal}
+                  descriptionPtBr={gifts.gifts_textPtBr}
+                  systemPtBr={gifts.gifts_systemPtBr}
+                  level={gifts.gifts_rank}
+                  name={gifts.gifts_name}
                   gifts={true}
                   admin={true}
                 />
