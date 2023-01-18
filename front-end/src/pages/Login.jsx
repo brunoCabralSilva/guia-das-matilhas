@@ -12,10 +12,11 @@ export default class Login extends React.Component{
     const { history } = this.props;
     try {
       const token = localStorage.getItem('token');
+      if (token) {
       const resp =  await axios.post(`${fetch()}/login/verify`, { token });
       if(resp) {
         history.push('/painel-admin');
-      }
+      }}
     } catch(error) {
       console.log(error.message);
     }

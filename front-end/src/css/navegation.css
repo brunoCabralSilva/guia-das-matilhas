@@ -70,7 +70,7 @@
 
 .navegation3 {
     grid-area: navegation3;
-    background-image: url('../images/menu/forest.gif');
+    background-image: url('https://64.media.tumblr.com/c9575ab369921aee090c02f7cb3da9e7/8305528fa1608264-bc/s640x960/5d7e370cfc67635f488cca966080910577aa5f78.gif');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -78,7 +78,7 @@
 
 .navegation4 {
     grid-area: navegation4;
-    background-image: url('../images/menu/earthblood.gif');
+    background-image: url('https://64.media.tumblr.com/211b80132af34bd972de8120549c5bd8/68794e779f4c07af-b6/s540x810/9bf323293d4da6cd7bea260ca02a3fdfeefed162.gif');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -86,7 +86,7 @@
 
 .navegation5 {
     grid-area: navegation5;
-    background-image: url('../images/menu/ritual.jpg');
+    background-image: url('https://i.pinimg.com/originals/87/81/0a/87810a0cf7c9f3d787b2a4059ab601ed.gif');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -94,7 +94,7 @@
 
 .navegation6 {
     grid-area: navegation6;
-    background-image: url('../images/menu/watterfall.gif');
+    background-image: url('https://media3.giphy.com/media/eGNpmOUeIIYUB4P4Al/giphy.gif?cid=790b76113d42c68657c63c771efd15378e71009f3ac51c5f&rid=giphy.gif&ct=g');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -155,7 +155,7 @@
 
     .navegation6 {
         grid-area: navegation6;
-        background-image: url('../images/menu/watterfall.gif');
+        background-image: url('https://amazonaid.org/wp-content/uploads/2019/02/ezgif.com-optimize.gif');
         background-size: cover;
         background-position: 70%;
         position: relative;
