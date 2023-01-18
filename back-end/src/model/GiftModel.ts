@@ -49,7 +49,7 @@ export default class GiftModel {
 
   returnFontByGift = async(id: number) => {
     const [fonts]: any = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
-    const [namefonts] = await Promise.all(
+    const namefonts = await Promise.all(
       fonts.map( async (fnt: any) => {
         const [searchfont]: any = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
         return searchfont;
@@ -69,7 +69,7 @@ export default class GiftModel {
 
   getAllGifts = async() => {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts');
-    const fontsBelongs = Promise.all(
+    const fontsBelongs = await Promise.all(
       query.map( async(item) => {
         const listBelongs = await this.returnBelongByGift(item.gift_id);
         const listFonts = await this.returnFontByGift(item.gift_id);

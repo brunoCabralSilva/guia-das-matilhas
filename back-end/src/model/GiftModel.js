@@ -123,8 +123,7 @@ var GiftModel = /** @class */ (function () {
                                 });
                             }); }))];
                     case 2:
-                        namefonts = (_a.sent())[0];
-                        console.log('namefonts', namefonts);
+                        namefonts = _a.sent();
                         return [2 /*return*/, namefonts];
                 }
             });
@@ -162,22 +161,23 @@ var GiftModel = /** @class */ (function () {
                     case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts')];
                     case 1:
                         query = (_a.sent())[0];
-                        console.log('list', query);
-                        fontsBelongs = Promise.all(query.map(function (item) { return __awaiter(_this, void 0, void 0, function () {
-                            var listBelongs, listFonts, obj;
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0: return [4 /*yield*/, this.returnBelongByGift(item.gift_id)];
-                                    case 1:
-                                        listBelongs = _a.sent();
-                                        return [4 /*yield*/, this.returnFontByGift(item.gift_id)];
-                                    case 2:
-                                        listFonts = _a.sent();
-                                        obj = __assign(__assign({}, item), { fonts: listFonts, belongs: listBelongs });
-                                        return [2 /*return*/, obj];
-                                }
-                            });
-                        }); }));
+                        return [4 /*yield*/, Promise.all(query.map(function (item) { return __awaiter(_this, void 0, void 0, function () {
+                                var listBelongs, listFonts, objGift;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0: return [4 /*yield*/, this.returnBelongByGift(item.gift_id)];
+                                        case 1:
+                                            listBelongs = _a.sent();
+                                            return [4 /*yield*/, this.returnFontByGift(item.gift_id)];
+                                        case 2:
+                                            listFonts = _a.sent();
+                                            objGift = __assign(__assign({}, item), { fonts: listFonts, belongs: listBelongs });
+                                            return [2 /*return*/, objGift];
+                                    }
+                                });
+                            }); }))];
+                    case 2:
+                        fontsBelongs = _a.sent();
                         console.log('lista completa', fontsBelongs);
                         return [2 /*return*/, fontsBelongs];
                 }

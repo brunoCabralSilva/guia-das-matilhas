@@ -47,15 +47,15 @@ export default class GiftExibition extends React.Component {
       <p key={ index } >
         Livro:
         {' '}
-        {array.book}
+        {array.font_book}
         {', '}
         Pag.
         {' '}
-        {array.page}
+        {array.font_page}
         {' - '}
         Edição:
         {' '}
-        { array.edition }
+        { array.font_edition }
         {'.'}
       </p>
     ));
