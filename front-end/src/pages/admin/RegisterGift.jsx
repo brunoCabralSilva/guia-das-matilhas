@@ -22,6 +22,7 @@ export default class RegisterGift extends React.Component {
     rank: 0,
     textPtbr: '',
     systemPtbr: '',
+    note: '',
     textOriginal: '',
     systemOriginal: '',
     listOfFonts: [],
@@ -121,6 +122,7 @@ export default class RegisterGift extends React.Component {
       listOfBelongs,
       textPtbr,
       systemPtbr,
+      note,
       textOriginal,
       systemOriginal,
     } = this.state;
@@ -162,6 +164,7 @@ export default class RegisterGift extends React.Component {
           belong: listOfBelongs,
           textPtbr,
           systemPtbr,
+          note,
           textOriginal,
           systemOriginal
         });
@@ -232,6 +235,7 @@ export default class RegisterGift extends React.Component {
       systemOriginal,
       systemPtbr,
       page,
+      note,
       textOriginal,
       showGifts,
     } = this.state;
@@ -475,6 +479,15 @@ export default class RegisterGift extends React.Component {
                 onChange={ (e) => this.setState({ systemPtbr: e.target.value })}
               />
             </label>
+            <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
+              <span className="py-3 font-bold pl-3">Nota adicional:</span>
+              <textarea
+                className="ml-3 mb-3 border p-2"
+                id="systemPtbr"
+                value={note}
+                onChange={ (e) => this.setState({ note: e.target.value })}
+              />
+            </label>
             <label
               htmlFor="TextOriginal"
               className="p-2 flex flex-col bg-white rounded-lg mt-3"
@@ -528,6 +541,7 @@ export default class RegisterGift extends React.Component {
                   arraysubtypes={[]}
                   description={gifts.gift_textOriginal}
                   system={gifts.gift_systemOriginal}
+                  not={gifts.gift_note}
                   descriptionPtBr={gifts.gift_textPtBr}
                   systemPtBr={gifts.gift_systemPtBr}
                   level={gifts.gift_rank}

@@ -106,11 +106,12 @@ export default class GiftModel {
       belong,
       textPtbr,
       systemPtbr,
+      note,
       textOriginal,
       systemOriginal
     } = gift;
     
-    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal]);
+    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);

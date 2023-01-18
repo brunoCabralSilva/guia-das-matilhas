@@ -69,6 +69,7 @@ export default class GiftExibition extends React.Component {
       description,
       descriptionPtBr,
       systemPtBr,
+      note,
       system,
       name,
       level,
@@ -121,6 +122,13 @@ export default class GiftExibition extends React.Component {
           <p className="my-2">{ descriptionPtBr }</p>
           <p className="my-2"><strong>Sistema:</strong></p>
           <p className="my-2">{ systemPtBr }</p>
+          {
+            note &&
+            <div>
+            <p className="my-2"><strong>Nota:</strong></p>
+            <p className="my-2">{ note }</p>
+            </div>
+          }
           <p className="my-2"><strong>Description:</strong></p>
           <p className="my-2">{description}</p>
           <p className="my-2"><strong>System:</strong></p>

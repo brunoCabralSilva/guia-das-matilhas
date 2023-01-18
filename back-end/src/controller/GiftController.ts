@@ -39,6 +39,7 @@ export default class GiftController {
       belong: req.body.belong,
       textPtbr: req.body.textPtbr,
       systemPtbr: req.body.systemPtbr,
+      note: req.body.note,
       textOriginal: req.body.textOriginal,
       systemOriginal: req.body.systemOriginal,
     }
