@@ -60,7 +60,7 @@ var GiftModel = /** @class */ (function () {
             var query;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts WHERE gift_name = ?', [name])];
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts WHERE gift_nameOriginal = ?', [name])];
                     case 1:
                         query = (_a.sent())[0];
                         return [2 /*return*/, query];
@@ -226,12 +226,12 @@ var GiftModel = /** @class */ (function () {
             });
         }); };
         this.registerGift = function (gift) { return __awaiter(_this, void 0, void 0, function () {
-            var name, rank, font, belong, textPtbr, systemPtbr, textOriginal, systemOriginal, query, foundGift;
+            var namePtBr, nameOriginal, rank, font, belong, textPtbr, systemPtbr, note, textOriginal, systemOriginal, query, foundGift;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        name = gift.name, rank = gift.rank, font = gift.font, belong = gift.belong, textPtbr = gift.textPtbr, systemPtbr = gift.systemPtbr, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
-                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, textOriginal, systemOriginal])];
+                        namePtBr = gift.namePtBr, nameOriginal = gift.nameOriginal, rank = gift.rank, font = gift.font, belong = gift.belong, textPtbr = gift.textPtbr, systemPtbr = gift.systemPtbr, note = gift.note, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
+                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr, nameOriginal, rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal])];
                     case 1:
                         query = (_a.sent())[0];
                         this.registerBelong(query.insertId, belong);

@@ -1,6 +1,19 @@
 import { Request, Response } from 'express';
 import GiftService from "../service/GiftService";
 
+interface GiftType {
+  namePtBr: string,
+  nameOriginal: string,
+  rank: number,
+  font: any,
+  belong: any,
+  textPtbr: string,
+  systemPtbr: string,
+  note: string,
+  textOriginal: string,
+  systemOriginal: string,
+}
+
 export default class GiftController {
   service: GiftService;
 
@@ -8,12 +21,14 @@ export default class GiftController {
     this.service = new GiftService();
   }
 
+
   getGiftByName = async(req: Request, res: Response) => {
     const { nameOriginal } = req.body;
     try {
       const query: any = await this.service.getGiftByName(nameOriginal);
       if (query.length > 0) {
-        return res.status(201).json({ gift: true });
+        console.log(query);
+        return res.status(201).json({ gift: query });
       } return res.status(404).json({ gift: false });
     } catch(error) {
       return res.status(404).json({ gift: false });
@@ -32,8 +47,9 @@ export default class GiftController {
   };
 
   registerGift = async(req: Request, res: Response) => {
-    const gift = {
-      name: req.body.name,
+    const gift: GiftType = {
+      namePtBr: req.body.namePtBr,
+      nameOriginal: req.body.nameOriginal,
       rank: req.body.rank,
       font: req.body.font,
       belong: req.body.belong,
