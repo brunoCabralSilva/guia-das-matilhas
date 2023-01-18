@@ -33,47 +33,46 @@ export default class GiftModel {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts WHERE gift_id = ?', [id]);
     return query;
   };
-  
-  getFontAndBelongsByGift = async(id: number) => {
-    const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
 
+  getFontByGift = async(id: number) => {
     const [fonts]: any = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
-
     const namefonts = await Promise.all(
       fonts.map( async (fnt: any) => {
         const [searchfont]: any = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
-        return searchfont[0];
-      }),
-    );
+        return searchfont;
+      }));
+    return namefonts;
+  };
 
-    const [nameBelongs] = await Promise.all(
+  getBelongByGift = async(id: number): Promise<string[]> => {
+    const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
+    const nameBelongs = await Promise.all(
       await belongs.map( async (bel: any) => {
         const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
         return searchBelong[0];
-      }),
-    );
-
-    if(nameBelongs && namefonts) {
-      return {
-        fonts: namefonts,
-        belongs: nameBelongs,
-      }
-    };
+      }));
+    return nameBelongs;
   };
 
   getAllGifts = async() => {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts');
-    const gifts = await Promise.all(
+    const fontsBelongs = await Promise.all(
       query.map( async(item) => {
         const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [item.gift_id]);
-        const objFontBelong = await this.getFontAndBelongsByGift(item.gift_id);
-        return {
+        const nameBelongs = await Promise.all(
+          await belongs.map( async (bel: any) => {
+            const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
+            return searchBelong[0];
+          }));
+        const objGift = {
           ...item,
-          ...objFontBelong,
+          belongs: nameBelongs,
+          fonts: await this.getFontByGift(item.gift_id),
         }
-      }),
+        return objGift;
+      })
     );
-    return gifts;
+    return fontsBelongs;
   };
 
   registerBelong = async (idGift: number, belongs: string[]) => {
