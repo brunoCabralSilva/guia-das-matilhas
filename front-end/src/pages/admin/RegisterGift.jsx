@@ -139,7 +139,9 @@ export default class RegisterGift extends React.Component {
       verifyBoolean = false;
     }
     if (nameOriginal === '' || nameOriginal.length < 4) {
-      window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
+      window.alert('Necessário adicionar o nome em inglês com pelo menos quatro caracteres para o dom');
+    } else if (namePtBr === '' || namePtBr.length < 4) {
+      window.alert('Necessário adicionar um nome traduziro com pelo menos quatro caracteres para o dom');
     } else if (rank === 0) {
       window.alert('Necessário escolher um Posto');
     } else if (listOfFonts.length === 0) {
