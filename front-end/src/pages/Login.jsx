@@ -18,7 +18,6 @@ export default class Login extends React.Component{
         history.push('/painel-admin');
       }}
     } catch(error) {
-      console.log(error.message);
     }
   };
 

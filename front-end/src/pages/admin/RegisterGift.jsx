@@ -41,7 +41,6 @@ export default class RegisterGift extends React.Component {
     await this.showAllGifts();
     const { history } = this.props;
     const getLists = await axios.get(`${fetch()}/gifts/lists`);
-    console.log(getLists);
     this.setState({
       listBreeds: getLists.data.queryBreeds,
       listAuspices: getLists.data.queryAuspices,
@@ -118,7 +117,7 @@ export default class RegisterGift extends React.Component {
       systemOriginal,
     } = this.state;
     const verify = await axios.post(`${fetch()}/gifts/name`, {
-        name,
+      name,
     });
     if (name === '' || name.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
@@ -487,12 +486,12 @@ export default class RegisterGift extends React.Component {
         <div className="w-full mt-2 sm:mt-2 items-center">
           <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>
             <h1 className="text-4xl text-white" onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}>Lista de Dons</h1>
-            {/* <img
+            <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}
               onClick={() => this.setState((prev) => ({ showGifts: !prev.showGifts }))}
               alt=""
-            /> */}
+            />
           </div>
           <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
             {
