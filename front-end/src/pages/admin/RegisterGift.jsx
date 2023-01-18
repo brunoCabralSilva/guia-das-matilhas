@@ -210,6 +210,7 @@ export default class RegisterGift extends React.Component {
         const verify = await axios.post(`${fetch()}/gifts/name`, {
           nameOriginal,
         });
+        console.log('data', verify.data.gift);
         if (verify.data.gift) {
           this.setState({ vName: "Nome já existente na base de dados" });
         } else {
@@ -238,9 +239,9 @@ export default class RegisterGift extends React.Component {
       listTrybes,
       listBreeds,
       listAuspices,
-      textPtBr: textPtbr,
+      textPtBr,
       systemOriginal,
-      systemPtBr: systemPtbr,
+      systemPtBr,
       page,
       note,
       textOriginal,
@@ -489,8 +490,8 @@ export default class RegisterGift extends React.Component {
               <textarea
                 className="ml-3 mb-3 border p-2"
                 id="textPtbr"
-                value={textPtbr}
-                onChange={ (e) => this.setState({ textPtbr: e.target.value }) }
+                value={textPtBr}
+                onChange={ (e) => this.setState({ textPtBr: e.target.value }) }
               />
             </label>
             <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
@@ -498,8 +499,8 @@ export default class RegisterGift extends React.Component {
               <textarea
                 className="ml-3 mb-3 border p-2"
                 id="systemPtbr"
-                value={systemPtbr}
-                onChange={ (e) => this.setState({ systemPtbr: e.target.value })}
+                value={systemPtBr}
+                onChange={ (e) => this.setState({ systemPtBr: e.target.value })}
               />
             </label>
             <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
