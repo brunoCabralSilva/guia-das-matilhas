@@ -36,21 +36,19 @@ export default class GiftModel {
 
   getFontByGift = async(id: number) => {
     const [fonts]: any = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
-    const namefonts = await Promise.all(
-      fonts.map( async (fnt: any) => {
+    const namefonts = await fonts.map( async (fnt: any) => {
         const [searchfont]: any = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
         return searchfont;
-      }));
+      });
     return namefonts;
   };
 
   getBelongByGift = async(id: number): Promise<string[]> => {
     const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
-    const nameBelongs = await Promise.all(
-      await belongs.map( async (bel: any) => {
+    const nameBelongs = await belongs.map( async (bel: any) => {
         const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
         return searchBelong[0];
-      }));
+      });
     return nameBelongs;
   };
 
@@ -60,16 +58,16 @@ export default class GiftModel {
       query.map( async(item) => {
         const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [item.gift_id]);
         const nameBelongs = await belongs.map( async (bel: any) => {
-            const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
-            return searchBelong[0];
-          });
+          const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
+          return searchBelong[0];
+        });
         const objGift = {
           ...item,
           belongs: nameBelongs,
           fonts: await this.getFontByGift(item.gift_id),
         }
         return objGift;
-      })
+      }),
     );
     return fontsBelongs;
   };

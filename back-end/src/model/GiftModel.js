@@ -86,7 +86,7 @@ var GiftModel = /** @class */ (function () {
                     case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id])];
                     case 1:
                         fonts = (_a.sent())[0];
-                        return [4 /*yield*/, Promise.all(fonts.map(function (fnt) { return __awaiter(_this, void 0, void 0, function () {
+                        return [4 /*yield*/, fonts.map(function (fnt) { return __awaiter(_this, void 0, void 0, function () {
                                 var searchfont;
                                 return __generator(this, function (_a) {
                                     switch (_a.label) {
@@ -96,7 +96,7 @@ var GiftModel = /** @class */ (function () {
                                             return [2 /*return*/, searchfont];
                                     }
                                 });
-                            }); }))];
+                            }); })];
                     case 2:
                         namefonts = _a.sent();
                         return [2 /*return*/, namefonts];
@@ -104,14 +104,13 @@ var GiftModel = /** @class */ (function () {
             });
         }); };
         this.getBelongByGift = function (id) { return __awaiter(_this, void 0, void 0, function () {
-            var belongs, nameBelongs, _a, _b;
+            var belongs, nameBelongs;
             var _this = this;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
                     case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id])];
                     case 1:
-                        belongs = (_c.sent())[0];
-                        _b = (_a = Promise).all;
+                        belongs = (_a.sent())[0];
                         return [4 /*yield*/, belongs.map(function (bel) { return __awaiter(_this, void 0, void 0, function () {
                                 var searchBelong;
                                 return __generator(this, function (_a) {
@@ -123,9 +122,8 @@ var GiftModel = /** @class */ (function () {
                                     }
                                 });
                             }); })];
-                    case 2: return [4 /*yield*/, _b.apply(_a, [_c.sent()])];
-                    case 3:
-                        nameBelongs = _c.sent();
+                    case 2:
+                        nameBelongs = _a.sent();
                         return [2 /*return*/, nameBelongs];
                 }
             });

@@ -63,8 +63,8 @@ export default class GiftExibition extends React.Component {
 
   render() {
     const {
-      source,
-      arrayCategories,
+      // source,
+      // arrayCategories,
       arraysubtypes,
       description,
       descriptionPtBr,
@@ -108,9 +108,12 @@ export default class GiftExibition extends React.Component {
         </div>
         {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}
         <div className={giftDescription}>
-          <p className="my-2"><strong>Fonte:</strong> { this.returnListFonts(source) }</p>
+          <p className="my-2"><strong>Fonte:</strong>
+          {/* { this.returnListFonts(source) } */}
+          </p>
           <p className="my-2"><strong>Pertencente a: </strong>
-          { this.returnListBelongs(arrayCategories) }</p>
+          {/* { this.returnListBelongs(arrayCategories) } */}
+          </p>
           {arraysubtypes.length === 0
             ? <p> </p>
             : <p className="my-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</p>}

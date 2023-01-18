@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Nav from '../../components/Nav';
 import fetch from '../../fetch';
+import GiftExibition from '../../components/GiftExibition';
 
 export default class RegisterGift extends React.Component {
   state = {
@@ -519,12 +520,12 @@ export default class RegisterGift extends React.Component {
             />
           </div>
           <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
-            {/* {
+            {
               listGifts.length > 0 && listGifts.map((gifts, index) => (
                 <GiftExibition
                   key={ index }
-                  source={gifts.font}
-                  arrayCategories={gifts.belong}
+                  // source={gifts.font}
+                  // arrayCategories={gifts.belong}
                   arraysubtypes={[]}
                   description={gifts.textOriginal}
                   system={gifts.systemOriginal}
@@ -536,7 +537,7 @@ export default class RegisterGift extends React.Component {
                   admin={true}
                 />
               ))
-            } */}
+            }
           </div>
         </div>
       </div>
