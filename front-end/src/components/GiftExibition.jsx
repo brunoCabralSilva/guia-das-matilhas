@@ -25,7 +25,7 @@ export default class GiftExibition extends React.Component {
     const array = arrayCategories.map((array, index) => {
       if (index + 1 < arrayCategories.length) {
         return (<span key={ index } >
-          {array}
+          {array.belong_name}
           {', '}
         </span>
         );
@@ -33,7 +33,7 @@ export default class GiftExibition extends React.Component {
       else { 
         return (
           <span key={ index } >
-            {array}
+            {array.belong_name}
             {'.'}
           </span>
         );
