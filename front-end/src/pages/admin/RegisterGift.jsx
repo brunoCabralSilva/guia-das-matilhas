@@ -177,13 +177,17 @@ export default class RegisterGift extends React.Component {
     if (name === '' || name.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
     } else {
-      const verify = await axios.post(`${fetch()}/gifts/name`, {
-        name,
-      });
-      if (!verify.data.gift) {
-        this.setState({ vName: "Nome disponível para cadastro" });
-      } else {
-        this.setState({ vName: "Nome já existente na base de dados" });
+      try {
+        const verify = await axios.post(`${fetch()}/gifts/name`, {
+          name,
+        });
+        if (!verify.data.gift) {
+          this.setState({ vName: "Nome disponível para cadastro" });
+        } else {
+          this.setState({ vName: "Nome já existente na base de dados" });
+        }
+      } catch(error) {
+        console.log(error.message);
       }
     }
     setTimeout(() => {
