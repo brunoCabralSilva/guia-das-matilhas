@@ -226,12 +226,12 @@ var GiftModel = /** @class */ (function () {
             });
         }); };
         this.registerGift = function (gift) { return __awaiter(_this, void 0, void 0, function () {
-            var namePtBr, nameOriginal, rank, font, belong, textPtbr, systemPtbr, note, textOriginal, systemOriginal, query, foundGift;
+            var namePtBr, nameOriginal, rank, font, belong, textPtBr, systemPtBr, note, textOriginal, systemOriginal, query, foundGift;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        namePtBr = gift.namePtBr, nameOriginal = gift.nameOriginal, rank = gift.rank, font = gift.font, belong = gift.belong, textPtbr = gift.textPtbr, systemPtbr = gift.systemPtbr, note = gift.note, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
-                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal])];
+                        namePtBr = gift.namePtBr, nameOriginal = gift.nameOriginal, rank = gift.rank, font = gift.font, belong = gift.belong, textPtBr = gift.textPtBr, systemPtBr = gift.systemPtBr, note = gift.note, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
+                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal])];
                     case 1:
                         query = (_a.sent())[0];
                         this.registerBelong(query.insertId, belong);

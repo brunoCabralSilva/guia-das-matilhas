@@ -122,8 +122,8 @@ export default class RegisterGift extends React.Component {
       rank,
       listOfFonts,
       listOfBelongs,
-      textPtBr: textPtbr,
-      systemPtBr: systemPtbr,
+      textPtBr,
+      systemPtBr,
       note,
       textOriginal,
       systemOriginal,
@@ -148,9 +148,9 @@ export default class RegisterGift extends React.Component {
       window.alert('Necessário cadastrar um Livro como referẽncia');
     } else if (listOfBelongs.length === 0) {
       window.alert('Necessário inserir a quem este dom pertence');
-    } else if (textPtbr.length <= 10 ) {
+    } else if (textPtBr.length <= 10 ) {
       window.alert('Necessário inserir uma descrição maior para o campo "Texto Traduzido".');
-    } else if (systemPtbr.length <= 10 ) {
+    } else if (systemPtBr.length <= 10 ) {
       window.alert('Necessário inserir uma descrição maior para o campo "Sistema Traduzido".');
     } else if (textOriginal.length <= 10 ) {
       window.alert('Necessário inserir uma descrição maior para o campo "Texto original".');
@@ -167,8 +167,8 @@ export default class RegisterGift extends React.Component {
           rank,
           font: listOfFonts,
           belong: listOfBelongs,
-          textPtbr,
-          systemPtbr,
+          textPtBr,
+          systemPtBr,
           note,
           textOriginal,
           systemOriginal
@@ -183,9 +183,9 @@ export default class RegisterGift extends React.Component {
       this.setState({
         namePtBr: '',
         nameOriginal: '',
-        textPtbr: '',
+        textPtBr: '',
         systemOriginal: '',
-        systemPtbr: '',
+        systemPtBr: '',
         textOriginal: '',
         listOfFonts: [],
         listOfBelongs: [],
@@ -494,20 +494,20 @@ export default class RegisterGift extends React.Component {
                 onChange={ (e) => this.setState({ textPtBr: e.target.value }) }
               />
             </label>
-            <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
+            <label htmlFor="systemPtBr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
               <span className="py-3 font-bold pl-3">Sistema Traduzido:</span>
               <textarea
                 className="ml-3 mb-3 border p-2"
-                id="systemPtbr"
+                id="systemPtBr"
                 value={systemPtBr}
                 onChange={ (e) => this.setState({ systemPtBr: e.target.value })}
               />
             </label>
-            <label htmlFor="systemPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
+            <label htmlFor="note" className="p-2 flex flex-col bg-white rounded-lg mt-3">
               <span className="py-3 font-bold pl-3">Nota adicional:</span>
               <textarea
                 className="ml-3 mb-3 border p-2"
-                id="systemPtbr"
+                id="note"
                 value={note}
                 onChange={ (e) => this.setState({ note: e.target.value })}
               />
@@ -564,7 +564,7 @@ export default class RegisterGift extends React.Component {
                   arraysubtypes={[]}
                   description={gifts.gift_textOriginal}
                   system={gifts.gift_systemOriginal}
-                  not={gifts.gift_note}
+                  note={gifts.gift_note}
                   descriptionPtBr={gifts.gift_textPtBr}
                   systemPtBr={gifts.gift_systemPtBr}
                   level={gifts.gift_rank}

@@ -3,7 +3,7 @@ import connection from "./connection";
 
 interface giftReturn {
   gift_id: number,
-  gift_name: string,
+  gift_namePtBr: string,
   gift_rank: number,
   gift_textPtBr: string,
   gift_systemPtBr: string,
@@ -105,14 +105,14 @@ export default class GiftModel {
       rank,
       font,
       belong,
-      textPtbr,
-      systemPtbr,
+      textPtBr,
+      systemPtBr,
       note,
       textOriginal,
       systemOriginal
     } = gift;
     
-    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal]);
+    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);
