@@ -23,11 +23,12 @@ export default class GiftController {
   getAllGifts = async(req: Request, res: Response) => {
     try {
       const query = await this.service.getAllGifts();
+      console.log(query);
       if (query) {
-        return res.status(201).json({ list: query });
-      } return res.status(404).json({ list: false });
+        return res.status(201).json(query);
+      } return res.status(404).json(false);
     } catch(error) {
-      return res.status(404).json({ list: false });
+      return res.status(404).json(false);
     }
   };
 

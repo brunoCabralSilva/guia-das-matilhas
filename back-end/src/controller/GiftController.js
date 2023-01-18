@@ -55,7 +55,6 @@ var GiftController = /** @class */ (function () {
                         return [4 /*yield*/, this.service.getGiftByName(name)];
                     case 2:
                         query = _a.sent();
-                        console.log(query);
                         if (query.length > 0) {
                             return [2 /*return*/, res.status(201).json({ gift: true })];
                         }
@@ -76,13 +75,14 @@ var GiftController = /** @class */ (function () {
                         return [4 /*yield*/, this.service.getAllGifts()];
                     case 1:
                         query = _a.sent();
+                        console.log(query);
                         if (query) {
-                            return [2 /*return*/, res.status(201).json({ list: query })];
+                            return [2 /*return*/, res.status(201).json(query)];
                         }
-                        return [2 /*return*/, res.status(404).json({ list: false })];
+                        return [2 /*return*/, res.status(404).json(false)];
                     case 2:
                         error_2 = _a.sent();
-                        return [2 /*return*/, res.status(404).json({ list: false })];
+                        return [2 /*return*/, res.status(404).json(false)];
                     case 3: return [2 /*return*/];
                 }
             });
