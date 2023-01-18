@@ -9,9 +9,9 @@ export default class GiftController {
   }
 
   getGiftByName = async(req: Request, res: Response) => {
-    const { name } = req.body;
+    const { nameOriginal } = req.body;
     try {
-      const query: any = await this.service.getGiftByName(name);
+      const query: any = await this.service.getGiftByName(nameOriginal);
       if (query.length > 0) {
         return res.status(201).json({ gift: true });
       } return res.status(404).json({ gift: false });

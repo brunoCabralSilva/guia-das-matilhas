@@ -71,7 +71,8 @@ export default class GiftExibition extends React.Component {
       systemPtBr,
       note,
       system,
-      name,
+      namePtBr,
+      nameOriginal,
       level,
       admin
     } = this.props;
@@ -91,7 +92,7 @@ export default class GiftExibition extends React.Component {
             }
             onClick={this.enableDisableGift}
           >
-            <strong>{name} (Nível {level})</strong>
+            <strong>{namePtBr} (Nível {level})</strong>
           </p>
           {
             giftDescription === 'hidden'
@@ -139,7 +140,7 @@ export default class GiftExibition extends React.Component {
               <button className="bg-black mr-1 p-3">Editar</button>
               <button
                 className="bg-black ml-2 p-3"
-                onClick={ () => this.deleteItem(name, level, description) }
+                onClick={ () => this.deleteItem(nameOriginal, level, description) }
               >
                 Excluir
               </button>

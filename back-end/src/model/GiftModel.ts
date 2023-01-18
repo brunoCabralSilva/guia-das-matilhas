@@ -25,7 +25,7 @@ export default class GiftModel {
   }
 
   getGiftByName = async(name: string): Promise<RowDataPacket[] | null> => {
-    const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts WHERE gift_name = ?', [name]);
+    const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts WHERE gift_nameOriginal = ?', [name]);
     return query;
   };
 
@@ -100,7 +100,8 @@ export default class GiftModel {
 
   registerGift = async(gift: any) => {
     const {
-      name,
+      namePtBr,
+      nameOriginal,
       rank,
       font,
       belong,
@@ -111,7 +112,7 @@ export default class GiftModel {
       systemOriginal
     } = gift;
     
-    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [name, rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal]);
+    const [query]: any = await this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr, nameOriginal, rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);

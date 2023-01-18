@@ -18,10 +18,11 @@ export default class RegisterGift extends React.Component {
     listGifts: [],
     showFormGift: false,
     showGifts: true,
-    name: '',
+    namePtBr: '',
+    nameOriginal: '',
     rank: 0,
-    textPtbr: '',
-    systemPtbr: '',
+    textPtBr: '',
+    systemPtBr: '',
     note: '',
     textOriginal: '',
     systemOriginal: '',
@@ -116,12 +117,13 @@ export default class RegisterGift extends React.Component {
 
   addGift = async () => {
     const {
-      name,
+      namePtBr,
+      nameOriginal,
       rank,
       listOfFonts,
       listOfBelongs,
-      textPtbr,
-      systemPtbr,
+      textPtBr: textPtbr,
+      systemPtBr: systemPtbr,
       note,
       textOriginal,
       systemOriginal,
@@ -130,13 +132,13 @@ export default class RegisterGift extends React.Component {
     let verifyBoolean = false;
     try {
       const verify = await axios.post(`${fetch()}/gifts/name`, {
-        name,
+        nameOriginal,
       });
       verifyBoolean = verify.data.gift;
     } catch(error) {
       verifyBoolean = false;
     }
-    if (name === '' || name.length < 4) {
+    if (nameOriginal === '' || nameOriginal.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
     } else if (rank === 0) {
       window.alert('Necessário escolher um Posto');
@@ -158,7 +160,8 @@ export default class RegisterGift extends React.Component {
     else {
       try {
         const register = await axios.post(`${fetch()}/gifts`, {
-          name,
+          namePtBr,
+          nameOriginal,
           rank,
           font: listOfFonts,
           belong: listOfBelongs,
@@ -176,7 +179,8 @@ export default class RegisterGift extends React.Component {
       const rankSelect = document.getElementById("rank");
       rankSelect.selectedIndex = 0;
       this.setState({
-        name: '',
+        namePtBr: '',
+        nameOriginal: '',
         textPtbr: '',
         systemOriginal: '',
         systemPtbr: '',
@@ -196,13 +200,13 @@ export default class RegisterGift extends React.Component {
   }
 
   verifyName = async () => {
-    const { name } = this.state;
-    if (name === '' || name.length < 4) {
+    const { nameOriginal } = this.state;
+    if (nameOriginal === '' || nameOriginal.length < 4) {
       window.alert('Necessário adicionar um nome com pelo menos quatro caracteres para o dom');
     } else {
       try {
         const verify = await axios.post(`${fetch()}/gifts/name`, {
-          name,
+          nameOriginal,
         });
         if (verify.data.gift) {
           this.setState({ vName: "Nome já existente na base de dados" });
@@ -222,7 +226,8 @@ export default class RegisterGift extends React.Component {
     const { listGifts } = this.state;
     console.log('Lista de Dons', listGifts);
     const { 
-      name,
+      namePtBr,
+      nameOriginal,
       vName,
       showFormGift,
       listBooks,
@@ -231,9 +236,9 @@ export default class RegisterGift extends React.Component {
       listTrybes,
       listBreeds,
       listAuspices,
-      textPtbr,
+      textPtBr: textPtbr,
       systemOriginal,
-      systemPtbr,
+      systemPtBr: systemPtbr,
       page,
       note,
       textOriginal,
@@ -261,14 +266,14 @@ export default class RegisterGift extends React.Component {
                 htmlFor="name"
                 className="mb-1 w-1/2 flex justify-between items-center"
               >
-                <span className="w-1/3 p-3 font-bold">Nome do Dom:</span>
+                <span className="w-1/3 p-3 font-bold">Nome(Inglês):</span>
                 <div className="w-full h-full flex mr-8">
                   <input
                     type="text"
-                    value={name}
+                    value={nameOriginal}
                     id="name"
                     className="w-full h-full rounded p-2 border border-gray-300"
-                    onChange={(e) => this.setState({ name: e.target.value })}
+                    onChange={(e) => this.setState({ nameOriginal: e.target.value })}
                   />
                   <button
                     type="button"
@@ -280,23 +285,19 @@ export default class RegisterGift extends React.Component {
                 </div>
               </label>
               <label
-                htmlFor='rank'
-                className="w-1/2 h-full flex items-center"
+                htmlFor="name"
+                className="mb-1 w-1/2 flex justify-between items-center"
               >
-                <span className="p-3 w-1/3 font-bold"> Rank / Posto:</span>
-                <select
-                  id="rank"
-                  className="w-full h-full p-2 mx-2 rounded border border-gray-300 text-center"
-                  onChange={(e) => this.setState({ rank: e.target.value })}
-                >
-                  <option disabled selected>Selecione um Posto</option>
-                  <option value={1}>Cliath (1)</option>
-                  <option value={2}>Fostern (2)</option>
-                  <option value={3}>Adren (3)</option>
-                  <option value={4}>Athro (4)</option>
-                  <option value={5}>Ancião (5)</option>
-                  <option value={6}>Lendário (6)</option>
-                </select>
+                <span className="w-1/3 p-3 font-bold">Nome(Pt-br):</span>
+                <div className="w-full h-full flex mr-8">
+                  <input
+                    type="text"
+                    value={namePtBr}
+                    id="name"
+                    className="w-full h-full rounded p-2 border border-gray-300"
+                    onChange={(e) => this.setState({ namePtBr: e.target.value })}
+                  />
+                </div>
               </label>
             </div>
             {
@@ -401,6 +402,27 @@ export default class RegisterGift extends React.Component {
                   </div>
                 ))
               }
+            </div>
+            <div className="bg-white rounded-lg mt-3 mb-2">
+              <label
+                htmlFor="belong"
+                id="idBelong"
+                className="p-2 pl-4 w-full flex items-center">
+                <span className="w-1/3 my-4 font-bold">Posto:</span>
+                <select
+                  id="rank"
+                  className="w-2/3 mr-24 h-full p-2 rounded border border-gray-300 text-center"
+                  onChange={(e) => this.setState({ rank: e.target.value })}
+                >
+                  <option disabled selected>Selecione um Posto</option>
+                  <option value={1}>Cliath (1)</option>
+                  <option value={2}>Fostern (2)</option>
+                  <option value={3}>Adren (3)</option>
+                  <option value={4}>Athro (4)</option>
+                  <option value={5}>Ancião (5)</option>
+                  <option value={6}>Lendário (6)</option>
+                </select>
+              </label>
             </div>
             <div className="bg-white rounded-lg mt-3 mb-2">
               <label
