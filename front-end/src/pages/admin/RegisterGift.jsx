@@ -31,12 +31,6 @@ export default class RegisterGift extends React.Component {
   showAllGifts = async () => {
     try {
       const getAllGifts = await axios.get(`${fetch()}/gifts`);
-      const getAllFontsAndBelongs = await axios
-        .post(
-          `${fetch()}/gifts/fonts&belongs`,
-          { gifts: getAllGifts.data },
-      );
-      console.log(getAllFontsAndBelongs.data);
       this.setState({ listGifts: getAllGifts.data });
     } catch(error) {
       // this.setState({ listGifts: [] });
@@ -190,7 +184,12 @@ export default class RegisterGift extends React.Component {
       window.alert(`Dom adicionado com sucesso!`);
       window.scrollTo(0, 0);
     }
-    await this.showAllGifts();
+    try {
+      const getAllGifts = await axios.get(`${fetch()}/gifts`);
+      this.setState({ listGifts: getAllGifts.data });
+    } catch(error) {
+      // this.setState({ listGifts: [] });
+    }
   }
 
   verifyName = async () => {
