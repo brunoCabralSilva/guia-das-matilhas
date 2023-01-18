@@ -219,12 +219,12 @@ export default class RegisterGift extends React.Component {
         <div className="w-full mt-14 sm:mt-6 items-center" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>
           <div className="pl-5 mx-3 flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>
             <h1 className="text-4xl text-white" onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}>Adicionar um Dom</h1>
-            {/* <img
+            <img
               className="h-14 object-cover"
               src={require(`../../images/logos/${!showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
               onClick={() => this.setState((prev) => ({ showFormGift: !prev.showFormGift }))}
               alt="arrow"
-            /> */}
+            />
           </div>
         </div>
         {
@@ -433,13 +433,13 @@ export default class RegisterGift extends React.Component {
                 }
               </div>
             </div>
-            <label htmlFor="textPtBr" className="p-2 flex flex-col bg-white rounded-lg mt-1">
+            <label htmlFor="textPtbr" className="p-2 flex flex-col bg-white rounded-lg mt-1">
               <span className="py-3 font-bold pl-3">Texto Traduzido:</span>
               <textarea
                 className="ml-3 mb-3 border p-2"
-                id="textPtBr"
+                id="textPtbr"
                 value={textPtbr}
-                onChange={ (e) => this.setState({ textPrbr: e.target.value }) }
+                onChange={ (e) => this.setState({ textPtbr: e.target.value }) }
               />
             </label>
             <label htmlFor="systemPtBr" className="p-2 flex flex-col bg-white rounded-lg mt-3">
