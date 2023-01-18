@@ -24,19 +24,6 @@ export default class GiftModel {
     this.connection = connection;
   }
 
-  returnAllGifts = async () => {
-    const [queryBreeds] = await this.connection.execute('');
-    const [queryAuspices] = await this.connection.execute('');
-    const [queryTrybes] = await this.connection.execute('');
-    const [queryBooks] = await this.connection.execute('');
-    return {
-      queryBreeds,
-      queryAuspices,
-      queryTrybes,
-      queryBooks,
-    }
-  };
-
   getGiftByName = async(name: string): Promise<RowDataPacket[] | null> => {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts WHERE gift_name = ?', [name]);
     return query;
@@ -47,7 +34,7 @@ export default class GiftModel {
     return query;
   };
 
-  returnFontByGift = async(id: number) => {
+  getFontByGift = async(id: number) => {
     const [fonts]: any = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
     const namefonts = await Promise.all(
       fonts.map( async (fnt: any) => {
@@ -57,7 +44,7 @@ export default class GiftModel {
     return namefonts;
   };
 
-  returnBelongByGift = async(id: number): Promise<string[]> => {
+  getBelongByGift = async(id: number): Promise<string[]> => {
     const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
     const nameBelongs = await Promise.all(
       belongs.map( async (bel: any) => {
@@ -71,10 +58,16 @@ export default class GiftModel {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts');
     const fontsBelongs = await Promise.all(
       query.map( async(item) => {
+        const [belongs]: any = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [item.gift_id]);
+        const nameBelongs = await Promise.all(
+          belongs.map( async (bel: any) => {
+            const [searchBelong]: any = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
+            return searchBelong[0];
+          }));
         const objGift = {
           ...item,
-          belongs: await this.returnBelongByGift(item.gift_id),
-          fonts: await this.returnFontByGift(item.gift_id),
+          belongs: nameBelongs,
+          fonts: await this.getFontByGift(item.gift_id),
         }
         return objGift;
       })
@@ -103,6 +96,7 @@ export default class GiftModel {
         const [query]: any = await this.connection.execute<RowDataPacket[]>('INSERT INTO fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition]);
 
         const [query2] = await this.connection.execute<RowDataPacket[]>('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
+        
       }
     ));
   };
