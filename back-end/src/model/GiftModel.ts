@@ -71,12 +71,10 @@ export default class GiftModel {
     const [query] = await this.connection.execute<RowDataPacket[]>('SELECT * FROM gifts');
     const fontsBelongs = await Promise.all(
       query.map( async(item) => {
-        const listBelongs = await this.returnBelongByGift(item.gift_id);
-        const listFonts = await this.returnFontByGift(item.gift_id);
         const objGift = {
           ...item,
-          fonts: listFonts,
-          belongs: listBelongs,
+          fonts: await this.returnBelongByGift(item.gift_id),
+          belongs: await this.returnFontByGift(item.gift_id),
         }
         return objGift;
       })

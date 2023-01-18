@@ -162,23 +162,25 @@ var GiftModel = /** @class */ (function () {
                     case 1:
                         query = (_a.sent())[0];
                         return [4 /*yield*/, Promise.all(query.map(function (item) { return __awaiter(_this, void 0, void 0, function () {
-                                var listBelongs, listFonts, objGift;
-                                return __generator(this, function (_a) {
-                                    switch (_a.label) {
-                                        case 0: return [4 /*yield*/, this.returnBelongByGift(item.gift_id)];
+                                var objGift, _a;
+                                var _b;
+                                return __generator(this, function (_c) {
+                                    switch (_c.label) {
+                                        case 0:
+                                            _a = [__assign({}, item)];
+                                            _b = {};
+                                            return [4 /*yield*/, this.returnBelongByGift(item.gift_id)];
                                         case 1:
-                                            listBelongs = _a.sent();
+                                            _b.fonts = _c.sent();
                                             return [4 /*yield*/, this.returnFontByGift(item.gift_id)];
                                         case 2:
-                                            listFonts = _a.sent();
-                                            objGift = __assign(__assign({}, item), { fonts: listFonts, belongs: listBelongs });
+                                            objGift = __assign.apply(void 0, _a.concat([(_b.belongs = _c.sent(), _b)]));
                                             return [2 /*return*/, objGift];
                                     }
                                 });
                             }); }))];
                     case 2:
                         fontsBelongs = _a.sent();
-                        console.log('lista completa', fontsBelongs);
                         return [2 /*return*/, fontsBelongs];
                 }
             });
