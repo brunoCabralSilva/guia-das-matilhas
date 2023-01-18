@@ -73,8 +73,8 @@ export default class GiftModel {
       query.map( async(item) => {
         const objGift = {
           ...item,
-          fonts: await this.returnBelongByGift(item.gift_id),
-          belongs: await this.returnFontByGift(item.gift_id),
+          belongs: await this.returnBelongByGift(item.gift_id),
+          fonts: await this.returnFontByGift(item.gift_id),
         }
         return objGift;
       })

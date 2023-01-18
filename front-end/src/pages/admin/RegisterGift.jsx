@@ -30,7 +30,6 @@ export default class RegisterGift extends React.Component {
   showAllGifts = async () => {
     try {
       const register = await axios.get(`${fetch()}/gifts`);
-      console.log(register.data);
       this.setState({ listGifts: register.data });
     } catch(error) {
       // this.setState({ listGifts: [] });
@@ -38,7 +37,9 @@ export default class RegisterGift extends React.Component {
   };
 
   async componentDidMount() {
-    await this.showAllGifts();
+    const register = await axios.get(`${fetch()}/gifts`);
+    this.setState({ listGifts: register.data });
+    console.log(register.data);
     const { history } = this.props;
     try {
       const getLists = await axios.get(`${fetch()}/gifts/lists`);
