@@ -11,9 +11,10 @@ export default class GiftController {
   getGiftByName = async(req: Request, res: Response) => {
     const { name } = req.body;
     try {
-      const query = await this.service.getGiftByName(name);
-      if (query) {
-        return res.status(201).json({ gift: query });
+      const query: any = await this.service.getGiftByName(name);
+      console.log(query);
+      if (query.length > 0) {
+        return res.status(201).json({ gift: true });
       } return res.status(404).json({ gift: false });
     } catch(error) {
       return res.status(404).json({ gift: false });

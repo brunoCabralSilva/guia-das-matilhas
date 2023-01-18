@@ -55,8 +55,9 @@ var GiftController = /** @class */ (function () {
                         return [4 /*yield*/, this.service.getGiftByName(name)];
                     case 2:
                         query = _a.sent();
-                        if (query) {
-                            return [2 /*return*/, res.status(201).json({ gift: query })];
+                        console.log(query);
+                        if (query.length > 0) {
+                            return [2 /*return*/, res.status(201).json({ gift: true })];
                         }
                         return [2 /*return*/, res.status(404).json({ gift: false })];
                     case 3:
