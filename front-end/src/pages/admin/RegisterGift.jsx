@@ -31,9 +31,10 @@ export default class RegisterGift extends React.Component {
   showAllGifts = async () => {
     try {
       const register = await axios.get(`${fetch()}/gifts`);
+      console.log(register);
       this.setState({ listGifts: register.data });
     } catch(error) {
-      this.setState({ listGifts: [] });
+      // this.setState({ listGifts: [] });
     }
   };
 
