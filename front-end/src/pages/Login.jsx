@@ -6,6 +6,7 @@ export default class Login extends React.Component{
   state = {
     user: '',
     password: '',
+    loading: true,
   };
   
   async componentDidMount() {
@@ -13,7 +14,9 @@ export default class Login extends React.Component{
     try {
       const token = localStorage.getItem('token');
       if (token) {
+      this.setState({ loading: true });
       const resp =  await axios.post(`${fetch()}/login/verify`, { token });
+      this.setState({ loading: false });
       if(resp) {
         history.push('/painel-admin');
       }}
@@ -34,13 +37,23 @@ export default class Login extends React.Component{
       localStorage.setItem('token', resp.data.token );
       if(resp.data.token) {
         history.push('/painel-admin');
+        this.setState({ loading: false });
       }
     } catch(error) {
       console.log(error.message);
+      this.setState({ loading: false });
     }
   };
 
   render() {
+    const { loading } = this.state;
+    if (loading) {
+      return (
+        <div className="h-screen w-full flex items-center justify-center">
+          <span className="loader"></span>
+        </div>
+      );
+    }
     return (
       <div className="w-screen h-screen flex items-center justify-center">
         <form onSubmit={this.submit} className="flex flex-col">
