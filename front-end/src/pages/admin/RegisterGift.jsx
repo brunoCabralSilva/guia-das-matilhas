@@ -527,12 +527,12 @@ export default class RegisterGift extends React.Component {
                   // source={gifts.gifts_fonts}
                   // arrayCategories={gifts.gifts_belongs}
                   arraysubtypes={[]}
-                  description={gifts.gifts_textOriginal}
-                  system={gifts.gifts_systemOriginal}
-                  descriptionPtBr={gifts.gifts_textPtBr}
-                  systemPtBr={gifts.gifts_systemPtBr}
-                  level={gifts.gifts_rank}
-                  name={gifts.gifts_name}
+                  description={gifts.gift_textOriginal}
+                  system={gifts.gift_systemOriginal}
+                  descriptionPtBr={gifts.gift_textPtBr}
+                  systemPtBr={gifts.gift_systemPtBr}
+                  level={gifts.gift_rank}
+                  name={gifts.gift_name}
                   gifts={true}
                   admin={true}
                 />
