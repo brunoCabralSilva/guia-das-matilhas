@@ -514,7 +514,7 @@ export default class RegisterGift extends React.Component {
           </div>
           <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
             {
-              listGifts.data &&  listGifts.data.map((gifts, index) => (
+              listGifts.length > 0 && listGifts.map((gifts, index) => (
                 <GiftExibition
                   key={ index }
                   source={gifts.font}
