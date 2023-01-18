@@ -10,17 +10,18 @@ export default class Login extends React.Component{
   };
   
   async componentDidMount() {
+    this.setState({ loading: true });
     const { history } = this.props;
     try {
       const token = localStorage.getItem('token');
       if (token) {
-      this.setState({ loading: true });
       const resp =  await axios.post(`${fetch()}/login/verify`, { token });
       this.setState({ loading: false });
       if(resp) {
         history.push('/painel-admin');
       }}
     } catch(error) {
+      this.setState({ loading: false });
     }
   };
 
