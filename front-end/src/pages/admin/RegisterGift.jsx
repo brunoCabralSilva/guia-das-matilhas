@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Nav from '../../components/Nav';
-import GiftExibition from '../../components/GiftExibition';
 import fetch from '../../fetch';
 
 export default class RegisterGift extends React.Component {
@@ -227,7 +226,6 @@ export default class RegisterGift extends React.Component {
       page,
       textOriginal,
       showGifts,
-      listGifts,
     } = this.state;
     return (
       <div className={`w-full ${showFormGift ? 'min-h-screen' : 'h-screen'} bg-wolf-01 bg-cover flex flex-col relative`}>
@@ -513,7 +511,7 @@ export default class RegisterGift extends React.Component {
             />
           </div>
           <div className={`text-white ${showGifts ? 'flex flex-wrap': 'hidden'}`}>
-            {
+            {/* {
               listGifts.length > 0 && listGifts.map((gifts, index) => (
                 <GiftExibition
                   key={ index }
@@ -530,7 +528,7 @@ export default class RegisterGift extends React.Component {
                   admin={true}
                 />
               ))
-            }
+            } */}
           </div>
         </div>
       </div>
