@@ -93,7 +93,8 @@ var GiftController = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         gift = {
-                            name: req.body.name,
+                            namePtBr: req.body.namePtBr,
+                            nameOriginal: req.body.nameOriginal,
                             rank: req.body.rank,
                             font: req.body.font,
                             belong: req.body.belong,

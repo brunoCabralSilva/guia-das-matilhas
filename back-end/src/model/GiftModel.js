@@ -60,7 +60,7 @@ var GiftModel = /** @class */ (function () {
             var query;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts WHERE gift_nameOriginal = ?', [name])];
+                    case 0: return [4 /*yield*/, this.connection.execute('SELECT * FROM gifts WHERE gift_nameOriginal = ?', [name.toLowerCase()])];
                     case 1:
                         query = (_a.sent())[0];
                         return [2 /*return*/, query];
@@ -231,7 +231,7 @@ var GiftModel = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         namePtBr = gift.namePtBr, nameOriginal = gift.nameOriginal, rank = gift.rank, font = gift.font, belong = gift.belong, textPtbr = gift.textPtbr, systemPtbr = gift.systemPtbr, note = gift.note, textOriginal = gift.textOriginal, systemOriginal = gift.systemOriginal;
-                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr, nameOriginal, rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal])];
+                        return [4 /*yield*/, this.connection.execute('INSERT INTO gifts (gift_name, gift_nameOriginal gift_rank, gift_textPtBr, gift_systemPtBr, gift_note gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtbr, systemPtbr, note, textOriginal, systemOriginal])];
                     case 1:
                         query = (_a.sent())[0];
                         this.registerBelong(query.insertId, belong);
