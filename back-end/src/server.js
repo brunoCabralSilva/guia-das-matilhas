@@ -1,22 +1,20 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var express_1 = __importDefault(require("express"));
-var dotenv_1 = __importDefault(require("dotenv"));
-var cors_1 = __importDefault(require("cors"));
-var login_1 = __importDefault(require("./routes/login"));
-var gifts_1 = __importDefault(require("./routes/gifts"));
-var authenticate_1 = __importDefault(require("./routes/authenticate"));
-var fetch_1 = __importDefault(require("./utils/fetch"));
-dotenv_1.default.config();
-var app = (0, express_1.default)();
-app.use((0, cors_1.default)());
-app.use(fetch_1.default);
-app.use(express_1.default.json());
-var port = process.env.PORT || 3001;
-app.listen(port, function () { return console.log("Funcionando na porta ".concat(port)); });
-app.use('/login', login_1.default);
-app.use('/gifts', gifts_1.default);
-app.use('/authenticate', authenticate_1.default);
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const login = require('./routes/login');
+const gifts = require('./routes/gifts');
+const authenticate = require('./routes/authenticate');
+const app = express();
+
+app.use(cors());
+// app.use(headers);
+
+app.use(express.json());
+
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => console.log(`Funcionando na porta ${port}`));
+
+app.use('/login', login);
+app.use('/gifts', gifts);
+app.use('/authenticate', authenticate);
