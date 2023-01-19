@@ -12,13 +12,12 @@ export default class GiftExibition extends React.Component {
     if (showData) {
       this.setState({ giftDescription: 'gift-found-content' });
     }
-
-  }
+  };
 
   deleteItem = async (name, level, description) => {
     const deleteGift =  await axios.delete(`${fetch()}/gifts/delete`, { data: { name, level, description }});
     window.alert(deleteGift.data.message);
-  }
+  };
 
   enableDisableGift = () => {
     const { giftDescription } = this.state;
@@ -27,7 +26,7 @@ export default class GiftExibition extends React.Component {
     } else {
       this.setState({ giftDescription: 'hidden' });
     }
-  }
+  };
 
   firstLetterUpper = (word) => {
     const newWord = word[0];
@@ -87,7 +86,7 @@ export default class GiftExibition extends React.Component {
       systemPtBr,
       note,
       system,
-      namePtBr,
+      name,
       nameOriginal,
       level,
       admin,
@@ -118,7 +117,7 @@ export default class GiftExibition extends React.Component {
               } 
             }}
           >
-            <strong>{namePtBr && this.firstLetterUpper(namePtBr)} (Nível {level})</strong>
+            <strong>{name && this.firstLetterUpper(name)} (Nível {level})</strong>
           </p>
           {
             giftDescription === 'hidden'

@@ -602,7 +602,7 @@ export default class RegisterGift extends React.Component {
                   descriptionPtBr={gifts.gift_textPtBr}
                   systemPtBr={gifts.gift_systemPtBr}
                   level={gifts.gift_rank}
-                  name={gifts.gift_name}
+                  name={gifts.gift_namePtBr}
                   gifts={true}
                   admin={true}
                 />
