@@ -29,7 +29,7 @@ export default class GiftExibition extends React.Component {
   };
 
   firstLetterUpper = (word) => {
-    const newWord = word[0];
+    let newWord = word[0];
     for (let i = 1; i < word.length; i += 1) {
       newWord.push(word[i]);
     }
