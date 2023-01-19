@@ -9,7 +9,12 @@ module.exports = class GiftModel {
 
   getGiftByName = async(name) => {
     const [query] = await this.connection.execute('SELECT * FROM gifts WHERE gift_nameOriginal = ?', [name.toLowerCase()]);
-    return query;
+    const objGift = [{
+      ...query[0],
+      belongs: await this.getBelongByGift(query[0].gift_id),
+      fonts: await this.getFontByGift(query[0].gift_id),
+    }];
+    return objGift;
   };
 
   getGiftById = async(id) => {

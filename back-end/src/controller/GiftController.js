@@ -12,30 +12,20 @@ module.exports = class GiftController {
     try {
       const query = await this.service.getGiftByName(nameOriginal);
       if (query.length > 0) {
-        console.log(query);
-        return res.status(201).json({ gift: query });
+        const query2 = await this.service.getFontsAndBelongs(query);
+        return res.status(201).json({ gift: query2 });
       } return res.status(404).json({ gift: false });
     } catch(error) {
       return res.status(404).json({ gift: false });
     }
   };
 
-  getFontsAndBelongs = async(req, res) => {
-    try {
-      const query = await this.service.getFontsAndBelongs(req.body.list);
-      if (query) {
-        return res.status(201).json(query);
-      } return res.status(404).json(false);
-    } catch(error) {
-      return res.status(404).json(false);
-    }
-  };
-
   getAllGifts = async(req, res) => {
     try {
       const query = await this.service.getAllGifts();
-      if (query) {
-        return res.status(201).json(query);
+      const query2 = await this.service.getFontsAndBelongs(query);
+      if (query2) {
+        return res.status(201).json(query2);
       } return res.status(404).json(false);
     } catch(error) {
       return res.status(404).json(false);
