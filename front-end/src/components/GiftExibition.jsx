@@ -28,13 +28,13 @@ export default class GiftExibition extends React.Component {
     }
   };
 
-  firstLetterUpper = (word) => {
-    let newWord = word[0];
-    for (let i = 1; i < word.length; i += 1) {
-      newWord.push(word[i]);
+  firstLetterUpper = (nome) => {
+    let novoNome = nome[0].toUpperCase();
+    for (let i = 1; i < nome.length; i += 1) {
+      novoNome += nome[i];
     }
-    return newWord;
-  };
+    return novoNome;
+  }
 
   returnListBelongs = (arrayCategories) => {
     const array = arrayCategories.map((array, index) => {
