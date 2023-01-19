@@ -22,7 +22,7 @@
     {
         "nome": "Admin",
         "class": "navegation-default navegation5",
-        "link": "/login"
+        "link": "https://guiadasmatilhas-admin.up.railway.app/"
     },
     {
         "nome": "Parceiros",

@@ -74,9 +74,17 @@ export default class Menu extends React.Component {
               animate="visible"
               exit="exit"
             >
-              <Link to={nav.link} className="link-menu">
-                <p className="navegation-p">{nav.nome}</p>
-              </Link>
+              { nav.nome === 'Admin'
+                ? <a
+                    className="link-menu"
+                    href="https://guiadasmatilhas-admin.up.railway.app/"
+                  >
+                    <p className="navegation-p">{nav.nome}</p>
+                  </a>
+                :<Link to={nav.link} className="link-menu">
+                  <p className="navegation-p">{nav.nome}</p>
+                </Link>
+              }
             </motion.div>
           ))
         }
