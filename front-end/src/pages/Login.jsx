@@ -10,13 +10,13 @@ export default class Login extends React.Component{
   };
   
   async componentDidMount() {
-    console.log('entrou');
     this.setState({ loading: true });
     const { history } = this.props;
     try {
       const token = localStorage.getItem('token');
       if (token) {
         const resp = await axios.post(`${fetch()}/login/verify`, { token });
+        console.log(resp);
         this.setState({ loading: false });
         if(resp) {
           history.push('/painel-admin');
@@ -64,7 +64,7 @@ export default class Login extends React.Component{
         {
           loading ?
           <div className="h-screen w-full flex items-center justify-center">
-            <span className="loader"></span>
+            <span className="loader" />
           </div>
           : <form onSubmit={this.submit} className="flex flex-col">
             <input
