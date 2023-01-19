@@ -18,7 +18,7 @@ export default class Login extends React.Component{
         const resp = await axios.post(`${fetch()}/login/verify`, { token });
         console.log(resp);
         this.setState({ loading: false });
-        if(resp) {
+        if(resp.data.token) {
           history.push('/painel-admin');
         }
         this.setState({ loading: false });
