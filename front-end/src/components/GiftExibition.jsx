@@ -122,7 +122,7 @@ export default class GiftExibition extends React.Component {
           {
             giftDescription === 'hidden'
               ? !showData && <img
-                alt="seta para baixo"
+                alt="baixo"
                 src={require('../images/logos/arrow-down.png')}
                 className="h-12 pr-4"
               />
