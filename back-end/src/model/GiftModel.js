@@ -90,8 +90,13 @@ module.exports = class GiftModel {
       textOriginal,
       systemOriginal
     } = gift;
+
+    const newDate = new Date(Date.now());
+    const date = `${newDate.getDate()}/${newDate
+      .getMonth() < 10 && '0'}${newDate
+      .getMonth() + 1}/${newDate.getFullYear()}`;
     
-    const [query] = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal]);
+    const [query] = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal, gift_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal, date]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);
