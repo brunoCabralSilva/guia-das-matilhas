@@ -12,6 +12,11 @@ class GiftService {
     return query;
   };
 
+  getFontsAndBelongs = async(list) => {
+    const query = await this.model.getFontsAndBelongs(list);
+    return query;
+  }
+
   getAllGifts = async() => {
     const query = await this.model.getAllGifts();
     return query;

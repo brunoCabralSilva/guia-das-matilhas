@@ -17,23 +17,26 @@ module.exports = class GiftModel {
     return query;
   };
 
+  getFontsAndBelongs = async(list) => {
+    const fonts = await Promise.all(list.map(async (item) => {
+        const value = await Promise.all( await item.fonts.map( async(font) => {
+          const [query] = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [font.font_id]);
+          return query[0];
+        }));
+      const newObj = {...item, fonts: value };
+      return newObj;
+    }));
+    return fonts;
+  }
+
   getFontByGift = async(id) => {
     const [fonts] = await this.connection.execute('SELECT * FROM gifts_font WHERE gift_id = ?', [id]);
-    const namefonts = await Promise.all(fonts.map( async (fnt) => {
-      const [searchfont] = await this.connection.execute('SELECT * FROM fonts WHERE font_id = ?', [fnt.font_id]);
-      return searchfont;
-    }));
-    console.log(namefonts);
-    return namefonts;
+    return fonts;
   };
 
   getBelongByGift = async(id) => {
     const [belongs] = await this.connection.execute('SELECT * FROM gifts_belong WHERE gift_id = ?', [id]);
-    const nameBelongs = await belongs.map( async (bel) => {
-        const [searchBelong] = await this.connection.execute('SELECT * FROM belongs WHERE belong_id = ?', [bel.belong_id]);
-        return searchBelong[0];
-      });
-    return nameBelongs;
+    return belongs;
   };
 
   getAllGifts = async() => {
@@ -52,20 +55,9 @@ module.exports = class GiftModel {
   };
 
   registerBelong = async (idGift, belongs) => {
-    console.log('belongs', belongs);
     await Promise.all(
       belongs.map( async(belong) => {
-        const [idTrybes] = await this.connection.execute('SELECT * FROM trybes WHERE trybes_name = ?', [belong]);
-        const [idBreeds] = await this.connection.execute('SELECT * FROM breeds WHERE breeds_name = ?', [belong]);
-        const [idAuspices] = await this.connection.execute('SELECT * FROM auspices WHERE auspices_name = ?', [belong]);
-        let id = 0;
-        if (idTrybes.length > 0 ) {
-        } else if (idBreeds.length > 0 ) {
-          id = idBreeds[0].breeds_id;
-        } else {
-          id = idAuspices[0].auspices_id;
-        }
-        const [query] = await this.connection.execute('INSERT INTO gifts_belong (gift_id, belong_id) VALUES (?, ?)', [idGift, id]);
+        const [query] = await this.connection.execute('INSERT INTO gifts_belong (gift_id, belong_name) VALUES (?, ?)', [idGift, belong]);
 
         return ({
           'belong': query.insertId,
@@ -80,8 +72,7 @@ module.exports = class GiftModel {
         const { book, page, edition } = font;
         const [query] = await this.connection.execute('INSERT INTO fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition]);
 
-        const [query2] = await this.connection.execute('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
-        
+        await this.connection.execute('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
       }
     ));
   };

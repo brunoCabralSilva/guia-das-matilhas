@@ -20,6 +20,17 @@ module.exports = class GiftController {
     }
   };
 
+  getFontsAndBelongs = async(req, res) => {
+    try {
+      const query = await this.service.getFontsAndBelongs(req.body.list);
+      if (query) {
+        return res.status(201).json(query);
+      } return res.status(404).json(false);
+    } catch(error) {
+      return res.status(404).json(false);
+    }
+  };
+
   getAllGifts = async(req, res) => {
     try {
       const query = await this.service.getAllGifts();
