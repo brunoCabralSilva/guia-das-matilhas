@@ -117,7 +117,7 @@ export default class GiftExibition extends React.Component {
               } 
             }}
           >
-            <strong>{name} (Nível {level})</strong>
+            <strong>{this.firstLetterUpper(name)} (Nível {level})</strong>
           </p>
           {
             giftDescription === 'hidden'
