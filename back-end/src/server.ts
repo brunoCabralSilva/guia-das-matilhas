@@ -4,11 +4,13 @@ import cors from 'cors';
 import login from './routes/login';
 import gifts from './routes/gifts';
 import authenticate from './routes/authenticate';
+import headers from './utils/fetch';
 
 dotenv.config();
 const app = express();
 
 app.use(cors());
+app.use(headers);
 
 app.use(express.json());
 
