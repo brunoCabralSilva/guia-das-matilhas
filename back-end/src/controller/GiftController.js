@@ -44,6 +44,7 @@ module.exports = class GiftController {
       note: req.body.note,
       textOriginal: req.body.textOriginal,
       systemOriginal: req.body.systemOriginal,
+      user: req.body.user,
     }
     try {
       const query = await this.service.registerGift(gift);
@@ -56,6 +57,15 @@ module.exports = class GiftController {
       } return res.status(201).json(false);
     } catch(error) {
       return res.status(404).json({ register: error });
+    }
+  };
+
+  deleteGift = async(req, res) => {
+    const gift = await this.service.deleteGift(req.params.name);
+    if (gift === 'sucesso') {
+      return res.status(201).end();
+    } else {
+      return res.status(404).end();
     }
   };
 

@@ -15,7 +15,12 @@ class GiftService {
   getFontsAndBelongs = async(list) => {
     const query = await this.model.getFontsAndBelongs(list);
     return query;
-  }
+  };
+
+  deleteGift = async(name) => {
+    const gift = await this.model.deleteGift(name);
+    return gift;
+  };
 
   getAllGifts = async() => {
     const query = await this.model.getAllGifts();
@@ -30,7 +35,7 @@ class GiftService {
   returnFeatures = async() => {
     const query = await this.model.returnFeatures();
     return query;
-  }
+  };
 };
 
 module.exports = GiftService;

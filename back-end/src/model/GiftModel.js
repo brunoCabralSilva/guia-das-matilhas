@@ -76,10 +76,20 @@ module.exports = class GiftModel {
       fonts.map( async(font) => {
         const { book, page, edition } = font;
         const [query] = await this.connection.execute('INSERT INTO fonts (font_book, font_page, font_edition) VALUES (?, ?, ?)', [book, page, edition]);
-
         await this.connection.execute('INSERT INTO gifts_font (gift_id, font_id) VALUES (?, ?)', [id, query.insertId]);
       }
     ));
+  };
+
+  deleteGift = async(name) => {
+    const gift = await this.getGiftByName(name);
+    const id = gift[0].gift_id;
+    const db = await this.connection.execute('DELETE FROM gifts_font WHERE gift_id = ?', [id]);
+    const df = await this.connection.execute('DELETE FROM gifts_belong WHERE gift_id = ?', [id]);
+    const dg = await this.connection.execute('DELETE FROM gifts WHERE gift_id = ?', [id]);
+    if (db[0].affectedRows > 0 && df[0].affectedRows > 0 && dg[0].affectedRows > 0) {
+      return (`sucesso`);
+    } else return (`erro`);
   };
 
   registerGift = async(gift) => {
@@ -93,15 +103,17 @@ module.exports = class GiftModel {
       systemPtBr,
       note,
       textOriginal,
-      systemOriginal
+      systemOriginal,
+      user,
     } = gift;
 
-    const newDate = new Date(Date.now());
-    const date = `${newDate.getDate()}/${newDate
-      .getMonth() < 10 && '0'}${newDate
-      .getMonth() + 1}/${newDate.getFullYear()}`;
+    console.log(gift);
+
+    const date = new Date().toLocaleDateString();
+    const hours = new Date().toLocaleTimeString();
+    const dateFinal = `${date} às ${hours}`;
     
-    const [query] = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal, gift_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal, date]);
+    const [query] = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal, gift_date, gift_user) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal, dateFinal, user]);
 
     this.registerBelong(query.insertId, belong);
     this.registerFont(query.insertId, font);

@@ -8,6 +8,6 @@ router.post('/', giftController.registerGift);
 router.get('/', giftController.getAllGifts);
 router.get('/lists', giftController.returnFeatures);
 router.post('/name', giftController.getGiftByName);
-// router.delete('/delete', {});
+router.delete('/delete/:name', giftController.deleteGift);
 
 module.exports = router;
