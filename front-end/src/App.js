@@ -23,7 +23,7 @@ function App() {
     <AnimateSharedLayout>
       <AnimatePresence>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/guiadasmatilhas" component={Home} />
           <Route path="/trybes" component={Trybes} />
           <Route path="/breeds" component={Breeds} />
           <Route path="/auspices" component={Auspices} />
