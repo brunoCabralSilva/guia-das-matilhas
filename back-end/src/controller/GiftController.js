@@ -32,6 +32,35 @@ module.exports = class GiftController {
     }
   };
 
+  updateGift = async(req, res) => {
+    const gift = {
+      id: req.body.id,
+      namePtBr: req.body.namePtBr,
+      nameOriginal: req.body.nameOriginal,
+      rank: req.body.rank,
+      font: req.body.font,
+      belong: req.body.belong,
+      textPtBr: req.body.textPtBr,
+      systemPtBr: req.body.systemPtBr,
+      note: req.body.note,
+      textOriginal: req.body.textOriginal,
+      systemOriginal: req.body.systemOriginal,
+      user: req.body.user,
+    }
+    try {
+      const query = await this.service.updateGift(gift);
+      if (query) {
+        const objReturn = {
+          id: query[0].gift_id,
+          name: query[0].gift_name,
+        };
+        return res.status(201).json(objReturn);
+      } return res.status(201).json(false);
+    } catch(error) {
+      return res.status(404).json({ register: error });
+    }
+  };
+
   registerGift = async(req, res) => {
     const gift = {
       namePtBr: req.body.namePtBr,

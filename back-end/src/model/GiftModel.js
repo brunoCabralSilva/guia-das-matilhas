@@ -1,4 +1,5 @@
- const connection = require("./connection");
+ const { get } = require("../routes/gifts");
+const connection = require("./connection");
 
 module.exports = class GiftModel {
   connection;
@@ -82,6 +83,7 @@ module.exports = class GiftModel {
   };
 
   deleteGift = async(name) => {
+    console.log(name);
     const gift = await this.getGiftByName(name);
     const id = gift[0].gift_id;
     const db = await this.connection.execute('DELETE FROM gifts_font WHERE gift_id = ?', [id]);
@@ -107,8 +109,6 @@ module.exports = class GiftModel {
       user,
     } = gift;
 
-    console.log(gift);
-
     const date = new Date().toLocaleDateString();
     const hours = new Date().toLocaleTimeString();
     const dateFinal = `${date} às ${hours}`;
@@ -120,6 +120,13 @@ module.exports = class GiftModel {
 
     const foundGift = await this.getGiftById(query.insertId);
     return foundGift;
+  };
+
+  updateGift = async (gift) => {
+    const getById = await this.getGiftById(gift.id);
+    const deleteItem = await this.deleteGift(getById[0].gift_nameOriginal);
+    const update = await this.registerGift(gift);
+    return update;
   };
 
   returnFeatures = async() => {

@@ -32,6 +32,11 @@ class GiftService {
     return query;
   };
 
+  updateGift = async(gift) => {
+    const query = await this.model.updateGift(gift);
+    return query;
+  };
+
   returnFeatures = async() => {
     const query = await this.model.returnFeatures();
     return query;
