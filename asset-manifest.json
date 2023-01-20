@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/guiadasmatilhas/static/css/main.e5b3f36c.css",
+    "main.js": "/guiadasmatilhas/static/js/main.c1291866.js",
+    "static/media/werewolfw20.png": "/guiadasmatilhas/static/media/werewolfw20.6d448191040f7b79515d.png",
+    "static/media/garou_nordeste.jpg": "/guiadasmatilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
+    "static/media/001.jpg": "/guiadasmatilhas/static/media/001.7732ba41059acaae2499.jpg",
+    "static/media/kombi.jpg": "/guiadasmatilhas/static/media/kombi.339f7315df6de2db3d0c.jpg",
+    "static/media/wolf_run.gif": "/guiadasmatilhas/static/media/wolf_run.67c8ac035834e2f424f6.gif",
+    "static/media/model.jpg": "/guiadasmatilhas/static/media/model.06f8ae66d1dadbd2de87.jpg",
+    "static/media/arrow-left.png": "/guiadasmatilhas/static/media/arrow-left.4d7b6b4a43d0b81bdbf7.png",
+    "static/media/arrow-down.png": "/guiadasmatilhas/static/media/arrow-down.f1328be3e4f27857d594.png",
+    "static/media/arrow-up.png": "/guiadasmatilhas/static/media/arrow-up.d0d4259bcaf268fdc339.png",
+    "index.html": "/guiadasmatilhas/index.html",
+    "main.e5b3f36c.css.map": "/guiadasmatilhas/static/css/main.e5b3f36c.css.map",
+    "main.c1291866.js.map": "/guiadasmatilhas/static/js/main.c1291866.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5b3f36c.css",
+    "static/js/main.c1291866.js"
+  ]
+}
