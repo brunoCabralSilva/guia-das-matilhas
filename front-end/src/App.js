@@ -14,6 +14,9 @@ import Trybes from './pages/Trybes';
 import Breeds from './pages/Breeds';
 import Auspices from './pages/Auspices';
 import Gifts from './pages/Gifts';
+import Login from './pages/admin/Login';
+import Painel from './pages/admin/Painel';
+import RegisterGift from './pages/admin/RegisterGift';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
           <Route path="/page" component={Page} />
           <Route path="/rituais" component={Rituals} />
           <Route path="/parceiros" component={Friends} />
+          <Route path='/login' component={Login} />
+          <Route path="/painel-admin" component={Painel} />
+          <Route path="/painel-dons" component={RegisterGift} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </AnimatePresence>

@@ -1,11 +1,12 @@
 import React from 'react';
-import axios from 'axios';
-import fetch from '../fetch';
+import contextRegister from '../context/registro/contextRegister';
+import PopUpDelete from './admin/PopUpDelete';
 
 export default class GiftExibition extends React.Component {
   state = {
     giftDescription: 'hidden',
-  }
+    popup: false,
+  };
 
   componentDidMount() {
     const { showData } = this.props;
@@ -14,9 +15,8 @@ export default class GiftExibition extends React.Component {
     }
   };
 
-  deleteItem = async (name, level, description) => {
-    const deleteGift =  await axios.delete(`${fetch()}/gifts/delete`, { data: { name, level, description }});
-    window.alert(deleteGift.data.message);
+  setPopup = (bool) => {
+    this.setState({ popup: bool });
   };
 
   enableDisableGift = () => {
@@ -59,9 +59,7 @@ export default class GiftExibition extends React.Component {
 
   returnListFonts = (source) => {
     return source.map((array, index) => (
-      <p key={ index } >
-        Livro:
-        {' '}
+      <div key={ index }>
         {array.font_book}
         {', '}
         Pag.
@@ -72,26 +70,56 @@ export default class GiftExibition extends React.Component {
         {' '}
         { array.font_edition }
         {'.'}
-      </p>
+      </div>
     ));
+  };
+
+  editGift = () => {
+    this.context.setShowFormGift(true);
+    window.scroll(0, 0);
+    this.context.setEdit(this.props.nameOriginal);
+    const belongsList = this.props.arrayCategories.map((cat) => cat.belong_name );
+    const sourceList = this.props.source.map((s) => (
+      { 
+        book: s.font_book,
+        page: s.font_page,
+        edition: s.font_edition
+      }
+    ))
+    const rankSelect = document.getElementById("rank");
+    rankSelect.selectedIndex = this.props.level;
+    this.context.setListOfFonts(sourceList);
+    this.context.setListOfBelongs(belongsList);
+    // arraysubtypes: this.props.arraysubtypes,
+    this.context.setId(this.props.id);
+    this.context.setTextOriginal(this.props.description);
+    this.context.setTextPtBr(this.props.descriptionPtBr);
+    this.context.setSystemPtBr(this.props.systemPtBr);
+    this.context.setNote(this.props.note);
+    this.context.setSystemOriginal(this.props.system);
+    this.context.setNamePtBr(this.props.namePtBr);
+    this.context.setNameOriginal(this.props.nameOriginal);
+    this.context.setRank(this.props.level);
   };
 
   render() {
     const {
-      // source,
-      // arrayCategories,
+      source,arrayCategories,
       arraysubtypes,
       description,
       descriptionPtBr,
       systemPtBr,
       note,
       system,
-      name,
+      namePtBr,
       nameOriginal,
       level,
       admin,
       color,
       showData,
+      date,
+      user,
+      edit,
     } = this.props;
     const { giftDescription } = this.state;
     return (
@@ -100,12 +128,19 @@ export default class GiftExibition extends React.Component {
           ? ' w-full text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'
           : ' w-full text-white sm:w-48% bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'}`}
       >
+        {
+          this.state.popup && 
+          <PopUpDelete
+            name={nameOriginal}
+            setPopup={ this.setPopup }
+          />
+        }
         <div className='flex items-center justify-between' onClick={() => {
               if(!showData) {
                 this.enableDisableGift()
               } 
             }}>
-          <p
+          <div
             className={
               giftDescription !== 'hidden'
                 ? "w-full"
@@ -117,8 +152,14 @@ export default class GiftExibition extends React.Component {
               } 
             }}
           >
-            <strong>{this.firstLetterUpper(name)} (Nível {level})</strong>
-          </p>
+            <strong>
+              {namePtBr && this.firstLetterUpper(namePtBr)}
+              {' ('}
+              {nameOriginal && this.firstLetterUpper(nameOriginal)}
+              {') '}
+              - Posto {level}
+            </strong>
+          </div>
           {
             giftDescription === 'hidden'
               ? !showData && <img
@@ -135,44 +176,66 @@ export default class GiftExibition extends React.Component {
         </div>
         {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}
         <div className={giftDescription}>
-          <p className="my-2"><strong>Fonte:</strong>
-          {/* { this.returnListFonts(source) } */}
-          </p>
-          <p className="my-2"><strong>Pertencente a: </strong>
-          {/* { this.returnListBelongs(arrayCategories) } */}
-          </p>
-          {arraysubtypes.length === 0
-            ? <p> </p>
-            : <p className="my-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</p>}
-          <p className="my-2"><strong>Descrição: </strong></p>
-          <p className="my-2">{ descriptionPtBr }</p>
-          <p className="my-2"><strong>Sistema:</strong></p>
-          <p className="my-2">{ systemPtBr }</p>
+          <div className="mt-2"><strong>Fonte:</strong>
+          { this.returnListFonts(source) }
+          </div>
+          <div className="mt-2">
+            <p><strong>Pertencente a: </strong></p>
+            { this.returnListBelongs(arrayCategories) }
+            </div>
+          <div className="mt-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</div>
+          <div className="my-2"><strong>Descrição: </strong></div>
+          <div className="my-2">{ descriptionPtBr }</div>
+          <div className="my-2"><strong>Sistema:</strong></div>
+          <div className="my-2">{ systemPtBr }</div>
           {
             note &&
             <div>
-            <p className="my-2"><strong>Nota:</strong></p>
-            <p className="my-2">{ note }</p>
+              <div className="my-2"><strong>Nota:</strong></div>
+              { 
+                edit
+                ? <textarea className="text-black w-full" value={note} onChange={(e) => this.setState({ note: e.target.value })} />
+                :<div className="my-2">{ note }</div>
+              }
             </div>
           }
-          <p className="my-2"><strong>Description:</strong></p>
-          <p className="my-2">{description}</p>
-          <p className="my-2"><strong>System:</strong></p>
-          <p className="my-2">{system}</p>
+          <div className="my-2"><strong>Description:</strong></div>
+          <div className="my-2">{description}</div>
+          <div className="my-2"><strong>System:</strong></div>
+          <div className="my-2">{system}</div>
+          {
+            date && 
+            <div>
+              <div className="my-2">
+                <strong>Atualizado pela última vez em</strong>
+                <span>{' '}</span>
+                {date}
+                <span>{' '}</span>
+                <span>por {user}</span>
+              </div>
+            </div>
+          }
           {
             admin &&
             <div className="mt-6">
-              <button className="bg-black mr-1 p-3">Editar</button>
               <button
-                className="bg-black ml-2 p-3"
-                onClick={ () => this.deleteItem(nameOriginal, level, description) }
+                className="bg-black mr-1 p-3 border-2 border-black hover:border-white transition duration-500"
+                onClick={this.editGift}
+              >
+                  Editar
+              </button>
+              <button
+                className="bg-black ml-2 p-3 border-2 border-black hover:border-white transition duration-500"
+                onClick={ () => this.setPopup(true) }
               >
                 Excluir
               </button>
             </div>
           }
         </div>
-      </section >
+      </section>
     );
   }
 }
+
+GiftExibition.contextType = contextRegister;
