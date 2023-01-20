@@ -76,7 +76,7 @@ export default class Allies extends React.Component {
                 whileHover={{ scale: 1.1 }}
                 src={require(`../images/logos/${image}`)}
                 alt="imagem do parceiro"
-                className="sm:w-11/12 h-60 object-contain p-4"
+                className="sm:w-11/12  h-60 object-contain p-4"
               />
           } */}
         </div>
