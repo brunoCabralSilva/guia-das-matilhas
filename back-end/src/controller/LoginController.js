@@ -1,4 +1,5 @@
 const LoginService = require('../service/LoginService');
+
 const Token = require('../utils/Token');
 
 module.exports = class LoginController {
