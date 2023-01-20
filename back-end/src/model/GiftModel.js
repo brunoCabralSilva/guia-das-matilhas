@@ -1,5 +1,4 @@
- const { get } = require("../routes/gifts");
-const connection = require("./connection");
+ const connection = require("./connection");
 
 module.exports = class GiftModel {
   connection;
