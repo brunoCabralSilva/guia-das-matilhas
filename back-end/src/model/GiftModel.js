@@ -93,6 +93,24 @@ module.exports = class GiftModel {
     } else return (`erro`);
   };
 
+  returnDateNow = () => {
+    const newDate = new Date();
+    const date = `${newDate.getDate() < 10 ? '0' : ''}${newDate.getDate()}`;
+    const month = `${newDate.getMonth() < 10 ? '0' : ''}${newDate.getMonth() + 1}`;
+    const year = `${newDate.getFullYear()}`;
+    const fullDate = `${date}/${month}/${year}`;
+    
+    const fuso = (newDate.getTimezoneOffset());
+    let hours = newDate.getHours();
+    if (fuso !== 180) {
+      const diferença = Math.abs(180 - fuso)/3;
+      hours = newDate.getHours() - diferença;
+    }
+    const minutes = newDate.getMinutes();
+    const fullHours = `${hours}h${minutes}min`;
+    return `${fullDate} às ${fullHours}`;
+  };
+
   registerGift = async(gift) => {
     const {
       namePtBr,
@@ -108,9 +126,7 @@ module.exports = class GiftModel {
       user,
     } = gift;
 
-    const date = new Date().toLocaleDateString();
-    const hours = new Date().toLocaleTimeString();
-    const dateFinal = `${date} às ${hours}`;
+    const dateFinal = this.returnDateNow();
     
     const [query] = await this.connection.execute('INSERT INTO gifts (gift_namePtBr, gift_nameOriginal, gift_rank, gift_textPtBr, gift_systemPtBr, gift_note, gift_textOriginal, gift_systemOriginal, gift_date, gift_user) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [namePtBr.toLowerCase(), nameOriginal.toLowerCase(), rank, textPtBr, systemPtBr, note, textOriginal, systemOriginal, dateFinal, user]);
 
@@ -123,7 +139,7 @@ module.exports = class GiftModel {
 
   updateGift = async (gift) => {
     const getById = await this.getGiftById(gift.id);
-    const deleteItem = await this.deleteGift(getById[0].gift_nameOriginal);
+    await this.deleteGift(getById[0].gift_nameOriginal);
     const update = await this.registerGift(gift);
     return update;
   };
