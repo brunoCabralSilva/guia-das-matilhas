@@ -4,9 +4,9 @@
 
 <h3 align="center">https://brunocabralsilva.github.io/guia-das-matilhas/</h3>
 
-![Tela Inicial da Aplicação](front/src/images/menu/apresentation01.png)
+![Tela Inicial da Aplicação](front-end/src/images/menu/apresentation01.png)
 
-![Menu principal](front/src/images/menu/apresentation02.png)
+![Menu principal](front-end/src/images/menu/apresentation02.png)
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
