@@ -16,7 +16,7 @@
     "swiper": "^8.4.6",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://brunoCabralSilva.github.io/guiadasmatilhas",
+  "homepage": "https://brunoCabralSilva.github.io/guia-das-matilhas",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
