@@ -82,7 +82,6 @@ module.exports = class GiftModel {
   };
 
   deleteGift = async(name) => {
-    console.log(name);
     const gift = await this.getGiftByName(name);
     const id = gift[0].gift_id;
     const db = await this.connection.execute('DELETE FROM gifts_font WHERE gift_id = ?', [id]);

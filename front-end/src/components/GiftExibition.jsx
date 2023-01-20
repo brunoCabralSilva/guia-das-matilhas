@@ -162,16 +162,16 @@ export default class GiftExibition extends React.Component {
           </div>
           {
             giftDescription === 'hidden'
-              ? !showData && <img
-                alt="baixo"
-                src={require('../images/logos/arrow-down.png')}
-                className="h-12 pr-4"
-              />
-              : !showData && <img
-                alt="seta para cima"
-                src={require('../images/logos/arrow-up.png')}
-                className="h-12 pr-4"
-              />
+            ? !showData && <img
+              alt="baixo"
+              src={require('../images/logos/arrow-down.png')}
+              className="h-12 pr-4"
+            />
+            : !showData && <img
+              alt="seta para cima"
+              src={require('../images/logos/arrow-up.png')}
+              className="h-12 pr-4"
+            />
           }
         </div>
         {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}

@@ -15,7 +15,6 @@ export default class Trybes extends React.Component {
     window.scrollTo(0, 0);
     const allLists = await axios.get(`${fetch()}/gifts/lists`);
     this.setState({ trybeLists: allLists.data.queryTrybes });
-    console.log(allLists.data.queryTrybes)
   }
 
   render() {

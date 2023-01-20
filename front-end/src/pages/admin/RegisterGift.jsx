@@ -46,8 +46,7 @@ export default class RegisterGift extends React.Component {
     }
   };
 
-  addGift = async () => {   
-    console.log(this.context);
+  addGift = async () => {
     let verifyBoolean = false;
     try {
       const verify = await axios.post(`${fetch()}/gifts/name`, {
@@ -122,11 +121,11 @@ export default class RegisterGift extends React.Component {
               <div className="w-full mt-14 cursor-pointer sm:mt-6 items-center" onClick={() => contextRegister.setShowFormGift(!contextRegister.showFormGift)}>
                 <div className="pl-5 mx-3 flex items-center justify-between bg-gradient-to-r from-f-transp to-transparent py-5">
                   <h1 className="text-2xl md:text-4xl text-white" >Adicionar um Dom</h1>
-                  {/* <img
+                  <img
                     className="h-14 object-cover"
-                    'src={require(`../../images/logos/${!contextRegister.showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
+                    src={require(`../../images/logos/${!contextRegister.showFormGift ? 'arrow-down.png': 'arrow-up.png'}`)}
                     alt="arrow"
-                  /> */}
+                  />
                 </div>
               </div>
               {
@@ -173,11 +172,11 @@ export default class RegisterGift extends React.Component {
               <div className="w-full mt-2 md:mt-2 items-center">
                 <div className="pl-5 mx-3 cursor-pointer items-center flex justify-between bg-gradient-to-r from-f-transp to-transparent py-5" onClick={() => contextRegister.setShowGifts(!contextRegister.showGifts) }>
                   <h1 className="text-2xl md:text-4xl text-white">Lista de Dons</h1>
-                  {/* <img
+                  <img
                     className="h-14 object-cover"
-                    src={require(`../images/logos/${contextRegister.showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}
+                    src={require(`../../images/logos/${contextRegister.showGifts ? 'arrow-down.png': 'arrow-up.png'}`)}
                     alt=""
-                  /> */}
+                  />
                 </div>
                 <div className={`text-white ${contextRegister.showGifts ? 'flex flex-wrap': 'hidden'}`}>
                   {

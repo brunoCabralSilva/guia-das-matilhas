@@ -43,6 +43,7 @@ export default class Allies extends React.Component {
       name,
       description,
       index,
+      image,
     } = this.props;
 
     const parceiros = {
@@ -69,7 +70,7 @@ export default class Allies extends React.Component {
         exit="exit"
       >
         <div className="w-full md:w-1/3 lg:w-1/6 min-h-48 md:mr-3 md:bg-f-transp bg-gradient-to-r from-f-transp to-transparent flex items-center justify-center">
-          {/* {
+          {
             image === ""
               ? "Sem imagem"
               : <motion.img
@@ -77,8 +78,8 @@ export default class Allies extends React.Component {
                 src={require(`../images/logos/${image}`)}
                 alt="imagem do parceiro"
                 className="sm:w-11/12  h-60 object-contain p-4"
-              />
-          } */}
+            />
+          }
         </div>
         <div className="w-full md:w-2/3 lg:w-5/6 bg-gradient-to-r from-f-transp to-transparent mt-3 md:mt-0 flex flex-col justify-center">
           <h1 className="text-2xl 2xl:text-4xl text-center md:text-left p-6 md:p-4">{name}</h1>

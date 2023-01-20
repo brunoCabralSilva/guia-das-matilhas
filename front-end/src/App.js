@@ -2,7 +2,6 @@ import { Switch, Route } from 'react-router-dom';
 import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import './App.css';
 import Home from './pages/Home';
-import NotFound from './pages/NotFound';
 import Menu from './pages/Menu';
 import MatilhaDaKombi from './pages/MatilhaDaKombi';
 import GarouNordeste from './pages/GarouNordeste';
@@ -23,7 +22,7 @@ function App() {
     <AnimateSharedLayout>
       <AnimatePresence>
         <Switch>
-          <Route exact path="/guia-das-matilhas" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/trybes" component={Trybes} />
           <Route path="/breeds" component={Breeds} />
           <Route path="/auspices" component={Auspices} />
@@ -38,7 +37,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path="/painel-admin" component={Painel} />
           <Route path="/painel-dons" component={RegisterGift} />
-          <Route exact path="*" component={NotFound} />
+          <Route exact path="*" component={Home} />
         </Switch>
       </AnimatePresence>
     </AnimateSharedLayout>

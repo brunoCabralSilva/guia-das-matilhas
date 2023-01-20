@@ -28,7 +28,6 @@ export default class Friends extends React.Component {
     return all;
   }
   render() {
-
     const parceiros = {
       hidden: { opacity: 0, x: 20 },
       visible: (index) => ({

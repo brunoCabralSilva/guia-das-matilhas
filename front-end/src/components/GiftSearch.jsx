@@ -12,9 +12,9 @@ export default class GiftSearch extends React.Component {
     let filter = [];
     if (bookSearch.length > 0) {
       filter = listAllGifts.filter((dom) => {
-        const { font } = dom;
+        const { fonts } = dom;
         const books = bookSearch.map((book) => {
-          const fontFiltered = font.filter((f) => f.book === book);
+          const fontFiltered = fonts.filter((f) => f.font_book === book);
           if(fontFiltered.length > 0) return true;
           return false;
         });
@@ -38,8 +38,8 @@ export default class GiftSearch extends React.Component {
         }
       });
       filter = filter.filter((eachGift) => {
-        const { rank } = eachGift;
-        const items = rankNames.filter((item) => item === rank);
+        const { gift_rank } = eachGift;
+        const items = rankNames.filter((item) => item === gift_rank);
         if(items.length > 0) return items;
         return false;
       });
@@ -47,9 +47,9 @@ export default class GiftSearch extends React.Component {
 
     if (featureSearch.length > 0) {
       filter = filter.filter((dom) => {
-        const { belong } = dom;
+        const { belongs } = dom;
         const items = featureSearch.map((item) => {
-          const eachName = belong.map((cat) => cat.includes(item));
+          const eachName = belongs.map((cat) => cat.belong_name === item);
           if (eachName.includes(true)) return true;
           return false;
         });
@@ -60,15 +60,18 @@ export default class GiftSearch extends React.Component {
     const filtredGifts = filter.map((dom, index) => (
       <GiftExibition
         key={ index } 
-        source={dom.font}
-        arrayCategories={dom.belong}
+        source={dom.fonts}
+        arrayCategories={dom.belongs}
         arraysubtypes={[]}
-        description={dom.textOriginal}
-        system={dom.systemOriginal}
-        descriptionPtBr={dom.textPtBr}
-        systemPtBr={dom.systemPtBr}
-        level={dom.rank}
-        name={dom.name_gift}
+        description={dom.gift_textOriginal}
+        system={dom.gift_systemOriginal}
+        descriptionPtBr={dom.gift_textPtBr}
+        systemPtBr={dom.gift_systemPtBr}
+        level={dom.gift_rank}
+        name={dom.gift_name_gift}
+        note={dom.gift_note}
+        namePtBr={dom.gift_namePtBr}
+        nameOriginal={dom.gift_nameOriginal}
         gifts={dom}
         admin={false}
       />
