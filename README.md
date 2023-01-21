@@ -129,8 +129,8 @@
 
 <h2 id="pessoas-envolvidas">Desenvolvedores e demais contribuidores</h2>
 
-* <strong>Bruno Gabryell Cabral da Silva</strong> - Desenvolvedor Web;
-* <strong>Thiago Lucas Martins da Silva</strong> - Idealizador, Tradutor e transcritor de textos dos livros nos arquivos JSON;
+* <strong>Bruno Gabryell Cabral da Silva</strong> - idealizador e Desenvolvedor Web;
+* <strong>Thiago Lucas Martins da Silva</strong> - Idealizador, Tradutor, transcritor de textos e principal responsável por inserir dados na aplicação;
 * <strong>Erika Emanuelly da Silva Cruz</strong> - Experiência do Usuário;
 * <strong>Patrick Cosme de Oliveira</strong> - Experiência do Usuário;
 
