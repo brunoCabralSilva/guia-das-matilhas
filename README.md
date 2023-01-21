@@ -6,7 +6,7 @@
 
 ![Tela Inicial da Aplicação](front-end/src/images/menu/apresentation01.png)
 
-![Menu principal](front-end/src/images/menu/apresentation02.png)
+![Menu principal](front-end/src/images/menu/apresentation02.gif)
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
