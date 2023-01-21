@@ -7,7 +7,7 @@ const listMenu = [
   {
     img: 'https://64.media.tumblr.com/e3a999e989e0f17dac10be8b649707eb/af64a96270ae26f2-dd/s400x600/c1164ced59af1891c7c60ca70613a4d4643d0bb9.gifv',
     name: 'Início',
-    link: 'https://guiadasmatilhas.up.railway.app/',
+    link: '/',
     col: 'col-span-3 sm:col-span-2',
   },
   {
@@ -74,25 +74,7 @@ export default class Painel extends React.Component {
     return(
       <div className="grid grid-rows-3 grid-cols-5 gap-2 m-4 items-center justify-center">
         {
-          listMenu.map((list, index) => {
-            if (list.name === 'Início') {
-              return (
-                <a
-                  key={ index }
-                  className={`${list.col} h-30vh relative`}
-                  href={list.link}
-                >
-                  <img
-                    src={`${list.img}`}
-                    alt="werewolf"
-                    className="h-full w-full absolute object-cover"
-                  />
-                  <p className="w-full h-full absolute z-10 text-white font-bold flex items-end p-2">
-                    {list.name}
-                  </p>
-                </a>
-              );
-            } return (
+          listMenu.map((list, index) => (
               <Link
                 key={ index }
                 className={`${list.col} h-30vh relative`}
@@ -107,9 +89,8 @@ export default class Painel extends React.Component {
                   {list.name}
                 </p>
               </Link>
-              );
-            })
-          }
+          ))
+        }
       </div>
     );
   }
