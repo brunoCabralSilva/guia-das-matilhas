@@ -41,7 +41,7 @@
 <ol>
 <li><h4>Menu Principal</h4></li> 
 
-<p>Lugar de acesso a diversas das informações do site. Por meio desta página, é possível ser direcionado para as páginas Dons, Rituais, Fetiches, Parceiros, Garou Nordeste e Matilha da Kombi.</p>
+<p>Lugar de acesso a diversas das informações do site. Por meio desta página, é possível ser direcionado para as páginas Dons, Admin, Fetiches, Parceiros, Garou Nordeste e Matilha da Kombi.</p>
 
 <p> </p>
 
@@ -95,7 +95,22 @@
 
 <p> Lugar reservado para falarmos um pouco a respeito de quem somos, quem são nossos grupos e como tudo começou, além de serem compartilhados todos os nossos links de contato.</p>
 
+<li><h4>Login</h4></li>
+
+<p> Um usuário administrador poderá acessar as funcionalidades referentes a sua função clicando em "Admin", na página de Menu. Ele será direcionado para uma página de Login que, antes de mais nada, verificará se ele possui um token de validação salvo em seu local storage no navegador. Caso exista e seja válido, o usuário é automaticamente direcionado para página do painel administrativo. Caso não, é necessário fazer o login para prosseguir (ao realizar o login com sucesso, um token é gerado e salvo no local storage).</p>
+
+<li><h4>Painel Administrativo</h4></li>
+
+<p> Lugar reservado para falarmos um pouco a respeito de quem somos, quem são nossos grupos e como tudo começou, além de serem compartilhados todos os nossos links de contato.</p>
+
+<li><h4>Painel de Dons</h4></li>
+
+<p> Na página em questão, é possível Adicionar um novo dom e listá-los. Para adicionar um dom, o usuário precisa preencher todos os dados necessários, caso contrário não será possível registrar o mesmo no banco de dados. Dentre todas as validações, é necessário escolher um nome que não existe ainda no banco de dados, não existirem campos em branco além de "nota", entre outros.</p>
+
+<p> Ao Adicionar um dom, ele é imediatamente listado junto aos demais dons existentes na área "Listar Dons" da página. A partir desta área, o usuário administrador poderá excluir um dom ou editá-lo.</p>
+
 </ol>
+
 
 <h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
 
