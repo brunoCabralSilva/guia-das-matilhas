@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/guia-das-matilhas/static/css/main.c8e79c76.css",
-    "main.js": "/guia-das-matilhas/static/js/main.2a7b1a14.js",
+    "main.js": "/guia-das-matilhas/static/js/main.a23cd435.js",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -150,10 +150,10 @@
     "static/media/ceu_noturno.jpeg": "/guia-das-matilhas/static/media/ceu_noturno.2b462db91177991b4fe1.jpeg",
     "index.html": "/guia-das-matilhas/index.html",
     "main.c8e79c76.css.map": "/guia-das-matilhas/static/css/main.c8e79c76.css.map",
-    "main.2a7b1a14.js.map": "/guia-das-matilhas/static/js/main.2a7b1a14.js.map"
+    "main.a23cd435.js.map": "/guia-das-matilhas/static/js/main.a23cd435.js.map"
   },
   "entrypoints": [
     "static/css/main.c8e79c76.css",
-    "static/js/main.2a7b1a14.js"
+    "static/js/main.a23cd435.js"
   ]
 }
