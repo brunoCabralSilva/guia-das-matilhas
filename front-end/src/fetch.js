@@ -1,6 +1,7 @@
 
 // const REACT_APP_API_HOST = 'guia-das-matilhas-back-end.up.railway.app';
-const REACT_APP_API_HOST = 'localhost:3001';
+// const REACT_APP_API_HOST = 'localhost:3001';
+const REACT_APP_API_HOST = '18.231.57.227:3001';
 
 // const REACT_APP_PROTOCOL = 'https';
 const REACT_APP_PROTOCOL = 'http';
