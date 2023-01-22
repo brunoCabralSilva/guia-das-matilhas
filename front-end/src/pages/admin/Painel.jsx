@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fetch from '../../fetch';
+import { motion } from 'framer-motion';
 
 const listMenu = [
   {
@@ -53,6 +54,31 @@ const listMenu = [
   },
 ];
 
+const item = {
+  hidden: {
+    y: 20,
+    opacity: 0
+  },
+  visible: (index) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.5 + (0.1 * index),
+      duration: 0.5,
+      type: 'spring',
+      stiffness: 150
+    }
+  }),
+  exit: (index) => ({
+    y: 20,
+    opacity: 0,
+    transition: {
+      delay: (0.1 * index),
+      duration: 0.1,
+    }
+  }),
+}
+
 export default class Painel extends React.Component {
   
   async componentDidMount() {
@@ -75,9 +101,18 @@ export default class Painel extends React.Component {
       <div className="grid grid-rows-3 grid-cols-5 gap-2 m-4 items-center justify-center">
         {
           listMenu.map((list, index) => (
+            <motion.div
+              key={index}
+              className={`${list.col} h-30vh relative hover:border hover:border-white`}
+              custom={index}
+              variants={item}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
               <Link
                 key={ index }
-                className={`${list.col} h-30vh relative`}
+                
                 to={list.link}
                 >
                 <img
@@ -89,6 +124,7 @@ export default class Painel extends React.Component {
                   {list.name}
                 </p>
               </Link>
+            </motion.div>
           ))
         }
       </div>

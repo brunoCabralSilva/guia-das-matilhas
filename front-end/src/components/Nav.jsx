@@ -127,8 +127,8 @@ export default class Nav extends React.Component {
         </motion.ul>
         </div>
         <motion.ul className="hidden sm:flex flex-row text-white justify-center pt-3 flex-wrap w-full mx-auto"
-          initial={{ x: 30, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           exit={{ y: -30, opacity: 0, transition: { duration: 0.5 } }}>
           <li className="px-3 mt-2">

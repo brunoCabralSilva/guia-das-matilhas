@@ -39,9 +39,9 @@ export default class AboutUs extends React.Component {
         >
           Quem Somos
         </motion.h2>
-        <div className="flex flex-col sm:flex-row m-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 m-3 ">
           <motion.div
-            className="w-full h-full sm:w-1/2 mr-3 md:mr-0"
+            className="w-full h-full mr-3 md:mr-0"
             custom={1}
             variants={text}
             initial="hidden"
@@ -89,7 +89,7 @@ export default class AboutUs extends React.Component {
             </div>
           </motion.div>
           <motion.div
-            className="w-full sm:w-1/2 mr-3 md:mr-0 mt-3 md:mt-0 ml-0 md:ml-3"
+            className="w-full mr-3 md:mr-0 mt-3 md:mt-0 ml-0 md:ml-3"
             custom={2}
             variants={text}
             initial="hidden"

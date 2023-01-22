@@ -19,13 +19,13 @@ export default class Home extends React.Component {
             <Nav />
           </div>
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
               delay: 0.5,
               duration: 1,
             }}
-            exit={{ y: -20, opacity: 0, transition: { duration: 0.3 } }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
             className="relative flex flex-col items-center w-full justify-center h-full"
           >
             <div className="w-80% text-center text-white flex items-end justify-center font-amatic text-5xl md:text-7xl 2xl:text-8xl">
