@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/guia-das-matilhas/static/css/main.53ee1cf9.css",
-    "main.js": "/guia-das-matilhas/static/js/main.c66801fe.js",
+    "main.css": "/guia-das-matilhas/static/css/main.c196d86a.css",
+    "main.js": "/guia-das-matilhas/static/js/main.d4f2fd99.js",
+    "static/media/apresentation02.gif": "/guia-das-matilhas/static/media/apresentation02.38ff2f441a2949957d5f.gif",
     "static/media/getOfFenris_transp.png": "/guia-das-matilhas/static/media/getOfFenris_transp.69900d85ced254f824ed.png",
     "static/media/blackSpiralDancers_transp.png": "/guia-das-matilhas/static/media/blackSpiralDancers_transp.7ac82b882ce4ac282f3f.png",
     "static/media/SilverFangs_transp.png": "/guia-das-matilhas/static/media/SilverFangs_transp.9ef43a0630ed738f00ea.png",
@@ -22,11 +23,12 @@
     "static/media/childrenOfGaia_transp.png": "/guia-das-matilhas/static/media/childrenOfGaia_transp.fb75f644e8541e889cca.png",
     "static/media/glassWalkers_transp.png": "/guia-das-matilhas/static/media/glassWalkers_transp.8c5af6e35bb8297c4639.png",
     "static/media/childrenOfGaia_slide.png": "/guia-das-matilhas/static/media/childrenOfGaia_slide.c4604b13024acefbe4f0.png",
+    "static/media/Garou Nordeste.png": "/guia-das-matilhas/static/media/Garou Nordeste.7a28fe38dc1c2dc1e48c.png",
     "static/media/capirremoto.png": "/guia-das-matilhas/static/media/capirremoto.1d55cb85cd76a3641b34.png",
     "static/media/Howlers_slide.png": "/guia-das-matilhas/static/media/Howlers_slide.02ef8aad96771218a937.png",
     "static/media/RedTalons_slide.png": "/guia-das-matilhas/static/media/RedTalons_slide.5dd6de82622aa7bbfbea.png",
     "static/media/stargazers_slide.png": "/guia-das-matilhas/static/media/stargazers_slide.1dc5481c0ccdf906dde0.png",
-    "static/media/werewolfw20.png": "/guia-das-matilhas/static/media/werewolfw20.6d448191040f7b79515d.png",
+    "static/media/werewolfw20.png": "/guia-das-matilhas/static/media/werewolfw20.317e132cb5297e7bc2e0.png",
     "static/media/bunyip_slide.png": "/guia-das-matilhas/static/media/bunyip_slide.1de659be0ad24fb1925d.png",
     "static/media/getOfFenris_slide.png": "/guia-das-matilhas/static/media/getOfFenris_slide.d5cb233f38cbb0a623c0.png",
     "static/media/croatan_slide.png": "/guia-das-matilhas/static/media/croatan_slide.6ad5592f588aae8a5fad.png",
@@ -112,6 +114,7 @@
     "static/media/Wendigo_semFundo.png": "/guia-das-matilhas/static/media/Wendigo_semFundo.a2c0202b6583d42c6466.png",
     "static/media/boneGnawers_semFundo.png": "/guia-das-matilhas/static/media/boneGnawers_semFundo.cca4fd793e9537dbc709.png",
     "static/media/Crônicas da Kombi.png": "/guia-das-matilhas/static/media/Crônicas da Kombi.d4d8e354dfd0561d71b3.png",
+    "static/media/apresentation01.png": "/guia-das-matilhas/static/media/apresentation01.218e9bdea98a1637336b.png",
     "static/media/Garou Nordeste2.png": "/guia-das-matilhas/static/media/Garou Nordeste2.f34c8bdaaff6fdfb7a0d.png",
     "static/media/garou_nordeste.jpg": "/guia-das-matilhas/static/media/garou_nordeste.f34c8bdaaff6fdfb7a0d.jpg",
     "static/media/rageacrossbrasil.png": "/guia-das-matilhas/static/media/rageacrossbrasil.19d0526d3fc599e1e4b9.png",
@@ -149,11 +152,11 @@
     "static/media/ragabash2.png": "/guia-das-matilhas/static/media/ragabash2.482488332eb2604abda8.png",
     "static/media/ceu_noturno.jpeg": "/guia-das-matilhas/static/media/ceu_noturno.2b462db91177991b4fe1.jpeg",
     "index.html": "/guia-das-matilhas/index.html",
-    "main.53ee1cf9.css.map": "/guia-das-matilhas/static/css/main.53ee1cf9.css.map",
-    "main.c66801fe.js.map": "/guia-das-matilhas/static/js/main.c66801fe.js.map"
+    "main.c196d86a.css.map": "/guia-das-matilhas/static/css/main.c196d86a.css.map",
+    "main.d4f2fd99.js.map": "/guia-das-matilhas/static/js/main.d4f2fd99.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ee1cf9.css",
-    "static/js/main.c66801fe.js"
+    "static/css/main.c196d86a.css",
+    "static/js/main.d4f2fd99.js"
   ]
 }
