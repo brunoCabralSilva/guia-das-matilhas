@@ -165,12 +165,12 @@ export default class GiftExibition extends React.Component {
             ? !showData && <img
               alt="baixo"
               src={require('../images/logos/arrow-down.png')}
-              className="h-12 pr-4"
+              className="h-12 md:pr-4"
             />
             : !showData && <img
               alt="seta para cima"
               src={require('../images/logos/arrow-up.png')}
-              className="h-12 pr-4"
+              className="h-12 md:pr-4"
             />
           }
         </div>

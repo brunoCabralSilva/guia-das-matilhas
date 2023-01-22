@@ -57,11 +57,11 @@ export default class Nav extends React.Component {
   render() {
     return (
       <nav className="w-full z-40 font-andika text-base relative 2xl:text-xl leading-6">
-        <div className={`absolute right-0 top-0 z-40 mr-8 mt-8 flex flex-col ${this.returnItemsMenu()} sm:hidden`} onClick={this.menu}>
+        <div className={`absolute right-0 top-0 z-40 mr-2 mt-2 flex flex-col ${this.returnItemsMenu()} sm:hidden`} onClick={this.menu}>
           <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra1()}`}> </div>
           <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra2()}`}> </div>
-          <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra3()}`}> </div>
-          <motion.ul
+          <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra3()}`}></div>
+        <motion.ul
             className={`${this.returnItemMenu()}`}
             initial={{ x: 30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -111,22 +111,22 @@ export default class Nav extends React.Component {
               <Link to="/login">
                 <p className="text-white font-bold">Login</p>
               </Link>
-              <div className="flex pt-10">
-              {/* <img
-                src={require('../images/logos/Garou Nordeste.png')}
+              {/* <div className="flex pt-10">
+              <img
+                src={require('../images/menu/garou_nordeste.jpg')}
                 alt="Logo do Garou Nordeste"
                 className="w-16"
               />
               <img
-                src={require('../images/logos/Crônicas da Kombi.png')}
+                src={require('../images/menu/kombi.jpg')}
                 alt="Logo da Matilha da Kombi"
                 className="w-16"
-              /> */}
-              </div>
+              />
+              </div> */}
         </div>
         </motion.ul>
         </div>
-        <motion.ul className="hidden sm:flex flex-row text-white justify-center pt-3 flex-wrap w-10/12 mx-auto"
+        <motion.ul className="hidden sm:flex flex-row text-white justify-center pt-3 flex-wrap w-full mx-auto"
           initial={{ x: 30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}

@@ -26,12 +26,12 @@ export default class Home extends React.Component {
               duration: 1,
             }}
             exit={{ y: -20, opacity: 0, transition: { duration: 0.3 } }}
-            className="relative flex flex-col items-center w-full"
+            className="relative flex flex-col items-center w-full justify-center h-full"
           >
-            <div className="w-80% h-35vh md:h-45vh text-center text-white flex items-end justify-center font-amatic text-5xl md:text-7xl 2xl:text-8xl">
+            <div className="w-80% text-center text-white flex items-end justify-center font-amatic text-5xl md:text-7xl 2xl:text-8xl">
               <h1 className="animate-pulse ">Guia das Matilhas</h1>
             </div>
-            <div className="w-full h-33vh md:h-40vh flex justify-center items-end">
+            <div className="w-full mt-16 sm:mt-28 flex justify-center items-end">
               <Link to="/menu" className="">
                 <img
                   src={require('../images/logos/arrow-down.png')}

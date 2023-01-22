@@ -111,10 +111,8 @@ export default class RegisterGift extends React.Component {
       <contextRegister.Consumer>
         {
           (contextRegister) => (
-            <div className={`w-full ${contextRegister.showFormGift ? 'min-h-screen' : 'h-screen'} bg-wolf-01 bg-cover flex flex-col relative`}>
-              <div className="main-nav relative z-20">
-                <Nav />
-              </div>
+            <div className={`w-full ${contextRegister.showFormGift ? 'min-h-screen' : 'h-screen'} items-center bg-cover flex flex-col relative`}>
+              <Nav />
               { 
                 contextRegister.message !== '' && <PopUpMessage />
               }
@@ -130,7 +128,7 @@ export default class RegisterGift extends React.Component {
               </div>
               {
                 contextRegister.showFormGift && 
-                <div className={`bg-gradient-to-r from-f-transp to-transparent m-3 flex flex-col md:p-8 z-10`}>
+                <div className={`m-3 flex flex-col w-11/12 md:w-full md:p-8 z-10`}>
                   <Names />
                   <Rank />
                   <Fonts />
@@ -161,7 +159,7 @@ export default class RegisterGift extends React.Component {
                       </div>
                     :<button
                       type="button"
-                      className="p-4 bg-gray-200 my-2 border border-black hover:border-white hover:bg-black hover:text-white transition duration-500 font-bold"
+                      className="p-4 bg-gray-200 mt-2 md:my-2 border border-black hover:border-white hover:bg-black hover:text-white transition duration-500 font-bold"
                       onClick={() => this.addGift(contextRegister)}
                     >
                       Adicionar dom

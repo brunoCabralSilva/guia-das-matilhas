@@ -36,16 +36,16 @@ export default function FontsOfGifts() {
   };
 
   return(
-    <div className="bg-white rounded-lg mt-3">
-      <div className="md:pl-4 p-2 flex-col md:flex-row border rounded-lg border-white flex gap-10 mb-2">
+    <div className="bg-white rounded-lg mt-3 py-5 px-4">
+      <div className="w-full flex-col md:flex-row border rounded-lg border-white flex gap-10 mb-3">
         <label
             htmlFor="book"
-            className="md:pl-2 w-full flex flex-col md:flex-row items-center"
+            className="w-full flex flex-col md:flex-row items-center"
           >
-            <span className="w-full p-3 md:p-0 md:w-1/3 font-bold">Fonte:</span>
+            <span className="w-full md:w-1/3 font-bold">Fonte:</span>
             <select
               id="book"
-              className="w-full p-2 border text-center border-gray-300"
+              className="mt-2 md:mt-0 w-full p-2 border text-center border-gray-300"
               onChange={(e) => contextRegister.setBook(e.target.value)}
             >
               <option disabled selected>Selecione um Livro</option>
@@ -64,11 +64,11 @@ export default function FontsOfGifts() {
           </label>
         <label
           htmlFor="page"
-          className="p-3 md:p-0 md:pl-2 py-1 w-full flex flex-col md:flex-row items-center"
+          className="w-full flex flex-col md:flex-row items-center"
         >
         <span className="w-full md:w-1/3 font-bold">Página:</span>
           <input
-            className="md:w-2/3 p-2 border text-center"
+            className="mt-2 md:mt-0 w-full md:w-2/3 p-2 border text-center"
             type="number"
             id="page"
             value={contextRegister.page}
@@ -77,12 +77,12 @@ export default function FontsOfGifts() {
         </label>
         <label
           htmlFor="edition"
-          className="pl-2 w-full flex flex-col md:flex-row items-center"
+          className="w-full flex flex-col md:flex-row items-center"
         >
           <span className="w-full md:w-1/3 font-bold">Edição:</span>
           <select
             id="edition"
-            className="w-full md:w-2/3 p-2 border text-center"
+            className="mt-2 md:mt-0 w-full md:w-2/3 p-2 border text-center"
             onChange={(e) => contextRegister.setEdition(e.target.value)}
           >
             <option disabled selected>Selecione uma Edição</option>
@@ -99,42 +99,44 @@ export default function FontsOfGifts() {
           +
         </button>
       </div>
-      {
-        contextRegister.listOfFonts && contextRegister.listOfFonts.map((fonts, index) => (
-          <div key={index} className="ml-5 mr-1 my-3 border border-gray-300 p-2 flex justify-between bg-white pl-10 rounded-lg">
-            <div className="w-10/12 flex items-center">
-              <p className="w-1/3">
-                <span className="font-bold">
-                  Livro:
-                </span>
-                {' '}
-                { fonts.book }
-              </p>
-              <p className="w-1/3">
-                <span className="font-bold">
-                  Página:
-                </span>
-                {' '}
-                { fonts.page }
-              </p>
-              <p className="w-1/3">
-                <span className="font-bold">
-                  Edição:
-                </span>
-                {' '}
-                { fonts.edition }
-              </p>
+      <div className="flex flex-col items-center justify-center">
+        {
+          contextRegister.listOfFonts && contextRegister.listOfFonts.map((fonts, index) => (
+            <div key={index} className="my-2 border border-gray-300 p-2 flex flex-col md:flex-row justify-between bg-white rounded-lg w-full">
+              <div className="w-full flex flex-col md:flex-row items-center text-center">
+                <p className="w-full md:w-1/3 md:py-0 py-3">
+                  <span className="font-bold">
+                    Livro:
+                  </span>
+                  {' '}
+                  { fonts.book }
+                </p>
+                <p className="w-full md:w-1/3 md:py-0 py-3">
+                  <span className="font-bold">
+                    Página:
+                  </span>
+                  {' '}
+                  { fonts.page }
+                </p>
+                <p className="w-full md:w-1/3 md:py-0 py-3">
+                  <span className="font-bold">
+                    Edição:
+                  </span>
+                  {' '}
+                  { fonts.edition }
+                </p>
+              </div>
+              <button
+                type="button"
+                className="px-5 py-3 border border-black hover:bg-black hover:text-white transition duration-500 rounded"
+                onClick={ () => deleteFont(contextRegister, fonts) }
+                >
+                Excluir
+              </button>
             </div>
-            <button
-              type="button"
-              className="px-5 py-3 border border-black hover:bg-black hover:text-white transition duration-500 rounded"
-              onClick={ () => deleteFont(contextRegister, fonts) }
-              >
-              Excluir
-            </button>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   );
 }

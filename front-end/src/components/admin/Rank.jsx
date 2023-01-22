@@ -4,15 +4,15 @@ import context from "../../context/registro/contextRegister";
 export default function Rank() {
   const contextRegister = useContext(context);
   return (
-    <div className="bg-white rounded-lg mt-3">
+    <div className="bg-white rounded-lg mt-3 py-5 px-4">
       <label
         htmlFor="belong"
         id="idBelong"
-        className="p-2 pl-4 w-full flex flex-col md:flex-row items-center">
-        <span className="w-full md:w-1/3 my-4 font-bold">Posto:</span>
+        className="w-full flex flex-col md:flex-row items-center">
+        <span className="w-full md:w-4/12 mb-3 md:mb-0 font-bold">Posto:</span>
         <select
           id="rank"
-          className="w-full md:w-2/3 md:mr-24 h-full p-2 rounded border border-gray-300 mb-3 md-mb-0 text-center"
+          className="w-full md:w-11/12 h-full p-2 rounded border border-gray-300 text-center"
           onChange={(e) => contextRegister.setRank(e.target.value)}
         >
           <option disabled selected>Selecione um Posto</option>

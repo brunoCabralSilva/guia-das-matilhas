@@ -24,23 +24,31 @@ export default class Carousel extends React.Component {
       return item.auspices_name;
     } return item.breeds_name;
   }
-
-  componentDidMount() {
-    const classSwiper = document.getElementsByClassName('swiper-slide');
-    for(let i = 0; i < classSwiper.length; i += 1) {
-      classSwiper[i].style.maxWidth = '30%';
-    }
-  };
   
   render() {
     const { list, navigation, loop } = this.props;
     return(
       <Swiper
+      breakpoints={{
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 1,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 4
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween:1,
+        }}}
         loop={loop}
         navigation={navigation}
-        slidesPerView="auto"
         modules={[Navigation, EffectCoverflow]}
-        className="h-75vh my-3 leading-10 relative mySwiper"
+        className="h-75vh my-3 leading-10 relative"
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -51,18 +59,15 @@ export default class Carousel extends React.Component {
           modifier: 2,
           slideShadows: true,
         }}
-        pagination={true}
       >
         {
           list.map((item, index) => (
-            <div key={ index } className="slider-swiper-div">
-              <SwiperSlide className="mx-2 h-full blur-sm w-10vw p-4 flex flex-col items-center justify-center">
-                { this.imageReturn(item) }
-                <p className="text-white font-amatic font-bold text-4xl w-full text-center py-2">
-                  { this.nameReturn(item) }
-                </p>
-              </SwiperSlide>
-            </div>
+            <SwiperSlide key={index} className="h-full blur-sm w-screen p-4 flex flex-col items-center justify-center">
+              { this.imageReturn(item) }
+              <p className="text-white font-amatic font-bold text-4xl w-full text-center py-2">
+                { this.nameReturn(item) }
+              </p>
+            </SwiperSlide>
           ))
         }
       </Swiper>

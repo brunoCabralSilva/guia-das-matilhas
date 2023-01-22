@@ -25,15 +25,15 @@ export default function Belongs() {
 
   const contextRegister = useContext(context);
   return(
-    <div className="bg-white rounded-lg mt-3 mb-2">
+    <div className="bg-white rounded-lg mt-3 py-5 px-4">
       <label
         htmlFor="belong"
         id="idBelong"
-        className="p-2 pl-4 w-full flex flex-col md:flex-row items-center">
+        className="w-full flex flex-col md:flex-row items-center">
         <span className="w-full md:w-1/3 my-4 font-bold">Pertencente a:</span>
         <select
           id="selectBelong"
-          className="w-full md:w-2/3 p-2 border text-center"
+          className="w-full p-2 border text-center"
           onChange={(e) => contextRegister.setBelong(e.target.value)}
         >
           <option disabled value={0} selected>Selecione</option>
@@ -58,7 +58,7 @@ export default function Belongs() {
         </select>
         <button
           type="button"
-          className="ml-2 p-2 px-10 border border-black hover:bg-black hover:text-white transition duration-500 rounded mr-1"
+          className=" w-full md:w-2/12 mt-2 md:mt-0 md:ml-2 py-2 border border-black hover:bg-black hover:text-white transition duration-500 rounded"
           onClick={() => addNewBelong()}
         >
           +
@@ -67,8 +67,8 @@ export default function Belongs() {
       <div className="flex flex-col mb-3">
         {
           contextRegister.listOfBelongs && contextRegister.listOfBelongs.map((bel, index) => (
-            <div key={index} className="ml-5 mr-1 mt-3 border border-gray-300 p-2 flex justify-between bg-white pl-10 rounded-lg items-center">
-              <div className="w-10/12 mr-4">
+            <div key={index} className="p-3 mt-3 border border-gray-300 flex justify-between bg-white rounded-lg items-center">
+              <div className="w-10/12">
                 { bel }
               </div>
               <button

@@ -20,7 +20,7 @@ export default class TextFromGifts extends React.Component{
         <div className="w-99% md:py-0 relative mt-2 mb-3 flex flex-col justify-center sm:justify-start mr-4">
           <img src={require('../images/wallpapers/touch.jpg')} alt="Dois Garou em comunhão" className="w-full object-cover h-full absolute z-0" />
           <div className="bg-7-transp absolute h-full w-full"/>
-          <h1 className="w-full my-6 sm:ml-4 text-2xl font-bold relative text-center sm:text-left">Como utilizar o filtro de busca</h1>
+          <h1 className="w-full my-6 pr-5 sm:pr-0 ml-4 text-2xl font-bold relative text-left">Como utilizar o filtro de busca</h1>
           <ul className="list-disc ml-10 relative pb-5">
             <li className="w-99%">
               Filtros de Raças, Tribos e Augúrios retornarão qualquer dom que inclua um dos selecionados:

@@ -6,6 +6,8 @@ body {
   background-image: url('./images/wallpapers/model.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .constr-gif-wolf {
@@ -71,28 +73,11 @@ body {
   background-size: cover;
 }
 
-.slider-swiper-div {
-  max-width: 30%;
-}
-
-@media (min-width: 650px) and (max-width: 965px) {
-  .swiper-slide {
-    max-width: 45%;
-  }  
-}
-
-@media (min-width: 350px) and (max-width: 649px) {
-  .swiper-slide {
-    max-width: 70%;
-  }  
-}
-
 @media (max-width: 349px) {
-  .swiper-slide {
-    max-width: 95%;
-  }
   .swiper-button-next::after, .swiper-button-prev::after {
-    display: none;
+    font-size: 20px !important;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000;
   }
 }
 

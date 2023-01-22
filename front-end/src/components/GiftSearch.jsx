@@ -88,7 +88,7 @@ export default class GiftSearch extends React.Component {
     }
     return (
       <div>
-        <h1 className="text-4xl w-full text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3 text-center">
+        <h1 className="text-4xl w-full text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3 text-left">
           {
             (number === 0)
               ? "Nenhum Dom foi Encontrado"
