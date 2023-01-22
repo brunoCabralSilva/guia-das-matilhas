@@ -1,15 +1,19 @@
-import { AiFillCloseCircle } from "react-icons/ai";
+import { useContext } from "react";
 import GiftExibition from '../GiftExibition';
 import context from "../../context/registro/contextRegister";
-import { useContext } from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { BiError } from "react-icons/bi";
 
 export default function PopUpGift({ gift }) {
   const contextRegister = useContext(context);
   return (
-    <div className="fixed z-50 top-0 left-0 h-screen w-full bg-black/80 flex flex-col items-center justify-center">
-      <p className="text-white font-bold px-4 text-center">
-        Já existe um Dom na base de dados cadastrado com este nome:
-      </p>
+    <div className="overflow-y-scroll snap-y fixed z-50 top-0 left-0 w-full bg-black/90 flex flex-col h-screen ">
+      <div className="text-white font-bold pt-10 pr-4 pl-7 md:pl-4 md:text-left text-center flex flex-col md:flex-row items-center justify-center">
+        <BiError className="text-7xl md:text-5xl mr-0 md:mr-3 mb-3 md:mb-0" />
+        <span className="">
+          Já existe um Dom na base de dados cadastrado com este nome:
+        </span>
+      </div>
       <GiftExibition
         source={gift.fonts}
         arrayCategories={gift.belongs}
@@ -33,7 +37,7 @@ export default function PopUpGift({ gift }) {
         className="z-50"
         onClick={ () => contextRegister.setShowPopUpIfGiftExists(false) }
       >
-        <AiFillCloseCircle className="text-white z-50 fixed top-0 right-0 text-5xl mt-10 mr-10" />
+        <AiFillCloseCircle className="text-white z-50 fixed top-0 right-0 text-5xl mt-5 md:mt-10 mr-5 md:mr-10" />
       </button>
     </div>
   );

@@ -30,7 +30,7 @@ export default function NamesOfGifts() {
   return(
     <div className="bg-white rounded-lg py-5 px-4">
       {
-        contextRegister.showPopUpIfGiftExists && 
+        contextRegister.showPopUpIfGiftExists && gift.gift &&
         <PopUp gift={ gift.gift[0] } />
       }
       <div className={`flex flex-col md:flex-row w-full bg-white ${contextRegister.vName !== '' ? 'rounded-t-lg' : 'rounded-lg' }`}>

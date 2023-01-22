@@ -58,7 +58,7 @@ export default function PopUpDelete({ name, setPopup }) {
         className="z-50"
         onClick={ () => setPopup(false) }
       >
-        <AiFillCloseCircle className="text-white z-50 fixed top-0 right-0 text-5xl mt-3 sm:mt-10 mr-3 sm:mr-10" />
+        <AiFillCloseCircle className="text-white z-50 fixed top-0 right-0 text-5xl mt-5 md:mt-10 mr-5 md:mr-10" />
       </button>
     </div>
   );

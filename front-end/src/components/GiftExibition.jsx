@@ -123,10 +123,10 @@ export default class GiftExibition extends React.Component {
     } = this.props;
     const { giftDescription } = this.state;
     return (
-      <section className={`${color === 'white' && 'text-white'} 
+      <section className={`pl-3  ${color === 'white' && 'text-white'} 
         ${giftDescription !== 'hidden'
-          ? ' w-full text-white bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'
-          : ' w-full text-white sm:w-48% bg-gradient-to-r from-f-transp to-transparent p-5 ml-3 mt-2 sm:mt-3'}`}
+          ? 'w-full'
+          : 'sm:w-48%'}`}
       >
         {
           this.state.popup && 
@@ -135,103 +135,108 @@ export default class GiftExibition extends React.Component {
             setPopup={ this.setPopup }
           />
         }
-        <div className='flex items-center justify-between' onClick={() => {
-              if(!showData) {
-                this.enableDisableGift()
-              } 
-            }}>
-          <div
-            className={
-              giftDescription !== 'hidden'
-                ? "w-full"
-                : "w-full sm:w-1/2"
-            }
-            onClick={() => {
-              if(!showData) {
-                this.enableDisableGift()
-              } 
-            }}
-          >
-            <strong>
-              {namePtBr && this.firstLetterUpper(namePtBr)}
-              {' ('}
-              {nameOriginal && this.firstLetterUpper(nameOriginal)}
-              {') '}
-              - Posto {level}
-            </strong>
-          </div>
-          {
-            giftDescription === 'hidden'
-            ? !showData && <img
-              alt="baixo"
-              src={require('../images/logos/arrow-down.png')}
-              className="h-12 md:pr-4"
-            />
-            : !showData && <img
-              alt="seta para cima"
-              src={require('../images/logos/arrow-up.png')}
-              className="h-12 md:pr-4"
-            />
-          }
-        </div>
-        {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}
-        <div className={giftDescription}>
-          <div className="mt-2"><strong>Fonte:</strong>
-          { this.returnListFonts(source) }
-          </div>
-          <div className="mt-2">
-            <p><strong>Pertencente a: </strong></p>
-            { this.returnListBelongs(arrayCategories) }
-            </div>
-          <div className="mt-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</div>
-          <div className="my-2"><strong>Descrição: </strong></div>
-          <div className="my-2">{ descriptionPtBr }</div>
-          <div className="my-2"><strong>Sistema:</strong></div>
-          <div className="my-2">{ systemPtBr }</div>
-          {
-            note &&
-            <div>
-              <div className="my-2"><strong>Nota:</strong></div>
-              { 
-                edit
-                ? <textarea className="text-black w-full" value={note} onChange={(e) => this.setState({ note: e.target.value })} />
-                :<div className="my-2">{ note }</div>
+        <div className="w-full text-white bg-gradient-to-r from-f-transp to-transparent mt-2 sm:mt-3 p-5">
+          <div className='flex items-center justify-between' onClick={() => {
+                if(!showData) {
+                  this.enableDisableGift()
+                } 
+              }}>
+            <div
+              className={
+                giftDescription !== 'hidden'
+                  ? "w-full"
+                  : "w-full sm:w-1/2"
               }
+              onClick={() => {
+                if(!showData) {
+                  this.enableDisableGift()
+                } 
+              }}
+            >
+              <strong>
+                {namePtBr && this.firstLetterUpper(namePtBr)}
+                {' ('}
+                {nameOriginal && this.firstLetterUpper(nameOriginal)}
+                {') '}
+                - Posto {level}
+              </strong>
             </div>
-          }
-          <div className="my-2"><strong>Description:</strong></div>
-          <div className="my-2">{description}</div>
-          <div className="my-2"><strong>System:</strong></div>
-          <div className="my-2">{system}</div>
-          {
-            date && 
-            <div>
-              <div className="my-2">
-                <strong>Atualizado pela última vez em</strong>
-                <span>{' '}</span>
-                {date}
-                <span>{' '}</span>
-                <span>por {user}</span>
+            {
+              giftDescription === 'hidden'
+              ? !showData && <img
+                alt="baixo"
+                src={require('../images/logos/arrow-down.png')}
+                className="h-12 md:pr-4"
+              />
+              : !showData && <img
+                alt="seta para cima"
+                src={require('../images/logos/arrow-up.png')}
+                className="h-12 md:pr-4"
+              />
+            }
+          </div>
+          {giftDescription !== 'hidden' && <hr className="my-3 w-9/12 sm:w-10/12 bg-white text-white" />}
+          <div className={giftDescription}>
+            <div className="mt-2"><strong>Fonte:</strong>
+            { this.returnListFonts(source) }
+            </div>
+            <div className="mt-2">
+              <p><strong>Pertencente a: </strong></p>
+              { this.returnListBelongs(arrayCategories) }
               </div>
-            </div>
-          }
-          {
-            admin &&
-            <div className="mt-6">
-              <button
-                className="bg-black mr-1 p-3 border-2 border-black hover:border-white transition duration-500"
-                onClick={this.editGift}
-              >
-                  Editar
-              </button>
-              <button
-                className="bg-black ml-2 p-3 border-2 border-black hover:border-white transition duration-500"
-                onClick={ () => this.setPopup(true) }
-              >
-                Excluir
-              </button>
-            </div>
-          }
+            <div className="mt-2"><strong>Pré-Requisito: </strong>{ arraysubtypes }</div>
+            <div className="my-2"><strong>Descrição: </strong></div>
+            <div className="my-2">{ descriptionPtBr }</div>
+            <div className="my-2"><strong>Sistema:</strong></div>
+            <div className="my-2">{ systemPtBr }</div>
+            {
+              note &&
+              <div>
+                <div className="my-2"><strong>Nota:</strong></div>
+                { 
+                  edit
+                  ? <textarea className="text-black w-full" value={note} onChange={(e) => this.setState({ note: e.target.value })} />
+                  :<div className="my-2">{ note }</div>
+                }
+              </div>
+            }
+            <div className="my-2"><strong>Description:</strong></div>
+            <div className="my-2">{description}</div>
+            <div className="my-2"><strong>System:</strong></div>
+            <div className="my-2">{system}</div>
+            {
+              date && 
+              <div>
+                <div className="my-2">
+                  <strong>Atualizado pela última vez em</strong>
+                  <span>{' '}</span>
+                  {date}
+                  <span>{' '}</span>
+                  <span>por {user}</span>
+                </div>
+              </div>
+            }
+            {
+              admin &&
+              <div className="mt-6">
+                <button
+                  className="bg-black mr-1 p-3 border-2 border-gray-600 hover:border-white transition duration-500"
+                  onClick={ () => {
+                    this.editGift();
+                    this.context.setShowPopUpIfGiftExists(false);
+                  }}
+                >
+                    Editar
+                </button>
+                <button
+                  className="bg-black ml-2 p-3 border-2 border-gray-600 hover:border-white transition duration-500"
+                  onClick={ () => this.setPopup(true) }
+                >
+                  Excluir
+                </button>
+              </div>
+            }
+          </div>
         </div>
       </section>
     );

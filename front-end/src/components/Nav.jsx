@@ -15,22 +15,22 @@ export default class Nav extends React.Component {
   barra1 = () => {
     const { showMenu} = this.state;
     if(!showMenu) {
-      return 'rotate-0 transition duration-500';
-    } return 'rotate-45deg transition duration-500 translate-y-2';
+      return 'rotate-0 transition duration-500 z-0';
+    } return 'rotate-45deg transition duration-500 translate-y-2 z-40';
   }
 
   barra2 = () => {
     const { showMenu} = this.state;
     if(!showMenu) {
-      return 'rotate-0 transition duration-500';
-    } return 'rotate-45 transition duration-500';
+      return 'rotate-0 transition duration-500 z-0';
+    } return 'rotate-45 transition duration-500 z-40';
   }
 
   barra3 = () => {
     const { showMenu} = this.state;
     if(!showMenu) {
-      return 'opacity-1 transition duration-500';
-    } return 'opacity-0 transition duration-500';
+      return 'opacity-1 transition duration-500 z-0';
+    } return 'opacity-0 transition duration-500 z-40';
   }
 
   returnItemMenu = () => {
@@ -56,11 +56,11 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="w-full z-40 font-andika text-base relative 2xl:text-xl leading-6">
-        <div className={`absolute right-0 top-0 z-40 mr-2 mt-2 flex flex-col ${this.returnItemsMenu()} sm:hidden`} onClick={this.menu}>
-          <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra1()}`}> </div>
-          <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra2()}`}> </div>
-          <div className={`h-1 w-7 bg-white mb-1 z-40 ${this.barra3()}`}></div>
+      <nav className="w-full font-andika text-base relative 2xl:text-xl leading-6">
+        <div className={`absolute right-0 top-0 mr-2 mt-2 flex flex-col ${this.returnItemsMenu()} sm:hidden`} onClick={this.menu}>
+          <div className={`h-1 w-7 bg-white mb-1 ${this.barra1()}`}> </div>
+          <div className={`h-1 w-7 bg-white mb-1 ${this.barra2()}`}> </div>
+          <div className={`h-1 w-7 bg-white mb-1 ${this.barra3()}`}></div>
         <motion.ul
             className={`${this.returnItemMenu()}`}
             initial={{ x: 30, opacity: 0 }}

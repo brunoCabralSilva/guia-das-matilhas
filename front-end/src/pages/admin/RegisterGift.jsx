@@ -112,10 +112,10 @@ export default class RegisterGift extends React.Component {
         {
           (contextRegister) => (
             <div className={`w-full ${contextRegister.showFormGift ? 'min-h-screen' : 'h-screen'} items-center bg-cover flex flex-col relative`}>
-              <Nav />
               { 
-                contextRegister.message !== '' && <PopUpMessage />
+                contextRegister.message !== '' && <PopUpMessage className="z-50" />
               }
+              <Nav />
               <div className="w-full mt-14 cursor-pointer sm:mt-6 items-center" onClick={() => contextRegister.setShowFormGift(!contextRegister.showFormGift)}>
                 <div className="pl-5 mx-3 flex items-center justify-between bg-gradient-to-r from-f-transp to-transparent py-5">
                   <h1 className="text-2xl md:text-4xl text-white" >Adicionar um Dom</h1>
